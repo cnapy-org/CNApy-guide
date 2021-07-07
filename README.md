@@ -1,8 +1,8 @@
 # Output directory containing the formatted manuscript
 
-The [`gh-pages`](https://github.com/sthiele/test-manubot/tree/gh-pages) branch hosts the contents of this directory at <https://sthiele.github.io/test-manubot/>.
-The permalink for this webpage version is <https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/>.
-To redirect to the permalink for the latest manuscript version at anytime, use the link <https://sthiele.github.io/test-manubot/v/freeze/>.
+The [`gh-pages`](https://github.com/cnapy-org/users-guide/tree/gh-pages) branch hosts the contents of this directory at <https://cnapy-org.github.io/users-guide/>.
+The permalink for this webpage version is <https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/>.
+To redirect to the permalink for the latest manuscript version at anytime, use the link <https://cnapy-org.github.io/users-guide/v/freeze/>.
 
 ## Files
 
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`4f55774b60726f39c58eb35a8f444591203a2c22`](https://github.com/sthiele/test-manubot/commit/4f55774b60726f39c58eb35a8f444591203a2c22).
+[`9c6db43272c2b9e456191a1e0f5d2831b03be7a5`](https://github.com/cnapy-org/users-guide/commit/9c6db43272c2b9e456191a1e0f5d2831b03be7a5).
