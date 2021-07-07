@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://sthiele.github.io/test-manubot/" />
   <meta name="citation_pdf_url" content="https://sthiele.github.io/test-manubot/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://sthiele.github.io/test-manubot/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://sthiele.github.io/test-manubot/v/5418bfa6f17bb9b78c4e3b41d205929486fd9df9/" />
-  <meta name="manubot_html_url_versioned" content="https://sthiele.github.io/test-manubot/v/5418bfa6f17bb9b78c4e3b41d205929486fd9df9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://sthiele.github.io/test-manubot/v/5418bfa6f17bb9b78c4e3b41d205929486fd9df9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://sthiele.github.io/test-manubot/v/ba25273c011b142a443614330e620c72a0fce38a/" />
+  <meta name="manubot_html_url_versioned" content="https://sthiele.github.io/test-manubot/v/ba25273c011b142a443614330e620c72a0fce38a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://sthiele.github.io/test-manubot/v/ba25273c011b142a443614330e620c72a0fce38a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://sthiele.github.io/test-manubot/v/5418bfa6f17bb9b78c4e3b41d205929486fd9df9/))
+([permalink](https://sthiele.github.io/test-manubot/v/ba25273c011b142a443614330e620c72a0fce38a/))
 was automatically generated
-from [sthiele/test-manubot@5418bfa](https://github.com/sthiele/test-manubot/tree/5418bfa6f17bb9b78c4e3b41d205929486fd9df9)
+from [sthiele/test-manubot@ba25273](https://github.com/sthiele/test-manubot/tree/ba25273c011b142a443614330e620c72a0fce38a)
 on July 7, 2021.
 </em></small>
 
