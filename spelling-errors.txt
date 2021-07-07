@@ -7,7 +7,7 @@ aute
 Axel
 axelvonkamp
 cillum
-cna
+CNA
 CNApy
 COBRApy
 commodo

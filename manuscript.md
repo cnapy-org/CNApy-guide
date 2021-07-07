@@ -31,15 +31,15 @@ header-includes: |-
   <meta name="citation_author_orcid" content="0000-0002-5812-6963" />
   <meta name="citation_author" content="Axel von Kamp" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
-  <link rel="canonical" href="https://sthiele.github.io/test-manubot/" />
-  <meta property="og:url" content="https://sthiele.github.io/test-manubot/" />
-  <meta property="twitter:url" content="https://sthiele.github.io/test-manubot/" />
-  <meta name="citation_fulltext_html_url" content="https://sthiele.github.io/test-manubot/" />
-  <meta name="citation_pdf_url" content="https://sthiele.github.io/test-manubot/manuscript.pdf" />
-  <link rel="alternate" type="application/pdf" href="https://sthiele.github.io/test-manubot/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/" />
-  <meta name="manubot_html_url_versioned" content="https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/" />
-  <meta name="manubot_pdf_url_versioned" content="https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/manuscript.pdf" />
+  <link rel="canonical" href="https://cnapy-org.github.io/users-guide/" />
+  <meta property="og:url" content="https://cnapy-org.github.io/users-guide/" />
+  <meta property="twitter:url" content="https://cnapy-org.github.io/users-guide/" />
+  <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
+  <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/))
+([permalink](https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/))
 was automatically generated
-from [sthiele/test-manubot@4f55774](https://github.com/sthiele/test-manubot/tree/4f55774b60726f39c58eb35a8f444591203a2c22)
+from [cnapy-org/users-guide@9c6db43](https://github.com/cnapy-org/users-guide/tree/9c6db43272c2b9e456191a1e0f5d2831b03be7a5)
 on July 7, 2021.
 </em></small>
 
