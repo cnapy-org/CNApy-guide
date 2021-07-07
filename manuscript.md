@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/9c6db43272c2b9e456191a1e0f5d2831b03be7a5/))
+([permalink](https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/))
 was automatically generated
-from [cnapy-org/users-guide@9c6db43](https://github.com/cnapy-org/users-guide/tree/9c6db43272c2b9e456191a1e0f5d2831b03be7a5)
+from [cnapy-org/users-guide@ef8562d](https://github.com/cnapy-org/users-guide/tree/ef8562de6cc59572c1f7a986553b0410f8779e2a)
 on July 7, 2021.
 </em></small>
 
@@ -94,7 +94,7 @@ on July 7, 2021.
 
 
 
-# Introduction
+## Introduction
 
 This is the user manual of CNApy. CNApy is a graphical interface for the modelling and analysis of metabolic networks on the basis of constraint-based (stoichiometric) modeling approaches. It allows
 
@@ -126,11 +126,10 @@ Thank you for using CNApy!
 
 
 
-This manuscript is a template (aka "rootstock") for [Manubot](https://manubot.org/ "Manubot"), a tool for writing scholarly manuscripts.
-Use this template as a starting point for your manuscript.
 
-The rest of this document is a full list of formatting elements/features supported by Manubot.
-Compare the input (`.md` files in the `/content` directory) to the output you see below.
+
+*The rest of this document is a full list of formatting elements/features supported by Manubot.
+Compare the input (`.md` files in the `/content` directory) to the output you see below.*
 
 ## Basic formatting
 
