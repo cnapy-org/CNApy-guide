@@ -1,24 +1,23 @@
 ---
-title: Manuscript Title
+title: CNApy Users Guide
 keywords:
-- markdown
-- publishing
-- manubot
+- constraint-programming
+- metabolic-models
 lang: en-US
 date-meta: '2021-07-07'
 author-meta:
-- John Doe
-- Jane Roe
+- Sven Thiele
+- Axel von Kamp
 header-includes: |-
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Manuscript Title" />
-  <meta name="citation_title" content="Manuscript Title" />
-  <meta property="og:title" content="Manuscript Title" />
-  <meta property="twitter:title" content="Manuscript Title" />
+  <meta name="dc.title" content="CNApy Users Guide" />
+  <meta name="citation_title" content="CNApy Users Guide" />
+  <meta property="og:title" content="CNApy Users Guide" />
+  <meta property="twitter:title" content="CNApy Users Guide" />
   <meta name="dc.date" content="2021-07-07" />
   <meta name="citation_publication_date" content="2021-07-07" />
   <meta name="dc.language" content="en-US" />
@@ -27,23 +26,20 @@ header-includes: |-
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="John Doe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
-  <meta name="twitter:creator" content="@johndoe" />
-  <meta name="citation_author" content="Jane Roe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Sven Thiele" />
+  <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
+  <meta name="citation_author_orcid" content="0000-0002-5812-6963" />
+  <meta name="citation_author" content="Axel von Kamp" />
+  <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
   <link rel="canonical" href="https://sthiele.github.io/test-manubot/" />
   <meta property="og:url" content="https://sthiele.github.io/test-manubot/" />
   <meta property="twitter:url" content="https://sthiele.github.io/test-manubot/" />
   <meta name="citation_fulltext_html_url" content="https://sthiele.github.io/test-manubot/" />
   <meta name="citation_pdf_url" content="https://sthiele.github.io/test-manubot/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://sthiele.github.io/test-manubot/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://sthiele.github.io/test-manubot/v/fcd8fed66a72fb029a29ad2d36ead7797914697a/" />
-  <meta name="manubot_html_url_versioned" content="https://sthiele.github.io/test-manubot/v/fcd8fed66a72fb029a29ad2d36ead7797914697a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://sthiele.github.io/test-manubot/v/fcd8fed66a72fb029a29ad2d36ead7797914697a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/" />
+  <meta name="manubot_html_url_versioned" content="https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/" />
+  <meta name="manubot_pdf_url_versioned" content="https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://sthiele.github.io/test-manubot/v/fcd8fed66a72fb029a29ad2d36ead7797914697a/))
+([permalink](https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/))
 was automatically generated
-from [sthiele/test-manubot@fcd8fed](https://github.com/sthiele/test-manubot/tree/fcd8fed66a72fb029a29ad2d36ead7797914697a)
+from [sthiele/test-manubot@4f55774](https://github.com/sthiele/test-manubot/tree/4f55774b60726f39c58eb35a8f444591203a2c22)
 on July 7, 2021.
 </em></small>
 
@@ -75,31 +71,58 @@ on July 7, 2021.
 
 
 
-+ **John Doe**<br>
++ **Sven Thiele**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0002-5812-6963](https://orcid.org/0000-0002-5812-6963)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [sthiele](https://github.com/sthiele)<br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
+     Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   </small>
 
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Axel von Kamp**<br>
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
+    [axelvonkamp](https://github.com/axelvonkamp)<br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   </small>
 
 
 
 ## Abstract {.page_break_before}
 
+
+
+
+# Introduction
+
+This is the user manual of CNApy. CNApy is a graphical interface for the modelling and analysis of metabolic networks on the basis of constraint-based (stoichiometric) modeling approaches. It allows
+
+- the import/export of SBML models
+- creating COBRApy/CNA models
+- linking a graphical representation to the model data
+- convenient exploration and  editing of the model
+- model analysis with standard and advanced constraint-based methods
+- and saving everything as a CNApy *.cna project
+
+The methods provided for model analysis (some of them are part of CNApy but most are functions from CNA and COBRApy) include:
+
+- Flux balance analysis
+- Parsimonious flux balance analysis
+- Flux variability analysis
+- Minimal cut sets
+- Elementary modes
+- Phase plane analysis
+- Yield optimization
+
+
+CNApy is available at https://github.com/cnapy-org/CNApy under the [Apache-2.0 License](https://github.com/ARB-Lab/CNApy/blob/master/LICENSE).
+
+We appreciate any comments or suggestions for improvements and we are greatly interested in your feedback which you can give at our [User Forum](https://groups.google.com/g/cellnetanalyzer-user-forum).
+
+For feature requests and bug reports please use our [Issue tracker](https://github.com/cnapy-org/CNApy/issues)
+
+Thank you for using CNApy!
 
 
 
