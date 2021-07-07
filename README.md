@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/sthiele/test-manubot/tree/gh-pages) branch hosts the contents of this directory at <https://sthiele.github.io/test-manubot/>.
-The permalink for this webpage version is <https://sthiele.github.io/test-manubot/v/fcd8fed66a72fb029a29ad2d36ead7797914697a/>.
+The permalink for this webpage version is <https://sthiele.github.io/test-manubot/v/4f55774b60726f39c58eb35a8f444591203a2c22/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://sthiele.github.io/test-manubot/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`fcd8fed66a72fb029a29ad2d36ead7797914697a`](https://github.com/sthiele/test-manubot/commit/fcd8fed66a72fb029a29ad2d36ead7797914697a).
+[`4f55774b60726f39c58eb35a8f444591203a2c22`](https://github.com/sthiele/test-manubot/commit/4f55774b60726f39c58eb35a8f444591203a2c22).
