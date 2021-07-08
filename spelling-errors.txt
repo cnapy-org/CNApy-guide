@@ -10,8 +10,8 @@ behaviour
 cardinality
 CellNetAnalyzer
 cillum
-CNA
-CNApy
+cna
+cnapy
 COBRApy
 commodo
 conda
@@ -23,6 +23,7 @@ cupidatat
 deserunt
 dialogs
 dolore
+dropdown
 Duis
 ECC
 EFM
@@ -32,11 +33,13 @@ eiusmod
 elit
 enim
 esse
+etoh
 Excepteur
 exercitation
 FBA
 fugiat
 FVA
+glc
 Gurobi
 incididunt
 inhomogeneous
@@ -56,6 +59,7 @@ magna
 MCS
 menubar
 MILP
+MILPs
 modelling
 mollit
 nisi
