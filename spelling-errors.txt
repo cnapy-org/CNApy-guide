@@ -4,7 +4,7 @@ behaviour
 cardinality
 CellNetAnalyzer
 CNA
-cnapy
+CNApy
 COBRApy
 conda
 CPLEX
