@@ -6,9 +6,10 @@ anim
 aute
 Axel
 axelvonkamp
+CellNetAnalyzer
 cillum
 CNA
-CNApy
+cnapy
 COBRApy
 commodo
 conda

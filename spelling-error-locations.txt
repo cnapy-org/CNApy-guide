@@ -14,6 +14,7 @@ content/02.introduction.md:23:cnapy
 content/02.introduction.md:23:CNApy
 content/02.introduction.md:23:CNApy
 content/02.introduction.md:23:CNApy
+content/02.introduction.md:25:cellnetanalyzer
 content/02.introduction.md:27:cnapy
 content/02.introduction.md:27:CNApy
 content/02.introduction.md:29:CNApy
@@ -35,6 +36,17 @@ content/03.installation.md:20:cnapy
 content/03.installation.md:23:cnapy
 content/03.installation.md:23:CNApy
 content/03.installation.md:23:CNApy
+content/04.configuration.md:3:CNApy
+content/04.configuration.md:6:CNApy
+content/04.configuration.md:7:cnapy
+content/04.configuration.md:9:CNApy
+content/04.configuration.md:11:CellNetAnalyzer
+content/04.configuration.md:11:CNApy
+content/04.configuration.md:12:CellNetAnalyzer
+content/04.configuration.md:12:CNApy
+content/04.configuration.md:14:CNApy
+content/04.configuration.md:18:CNA
+content/04.configuration.md:20:CNApy
 content/78.delete-me.md:43:adipiscing
 content/78.delete-me.md:43:aliqua
 content/78.delete-me.md:43:amet

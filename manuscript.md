@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/))
+([permalink](https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/))
 was automatically generated
-from [cnapy-org/users-guide@ac12e2b](https://github.com/cnapy-org/users-guide/tree/ac12e2b43cbd17b8d874d91007b01273cfa61d0b)
+from [cnapy-org/users-guide@d979e0d](https://github.com/cnapy-org/users-guide/tree/d979e0d78ae97d2cbcbc5afd958e675f7639bf34)
 on July 8, 2021.
 </em></small>
 
@@ -149,6 +149,28 @@ The easiest way to install CNApy is using conda. First install conda and then:
     ```
 
 On windows you may also use the [graphical installer](https://github.com/cnapy-org/CNApy/releases/download/v1.0.0/CNApy-1.0.0-Windows-x86_64.exe).
+
+
+## Configuration
+
+When we start CNApy for the first time we are greeted with a dialog like this.
+
+![
+**CNApy Configuration dialog.**
+](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/config-dialog.png "Configuration dialog"){#fig:config-dialog}
+
+With this dialog you can configure which Matlab/Octave installation CNApy should use.
+
+The minimal cut set computation in CNApy uses functions that are provided by CellNetAnalyzer.
+To be able to use these functions you have to provide CNApy with either a path to a Matlab installation >R2019 or the path to an Octave executable >4, and of course with a path to a recent CellNetAnalyzer installation.
+You can do this by clicking these buttons (1).
+If you change the settings CNApy performs some basic tests to make sure everything is working.
+If all checks are successful green check marks  are shown, if a check fails a red cross  is shown.
+
+If no check can be performed, a yellow question mark  is shown.
+For example, the check of the CNA directory needs a working Matlab or Octave installation.
+
+You can also configure which colors CNApy should use to highlight reactions on the map or in the reaction list.
 
 
 
