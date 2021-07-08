@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2021-07-07'
+date-meta: '2021-07-08'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Users Guide" />
   <meta property="og:title" content="CNApy Users Guide" />
   <meta property="twitter:title" content="CNApy Users Guide" />
-  <meta name="dc.date" content="2021-07-07" />
-  <meta name="citation_publication_date" content="2021-07-07" />
+  <meta name="dc.date" content="2021-07-08" />
+  <meta name="citation_publication_date" content="2021-07-08" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +61,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/ef8562de6cc59572c1f7a986553b0410f8779e2a/))
+([permalink](https://cnapy-org.github.io/users-guide/v/ac12e2b43cbd17b8d874d91007b01273cfa61d0b/))
 was automatically generated
-from [cnapy-org/users-guide@ef8562d](https://github.com/cnapy-org/users-guide/tree/ef8562de6cc59572c1f7a986553b0410f8779e2a)
-on July 7, 2021.
+from [cnapy-org/users-guide@ac12e2b](https://github.com/cnapy-org/users-guide/tree/ac12e2b43cbd17b8d874d91007b01273cfa61d0b)
+on July 8, 2021.
 </em></small>
 
 ## Authors
@@ -124,6 +124,31 @@ For feature requests and bug reports please use our [Issue tracker](https://gith
 
 Thank you for using CNApy!
 
+
+
+## Installation
+
+The easiest way to install CNApy is using conda. First install conda and then:
+
+- Create a conda environment with all dependencies
+
+    ```sh
+    conda create -n cnapy-1.0.0 -c conda-forge -c cnapy cnapy=1.0.0
+    ```
+
+- Activate the cnapy conda environment
+
+    ```sh
+    conda activate cnapy-1.0.0
+    ```
+
+- Run CNApy
+
+    ```sh
+    cnapy
+    ```
+
+On windows you may also use the [graphical installer](https://github.com/cnapy-org/CNApy/releases/download/v1.0.0/CNApy-1.0.0-Windows-x86_64.exe).
 
 
 
