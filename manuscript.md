@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/))
+([permalink](https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/))
 was automatically generated
-from [cnapy-org/users-guide@ea04570](https://github.com/cnapy-org/users-guide/tree/ea04570f2f043b784a8abbfa0a67fc9b5b396d69)
+from [cnapy-org/users-guide@031d7ad](https://github.com/cnapy-org/users-guide/tree/031d7ad71b7717029a855a543d75112ad98787bf)
 on July 8, 2021.
 </em></small>
 
@@ -202,6 +202,53 @@ The console (2) now shows the output of some computations, and above the console
 On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.
 
 We can add new maps via the Map menu, and drag reactions from the reaction list onto the desired position on the map.
+
+
+## Create a new project
+
+In this Section we explain how to create a new network project.
+We also have a video on that topic https://youtu.be/bsNXZBmtyWw.
+
+CNApy starts with an empty Project.
+You can directly add new reactions via the reaction mask on the right.
+By pressing the Add new reaction button.
+
+Then simply type the reaction formula into the Equation field. For example `A + 2 B -> C`.
+
+The associated metabolites `A`, `B` and `C` are then automatically added to the model.
+
+Changing metabolite identifiers in the metabolite form instantly rewrites the reaction equation of the associated reactions.
+
+Creating big models by adding single reactions is very cumbersome.
+Therefore CNApy allows you to create a new project from an SBML file.
+You find the point New project from SBML in the Project menu.
+
+After importing an SBML model the reaction list is populated with all the reactions from the model.
+
+You can add a map to our project, by going to the map menu and clicking add new map.
+
+From the map menu we can also change the background image of our map.
+
+Any SVG image can be used as a background.
+
+You can add multiple maps that highlight different aspects of your model.
+
+Reaction boxes can be put on the map by dragging over them from the reactions list.
+
+You can adjust the box size with the keyboard shortcuts `Ctrl`{.grey} + `+`{.grey} and `Ctrl`{.grey} + `-`{.grey}.
+You can move the reaction box to the desired position by dragging them on their handles.
+If you want to move all reaction boxes together, press `Ctrl`{.grey} while dragging.
+
+Positioning a big number of reaction boxes can be tiresome.
+CNApy allows you to load and save reaction box positions.
+This facilitates reuse among similar projects.
+
+The size of the background image can be adjusted with the shortcuts `Ctrl`{.grey} + `Shift`{.grey} + `+`{.grey} and `Ctrl`{.grey} + `Shift`{.grey} + `-`{.grey}.
+
+To save a project click Save Project as in the Project menu.
+It is important to add the dot CNA extension to the file name.
+This way your files can be found by CNApy.
+
 
 
 

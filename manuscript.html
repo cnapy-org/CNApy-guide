@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/ea04570f2f043b784a8abbfa0a67fc9b5b396d69">cnapy-org/users-guide@ea04570</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/031d7ad71b7717029a855a543d75112ad98787bf">cnapy-org/users-guide@031d7ad</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -251,6 +251,34 @@ The reactions list contains buttons that lets us add/delete reactions to/from th
 The console (2) now shows the output of some computations, and above the console we have a map view (3) with a graphical representation of our network.
 On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.</p>
 <p>We can add new maps via the Map menu, and drag reactions from the reaction list onto the desired position on the map.</p>
+<h2 id="create-a-new-project">Create a new project</h2>
+<p>In this Section we explain how to create a new network project.
+We also have a video on that topic https://youtu.be/bsNXZBmtyWw.</p>
+<p>CNApy starts with an empty Project.
+You can directly add new reactions via the reaction mask on the right.
+By pressing the Add new reaction button.</p>
+<p>Then simply type the reaction formula into the Equation field. For example <code>A + 2 B -&gt; C</code>.</p>
+<p>The associated metabolites <code>A</code>, <code>B</code> and <code>C</code> are then automatically added to the model.</p>
+<p>Changing metabolite identifiers in the metabolite form instantly rewrites the reaction equation of the associated reactions.</p>
+<p>Creating big models by adding single reactions is very cumbersome.
+Therefore CNApy allows you to create a new project from an SBML file.
+You find the point New project from SBML in the Project menu.</p>
+<p>After importing an SBML model the reaction list is populated with all the reactions from the model.</p>
+<p>You can add a map to our project, by going to the map menu and clicking add new map.</p>
+<p>From the map menu we can also change the background image of our map.</p>
+<p>Any SVG image can be used as a background.</p>
+<p>You can add multiple maps that highlight different aspects of your model.</p>
+<p>Reaction boxes can be put on the map by dragging over them from the reactions list.</p>
+<p>You can adjust the box size with the keyboard shortcuts <code class="grey">Ctrl</code> + <code class="grey">+</code> and <code class="grey">Ctrl</code> + <code class="grey">-</code>.
+You can move the reaction box to the desired position by dragging them on their handles.
+If you want to move all reaction boxes together, press <code class="grey">Ctrl</code> while dragging.</p>
+<p>Positioning a big number of reaction boxes can be tiresome.
+CNApy allows you to load and save reaction box positions.
+This facilitates reuse among similar projects.</p>
+<p>The size of the background image can be adjusted with the shortcuts <code class="grey">Ctrl</code> + <code class="grey">Shift</code> + <code class="grey">+</code> and <code class="grey">Ctrl</code> + <code class="grey">Shift</code> + <code class="grey">-</code>.</p>
+<p>To save a project click Save Project as in the Project menu.
+It is important to add the dot CNA extension to the file name.
+This way your files can be found by CNApy.</p>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
 Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</em></p>
 <h2 id="basic-formatting">Basic formatting</h2>
@@ -458,7 +486,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:6348530f-b67f-4e53-be74-8f903351ce7e" class="tablenos">
+<div id="tbl:167ee9d8-83cb-4b35-b401-df3563697cf0" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>

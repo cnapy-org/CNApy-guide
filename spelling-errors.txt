@@ -9,7 +9,7 @@ axelvonkamp
 CellNetAnalyzer
 cillum
 cna
-CNApy
+cnapy
 COBRApy
 commodo
 conda
