@@ -8,8 +8,8 @@ Axel
 axelvonkamp
 CellNetAnalyzer
 cillum
-cna
-cnapy
+CNA
+CNApy
 COBRApy
 commodo
 conda
@@ -27,6 +27,7 @@ enim
 esse
 Excepteur
 exercitation
+FBA
 fugiat
 incididunt
 ipsum
@@ -55,6 +56,7 @@ qui
 quis
 reprehenderit
 SBML
+scen
 sed
 sint
 sthiele

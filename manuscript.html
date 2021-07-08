@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/031d7ad71b7717029a855a543d75112ad98787bf">cnapy-org/users-guide@031d7ad</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/ea90005122f6d65d90d26b4c75aee170aefe07c4">cnapy-org/users-guide@ea90005</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -279,6 +279,22 @@ This facilitates reuse among similar projects.</p>
 <p>To save a project click Save Project as in the Project menu.
 It is important to add the dot CNA extension to the file name.
 This way your files can be found by CNApy.</p>
+<h2 id="scenarios">Scenarios</h2>
+<p>In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
+In essence a scenario is a set of flux constraints for a set of reactions.
+These constraints can fix the flux of a reaction or constraint lower and upper bounds for the flux.</p>
+<p>The scenario can be edited via the map, by entering values into the corresponding reaction boxes.
+Accepted values are either a single float like <code>1.2</code> or a pair of floats like <code>(-10, 1.2)</code>.
+A single float fixes the flux of the reaction to this value.
+While a pair sets the lower flux bound of the reaction to the first value and the upper flux bound to the second value.</p>
+<p>Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
+The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.</p>
+<p>To remove the constraints on a reaction simply delete the scenario value in the reaction box.</p>
+<p>You can save and load scenarios as <em>.scen files. One scenario can be set as the default scenario of your project.
+This can be done via </em>set current scenario as default scenario* in the Scenario menu.
+The project must then be saved, and the next time you open the project the scenario is already set.</p>
+<p>CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
+You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model’s reaction bounds to the current scenario values.</p>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
 Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</em></p>
 <h2 id="basic-formatting">Basic formatting</h2>
@@ -486,7 +502,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:167ee9d8-83cb-4b35-b401-df3563697cf0" class="tablenos">
+<div id="tbl:1008a9c4-8cef-45e8-82d9-02f1f2786159" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>

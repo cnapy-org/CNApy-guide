@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/031d7ad71b7717029a855a543d75112ad98787bf/))
+([permalink](https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/))
 was automatically generated
-from [cnapy-org/users-guide@031d7ad](https://github.com/cnapy-org/users-guide/tree/031d7ad71b7717029a855a543d75112ad98787bf)
+from [cnapy-org/users-guide@ea90005](https://github.com/cnapy-org/users-guide/tree/ea90005122f6d65d90d26b4c75aee170aefe07c4)
 on July 8, 2021.
 </em></small>
 
@@ -248,6 +248,30 @@ The size of the background image can be adjusted with the shortcuts `Ctrl`{.grey
 To save a project click Save Project as in the Project menu.
 It is important to add the dot CNA extension to the file name.
 This way your files can be found by CNApy.
+
+
+## Scenarios
+
+In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
+In essence a scenario is a set of flux constraints for a set of reactions.
+These constraints can fix the flux of a reaction or constraint lower and upper bounds for the flux.
+
+The scenario can be edited via the map, by entering values into the corresponding reaction boxes. 
+Accepted values are either a single float like `1.2` or a pair of floats like `(-10, 1.2)`.
+A single float fixes the flux of the reaction to this value.
+While a pair sets the lower flux bound of the reaction to the first value and the upper flux bound to the second value.
+
+Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
+The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.
+
+To remove the constraints on a reaction simply delete the scenario value in the reaction box.
+
+You can save and load scenarios as *.scen files. One scenario can be set as the default scenario of your project.
+This can be done via *set current scenario as default scenario* in the Scenario menu.
+The project must then be saved, and the next time you open the project the scenario is already set.
+
+CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
+You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model's reaction bounds to the current scenario values.
 
 
 
