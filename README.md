@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/cnapy-org/users-guide/tree/gh-pages) branch hosts the contents of this directory at <https://cnapy-org.github.io/users-guide/>.
-The permalink for this webpage version is <https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/>.
+The permalink for this webpage version is <https://cnapy-org.github.io/users-guide/v/28bd12fbd75760401f88982993f9e006422e062e/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://cnapy-org.github.io/users-guide/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`a3fe605398533e48e550f0caf8ecb153893ad6f0`](https://github.com/cnapy-org/users-guide/commit/a3fe605398533e48e550f0caf8ecb153893ad6f0).
+[`28bd12fbd75760401f88982993f9e006422e062e`](https://github.com/cnapy-org/users-guide/commit/28bd12fbd75760401f88982993f9e006422e062e).

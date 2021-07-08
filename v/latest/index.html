@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/28bd12fbd75760401f88982993f9e006422e062e/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/28bd12fbd75760401f88982993f9e006422e062e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/28bd12fbd75760401f88982993f9e006422e062e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/28bd12fbd75760401f88982993f9e006422e062e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/a3fe605398533e48e550f0caf8ecb153893ad6f0">cnapy-org/users-guide@a3fe605</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/28bd12fbd75760401f88982993f9e006422e062e">cnapy-org/users-guide@28bd12f</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -304,7 +304,8 @@ You can also import all the values that are currently in the reaction boxes into
 <h3 id="flux-balance-analysis-fba">Flux balance analysis (FBA)</h3>
 <p>Optimizes the value of the current objective function and shows a flux distribution that realizes this optimum.
 The objective function is a linear function over the reaction rates in the network, its coefficients can be modified in the reaction dialogs.
-To display the current objective function in the console you can call “Show optimization function” from the analysis menu.
+To display the current objective function you can choose <em>Show optimization function</em> from the <em>Analysis</em> menu.
+The current objective function in shown in the console.
 Note that the flux distribution calculated by FBA is usually not unique.</p>
 <h3 id="parsimonious-fba-pfba">Parsimonious FBA (pFBA)</h3>
 <p>In parsimonious FBA first the objective function optimized and then with this optimum as additional constraint the sum of the fluxes in the network is minimized.
@@ -324,7 +325,8 @@ This gives the possible flux range for each reaction.</p>
 <h4 id="additional-options-for-cna">Additional options for CNA</h4>
 <ul>
 <li><p>use flux bounds to calculate elementary flux vectors
-To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p></li>
+To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
+A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p></li>
 <li><p>check reversibility</p></li>
 </ul>
 <p>Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.</p>
@@ -340,7 +342,9 @@ To calculate EFV instead of EFM, activate this option. Flux bounds defined in th
 <li>use rational numbers</li>
 </ul>
 <p>Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
-To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
+To calculate EFV instead of EFM, activate this option.
+Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
+A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
 <h3 id="minimal-cut-sets">Minimal cut sets</h3>
 <p>Minimal cut sets (MCS) can be calculated in CNApy using the dual method.</p>
 <div id="fig:mcs-dialog" class="fignos">
@@ -380,7 +384,8 @@ It is strongly recommended to use this parameter because MCS computation can tak
 </ul>
 <p>MCS can be enumerated iteratively, either the smallest first (least number of cuts) or any MCS (up to the number of cuts given by max. size).
 With the latter option new MCS are found more quickly but may not be the smallest.</p>
-<p>With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed. In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but often faster.</p>
+<p>With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed.
+In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but often faster.</p>
 <ul>
 <li>Gene KOs (CNA only)</li>
 </ul>
@@ -393,6 +398,73 @@ With the latter option new MCS are found more quickly but may not be the smalles
 <li>Consider constraints given by scenario</li>
 </ul>
 <p>Take reaction bounds set by the current scenario into account for all target and desired regions.</p>
+<h3 id="yield-optimization">Yield optimization</h3>
+<div id="fig:yield-dialog" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/yield-optimization-dialog.png" alt="Figure 7: Yield optimization dialog." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>Yield optimization dialog.</strong></figcaption>
+</figure>
+</div>
+<p>Maximizes the value of a yield function <em>c/d</em> where <em>c</em> and <em>d</em> are linear expressions over the fluxes in the network.
+For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
+The flux values of the current scenario are taken into during the optimization.</p>
+<p>A typical application would be the maximization of a product yield: When the exchange fluxes for ethanol and glucose are <em>EX_etoh</em> and <em>EX_glc</em> then maximizing <em>EX_etoh/-EX_glc gives</em> the maximal ethanol yield on glucose.</p>
+<h3 id="phase-plane-plot">Phase plane plot</h3>
+<div id="fig:phase-plane-dialog" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/phase-plane-dialog.png" alt="Figure 8: Phase plane plot dialog." /><figcaption aria-hidden="true"><span>Figure 8:</span> <strong>Phase plane plot dialog.</strong></figcaption>
+</figure>
+</div>
+<p>Creates a plot (in the console) that shows the projection of the solution space onto a two-dimensional plane of two selected reaction rates.
+The flux values of the current scenario are taken into account during the calculations.</p>
+<h3 id="compute-inout-fluxes-at-a-metabolite">Compute in/out fluxes at a metabolite</h3>
+<p>If a flux distribution has been calculated (e.g. by FBA) this function shows the magnitude of all fluxes going in/coming out of a specified metabolite.
+The reaction fluxes are displayed as stacked bar graphs on the console.
+You can either call this function from the Analysis menu and specify a metabolite or right-click on a metabolite in the list and call the function from the context menu.</p>
+<h3 id="clipboard-calculator">Clipboard calculator</h3>
+<div id="fig:clipboard-calc" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/clipboard-calculator.png" alt="Figure 9: Clipboard calculator." /><figcaption aria-hidden="true"><span>Figure 9:</span> <strong>Clipboard calculator.</strong></figcaption>
+</figure>
+</div>
+<p>The clipboard calculator allows you to perform arithmetic operations with the values stored in the clipboard, the current reaction rates or a fixed value that you can enter in this dialog.
+The result of the operation replaces the current flux values.</p>
+<h3 id="configure-cobrapy">Configure COBRApy</h3>
+<div id="fig:cobrapy-config" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/cobrapy-config-dialog.png" alt="Figure 10: COBRApy configuration dialog." /><figcaption aria-hidden="true"><span>Figure 10:</span> <strong>COBRApy configuration dialog.</strong></figcaption>
+</figure>
+</div>
+<p>With this dialog selected global settings (<code>class cobra.Configuration()</code>) of the COBRApy toolbox and selected parameters of the current model can be modified. The global settings are saved, but the parameters of the current model are not and will revert to the global default values are (re-)loading a model.</p>
+<ul>
+<li>Default solver (global)</li>
+</ul>
+<p>Select which solver to use as global default from the dropdown list. COBRApy supports a variety of solvers but only the ones which are installed for COBRApy on your system will be available on the list. Also, different solvers have different capabilities so you should set a default that has all capabilities that you require (e.g. glpk_exact cannot be used for MILPs).</p>
+<ul>
+<li>Solver for current model</li>
+</ul>
+<p>Here you can change the solver for the current model.</p>
+<ul>
+<li>Number of processes for multiprocessing (global)</li>
+</ul>
+<p>Number of processes run in parallel when Python multiprocessing is used, e.g. for FVA. Setting this to 1 disables multiprocessing.</p>
+<!-- IMPORTANT: Should be set to 1 on Windows because Python multiprocessing performs very poorly on this OS. -->
+<p><span class="banner lightblue"><i class="fas fa-info-circle fa-lg"></i> <strong>IMPORTANT</strong><br>
+Should be set to 1 on Windows because Python multiprocessing performs very poorly on this OS.</span></p>
+<ul>
+<li>Default tolerance (global)</li>
+</ul>
+<p>This value is used to distinguish zero from non-zero elements for various purposes. In particular, this value is propagated to the solver (see the COBRApy source code which solver parameters are affected). Most solvers restrict the range of this value, so it must be between 1E-9 and 0.1 For details where this value is used see the COBRApy documentation and source code.</p>
+<ul>
+<li>Tolerance for the current model</li>
+</ul>
+<p>Here you can change the tolerance for the current model. You may enter an arbitrary value &gt;= 0 here but if it is not compatible with the current solver then “Apply Changes” can lead to an error message.</p>
+<h3 id="programming-cnapy">Programming CNApy</h3>
+<h5 id="under-construction">Under Construction</h5>
+<ul>
+<li>accessing the COBRApy Model</li>
+<li>accessing scenario and computed values</li>
+<li>accessing the CNApy UI</li>
+</ul>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
 Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</em></p>
 <h2 id="basic-formatting">Basic formatting</h2>
@@ -468,10 +540,10 @@ two spaces at end of line.</p>
 Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
 <p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
 <h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
-<p>Figure <a href="#fig:square-image">7</a></p>
-<p>Figure <a href="#fig:wide-image">8</a></p>
-<p>Figure <a href="#fig:tall-image">9</a></p>
-<p>Figure <a href="#fig:vector-image">10</a></p>
+<p>Figure <a href="#fig:square-image">11</a></p>
+<p>Figure <a href="#fig:wide-image">12</a></p>
+<p>Figure <a href="#fig:tall-image">13</a></p>
+<p>Figure <a href="#fig:vector-image">14</a></p>
 <p>Table <a href="#tbl:bowling-scores">1</a></p>
 <p>Equation <a href="#eq:regular-equation">1</a></p>
 <p>Equation <a href="#eq:long-equation">2</a></p>
@@ -500,25 +572,25 @@ Exporting PDF manuscript</code></pre>
 <h2 id="figures">Figures</h2>
 <div id="fig:square-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 7: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 11: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 11:</span> <strong>A square image at actual size and with a bottom caption.</strong>
 Loaded from the latest version of image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:wide-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 8: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 8:</span> <strong>An image too wide to fit within page at full size.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 12: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 12:</span> <strong>An image too wide to fit within page at full size.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:tall-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 9: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 9:</span> <strong>A tall image with a specified height.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 13: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 13:</span> <strong>A tall image with a specified height.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:vector-image" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 10: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 10:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 14: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 14:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
 The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
 White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
 </figure>
@@ -600,7 +672,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:f4d0d97c-2fbd-4fbe-b5b5-87d0ba4fb332" class="tablenos">
+<div id="tbl:ca4cb70a-fa09-4dbf-a3df-6278b51049b6" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
