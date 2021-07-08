@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205">cnapy-org/users-guide@5f2864b</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/a3fe605398533e48e550f0caf8ecb153893ad6f0">cnapy-org/users-guide@a3fe605</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -300,7 +300,7 @@ This can be done via <em>set current scenario as default scenario</em> in the <e
 The project must then be saved, and the next time you open the project the scenario is already set.</p>
 <p>CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
 You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model’s reaction bounds to the current scenario values.</p>
-<h2 id="analysing-a-metabolic-model">Analysing a metabolic model</h2>
+<h2 id="analysis-functions">Analysis functions</h2>
 <h3 id="flux-balance-analysis-fba">Flux balance analysis (FBA)</h3>
 <p>Optimizes the value of the current objective function and shows a flux distribution that realizes this optimum.
 The objective function is a linear function over the reaction rates in the network, its coefficients can be modified in the reaction dialogs.
@@ -341,6 +341,58 @@ To calculate EFV instead of EFM, activate this option. Flux bounds defined in th
 </ul>
 <p>Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
 To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
+<h3 id="minimal-cut-sets">Minimal cut sets</h3>
+<p>Minimal cut sets (MCS) can be calculated in CNApy using the dual method.</p>
+<div id="fig:mcs-dialog" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/mcs-dialog.png" alt="Figure 6: Minimal cut sets computation dialog." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Minimal cut sets computation dialog.</strong></figcaption>
+</figure>
+</div>
+<ul>
+<li>Target and Desired region(s)</li>
+</ul>
+<p>For the dual method one or more target regions must be defined which describe the network behaviour that is to be suppressed.
+In addition, one or more desired regions may be defined which describe the network behaviour that is to be preserved.
+Each target/desired region is defined by a set of linear equality constraints over the reaction rates in the network.
+All target and desired regions must be initially feasible or an error will be raised. Also make sure that 0 is not included in any target or desired region (0 as target cannot be suppressed and 0 as desired is always fulfilled).</p>
+<p>Note that all non-default reaction bounds (as defined by cobra.Configuration().bounds) are automatically added to all target and desired regions before MCS computation.</p>
+<ul>
+<li>Solver</li>
+</ul>
+<p>MCS can either be calculated via CNA (using either Octave or Matlab) or via optlang using different MILP solvers.
+For CNA the solver must be chosen while optlang uses the solver for the current model (cf. Solver for current model).
+Not all variants and solvers allow for the same options so these will partly be disabled depending on the chosen solver.</p>
+<ul>
+<li>Max. solutions</li>
+</ul>
+<p>Maximal number of MCS to calculate.</p>
+<ul>
+<li>Max. size</li>
+</ul>
+<p>Only calculate MCS which consists of up to this number of cuts.</p>
+<ul>
+<li>Time limit</li>
+</ul>
+<p>Do not run the search for longer than this limit.
+It is strongly recommended to use this parameter because MCS computation can take very long especially when searching for smallest MCS.</p>
+<ul>
+<li>MCS search</li>
+</ul>
+<p>MCS can be enumerated iteratively, either the smallest first (least number of cuts) or any MCS (up to the number of cuts given by max. size).
+With the latter option new MCS are found more quickly but may not be the smallest.</p>
+<p>With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed. In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but often faster.</p>
+<ul>
+<li>Gene KOs (CNA only)</li>
+</ul>
+<p>If the model contains the gene-reaction association, search for gene knock-outs instead of reaction knock-outs.</p>
+<ul>
+<li>Exclude boundary reactions as cuts (optlang only)</li>
+</ul>
+<p>Do not allow knock-out of boundary reactions (reactions that cross the system boundary, e.g. exchange reactions).</p>
+<ul>
+<li>Consider constraints given by scenario</li>
+</ul>
+<p>Take reaction bounds set by the current scenario into account for all target and desired regions.</p>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
 Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</em></p>
 <h2 id="basic-formatting">Basic formatting</h2>
@@ -416,10 +468,10 @@ two spaces at end of line.</p>
 Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
 <p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
 <h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
-<p>Figure <a href="#fig:square-image">6</a></p>
-<p>Figure <a href="#fig:wide-image">7</a></p>
-<p>Figure <a href="#fig:tall-image">8</a></p>
-<p>Figure <a href="#fig:vector-image">9</a></p>
+<p>Figure <a href="#fig:square-image">7</a></p>
+<p>Figure <a href="#fig:wide-image">8</a></p>
+<p>Figure <a href="#fig:tall-image">9</a></p>
+<p>Figure <a href="#fig:vector-image">10</a></p>
 <p>Table <a href="#tbl:bowling-scores">1</a></p>
 <p>Equation <a href="#eq:regular-equation">1</a></p>
 <p>Equation <a href="#eq:long-equation">2</a></p>
@@ -448,25 +500,25 @@ Exporting PDF manuscript</code></pre>
 <h2 id="figures">Figures</h2>
 <div id="fig:square-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 6: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 7: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>A square image at actual size and with a bottom caption.</strong>
 Loaded from the latest version of image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:wide-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 7: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>An image too wide to fit within page at full size.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 8: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 8:</span> <strong>An image too wide to fit within page at full size.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:tall-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 8: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 8:</span> <strong>A tall image with a specified height.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 9: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 9:</span> <strong>A tall image with a specified height.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:vector-image" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 9: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 9:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 10: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 10:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
 The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
 White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
 </figure>
@@ -548,7 +600,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:1ff4676e-5a5d-4dd8-ae95-1c639f8263ef" class="tablenos">
+<div id="tbl:f4d0d97c-2fbd-4fbe-b5b5-87d0ba4fb332" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
