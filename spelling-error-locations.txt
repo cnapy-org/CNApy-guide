@@ -11,6 +11,8 @@ content/02.introduction.md:12:CNA
 content/02.introduction.md:12:CNApy
 content/02.introduction.md:12:COBRApy
 content/02.introduction.md:23:cnapy
+content/02.introduction.md:23:cnapy
+content/02.introduction.md:23:CNApy
 content/02.introduction.md:23:CNApy
 content/02.introduction.md:23:CNApy
 content/02.introduction.md:23:CNApy

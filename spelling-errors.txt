@@ -8,8 +8,8 @@ Axel
 axelvonkamp
 CellNetAnalyzer
 cillum
-CNA
-CNApy
+cna
+cnapy
 COBRApy
 commodo
 conda

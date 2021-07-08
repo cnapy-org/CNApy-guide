@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/ea90005122f6d65d90d26b4c75aee170aefe07c4/))
+([permalink](https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/))
 was automatically generated
-from [cnapy-org/users-guide@ea90005](https://github.com/cnapy-org/users-guide/tree/ea90005122f6d65d90d26b4c75aee170aefe07c4)
+from [cnapy-org/users-guide@63e9e4e](https://github.com/cnapy-org/users-guide/tree/63e9e4ec1a7459a9abcbf752b01690bba7cee245)
 on July 8, 2021.
 </em></small>
 
@@ -116,7 +116,7 @@ The methods provided for model analysis (some of them are part of CNApy but most
 - Yield optimization
 
 
-CNApy is available at https://github.com/cnapy-org/CNApy under the [Apache-2.0 License](https://github.com/ARB-Lab/CNApy/blob/master/LICENSE).
+CNApy is available at [https://github.com/cnapy-org/CNApy](https://github.com/cnapy-org/CNApy) under the [Apache-2.0 License](https://github.com/ARB-Lab/CNApy/blob/master/LICENSE).
 
 We appreciate any comments or suggestions for improvements and we are greatly interested in your feedback which you can give at our [User Forum](https://groups.google.com/g/cellnetanalyzer-user-forum).
 
@@ -207,7 +207,7 @@ We can add new maps via the Map menu, and drag reactions from the reaction list 
 ## Create a new project
 
 In this Section we explain how to create a new network project.
-We also have a video on that topic https://youtu.be/bsNXZBmtyWw.
+We also have a video on that topic [https://youtu.be/bsNXZBmtyWw](https://youtu.be/bsNXZBmtyWw).
 
 CNApy starts with an empty Project.
 You can directly add new reactions via the reaction mask on the right.
