@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/fe48cd8eafd80ccce428e5ea7f794a0aef76755e/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/fe48cd8eafd80ccce428e5ea7f794a0aef76755e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/fe48cd8eafd80ccce428e5ea7f794a0aef76755e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/fe48cd8eafd80ccce428e5ea7f794a0aef76755e/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/fe48cd8eafd80ccce428e5ea7f794a0aef76755e">cnapy-org/users-guide@fe48cd8</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205">cnapy-org/users-guide@5f2864b</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -264,9 +264,9 @@ By pressing the <em>Add new reaction</em> button.</p>
 Therefore CNApy allows you to create a new project from an SBML file.
 You find the point <em>New project from SBML</em> in the <em>Project</em> menu.</p>
 <p>After importing an SBML model the reaction list is populated with all the reactions from the model.</p>
-<p>You can add a map to our project, by going to the map menu and clicking add new map.</p>
-<p>From the map menu we can also change the background image of our map.</p>
-<p>Any SVG image can be used as a background.</p>
+<p>You can add a map to our project, by going to the <em>Map</em> menu and clicking <em>add new map</em>.</p>
+<p>From the <em>Map</em> menu we can also <em>change the background image</em> of our map.
+Any SVG image can be used as a background.</p>
 <p>You can add multiple maps that highlight different aspects of your model.</p>
 <p>Reaction boxes can be put on the map by dragging over them from the reactions list.</p>
 <p>You can adjust the box size with the keyboard shortcuts <code class="grey">Ctrl</code> + <code class="grey">+</code> and <code class="grey">Ctrl</code> + <code class="grey">-</code>.
@@ -314,23 +314,31 @@ This has the advantage that redundant internal cyclic fluxes are suppressed and 
 This gives the possible flux range for each reaction.</p>
 <h3 id="elementary-modes-efmelementary-flux-vectors-efv">Elementary modes (EFM)/elementary flux vectors (EFV)</h3>
 <p>EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required.</p>
-<h4 id="options-for-cna-and-efmtool">Options for CNA and efmtool</h4>
-<p>When reactions are marked with 0 flux in a scenario and the option “consider 0 in current scenario as off” is activated then only the subset of EFM/EFV is calculated in which these reactions do not participate</p>
-<h4 id="additional-options-for-cna">Additional options for CNA</h4>
-<h4 id="use-flux-bounds-to-calculate-elementary-flux-vectors">use flux bounds to calculate elementary flux vectors</h4>
-<p>To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
 <div id="fig:efm-dialog" class="fignos">
 <figure>
 <img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/efm-dialog.png" alt="Figure 5: Elementary Flux Mode Computation Dialog." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Elementary Flux Mode Computation Dialog.</strong></figcaption>
 </figure>
 </div>
-<h4 id="check-reversibility">check reversibility</h4>
+<h4 id="options-for-cna-and-efmtool">Options for CNA and efmtool</h4>
+<p>When reactions are marked with 0 flux in a scenario and the option “consider 0 in current scenario as off” is activated then only the subset of EFM/EFV is calculated in which these reactions do not participate</p>
+<h4 id="additional-options-for-cna">Additional options for CNA</h4>
+<ul>
+<li><p>use flux bounds to calculate elementary flux vectors
+To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p></li>
+<li><p>check reversibility</p></li>
+</ul>
 <p>Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.</p>
-<h5 id="only-convex-basis">only convex basis</h5>
+<ul>
+<li>only convex basis</li>
+</ul>
 <p>Currently has no effect (need to be able to switch computation method first).</p>
-<h5 id="consider-isozymes-only-once">consider isozymes only once</h5>
+<ul>
+<li>consider isozymes only once</li>
+</ul>
 <p>If a group of reactions has the same stoichiometry then only the modes with one representative of that group are calculated.</p>
-<h5 id="use-rational-numbers">use rational numbers</h5>
+<ul>
+<li>use rational numbers</li>
+</ul>
 <p>Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
 To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
@@ -540,7 +548,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:605ce0b5-9284-4965-842e-0013a8e383b6" class="tablenos">
+<div id="tbl:1ff4676e-5a5d-4dd8-ae95-1c639f8263ef" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
