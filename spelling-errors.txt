@@ -8,8 +8,8 @@ Axel
 axelvonkamp
 CellNetAnalyzer
 cillum
-CNA
-cnapy
+cna
+CNApy
 COBRApy
 commodo
 conda
@@ -20,6 +20,7 @@ cupidatat
 deserunt
 dolore
 Duis
+ECC
 eiusmod
 elit
 enim
@@ -30,6 +31,7 @@ fugiat
 incididunt
 ipsum
 irure
+Jupyter
 Kamp
 labore
 laboris
@@ -37,6 +39,7 @@ laborum
 Lorem
 Magdeburg
 magna
+menubar
 modelling
 mollit
 nisi
@@ -46,6 +49,7 @@ occaecat
 officia
 Pandoc’s
 pariatur
+programmatically
 proident
 qui
 quis
@@ -58,6 +62,7 @@ stoichiometric
 sunt
 tempor
 Thiele
+UI
 ullamco
 velit
 veniam
