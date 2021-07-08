@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/))
+([permalink](https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/))
 was automatically generated
-from [cnapy-org/users-guide@63e9e4e](https://github.com/cnapy-org/users-guide/tree/63e9e4ec1a7459a9abcbf752b01690bba7cee245)
+from [cnapy-org/users-guide@e38545e](https://github.com/cnapy-org/users-guide/tree/e38545e435c1942fef0fa59766c1e6cdfc8db87e)
 on July 8, 2021.
 </em></small>
 
@@ -89,7 +89,7 @@ on July 8, 2021.
 
 
 
-## Abstract {.page_break_before}
+<!-- ## Abstract {.page_break_before} -->
 
 
 
@@ -211,7 +211,7 @@ We also have a video on that topic [https://youtu.be/bsNXZBmtyWw](https://youtu.
 
 CNApy starts with an empty Project.
 You can directly add new reactions via the reaction mask on the right.
-By pressing the Add new reaction button.
+By pressing the *Add new reaction* button.
 
 Then simply type the reaction formula into the Equation field. For example `A + 2 B -> C`.
 
@@ -221,7 +221,7 @@ Changing metabolite identifiers in the metabolite form instantly rewrites the re
 
 Creating big models by adding single reactions is very cumbersome.
 Therefore CNApy allows you to create a new project from an SBML file.
-You find the point New project from SBML in the Project menu.
+You find the point *New project from SBML* in the *Project* menu.
 
 After importing an SBML model the reaction list is populated with all the reactions from the model.
 
@@ -245,8 +245,8 @@ This facilitates reuse among similar projects.
 
 The size of the background image can be adjusted with the shortcuts `Ctrl`{.grey} + `Shift`{.grey} + `+`{.grey} and `Ctrl`{.grey} + `Shift`{.grey} + `-`{.grey}.
 
-To save a project click Save Project as in the Project menu.
-It is important to add the dot CNA extension to the file name.
+To save a project click *Save Project as* in the *Project* menu.
+It is important to add the `.cna` extension to the file name.
 This way your files can be found by CNApy.
 
 
@@ -257,22 +257,81 @@ In essence a scenario is a set of flux constraints for a set of reactions.
 These constraints can fix the flux of a reaction or constraint lower and upper bounds for the flux.
 
 The scenario can be edited via the map, by entering values into the corresponding reaction boxes. 
-Accepted values are either a single float like `1.2` or a pair of floats like `(-10, 1.2)`.
-A single float fixes the flux of the reaction to this value.
-While a pair sets the lower flux bound of the reaction to the first value and the upper flux bound to the second value.
+Accepted values are either a single float like `1.5` or a pair of floats like `(-10, 1.2)`.
+A single float fixes the flux of the reaction to this value (`1.5`).
+While a pair sets the lower flux bound of the reaction to the first value (`-10`) and the upper flux bound to the second value (`1.2`).
+
+![
+**Reaction box with scenario value.**
+](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/scenario-box.png "Reaction box with scenario value"){#fig:scenario-box}
 
 Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
 The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.
 
 To remove the constraints on a reaction simply delete the scenario value in the reaction box.
 
-You can save and load scenarios as *.scen files. One scenario can be set as the default scenario of your project.
-This can be done via *set current scenario as default scenario* in the Scenario menu.
+You can save and load scenarios as `*.scen` files. One scenario can be set as the default scenario of your project.
+This can be done via *set current scenario as default scenario* in the *Scenario* menu.
 The project must then be saved, and the next time you open the project the scenario is already set.
 
 CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
 You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model's reaction bounds to the current scenario values.
 
+
+## Analysing a metabolic model
+
+### Flux balance analysis (FBA)
+
+Optimizes the value of the current objective function and shows a flux distribution that realizes this optimum.
+The objective function is a linear function over the reaction rates in the network, its coefficients can be modified in the reaction dialogs.
+To display the current objective function in the console you can call “Show optimization function” from the analysis menu.
+Note that the flux distribution calculated by FBA is usually not unique.
+
+### Parsimonious FBA (pFBA)
+
+In parsimonious FBA first the objective function optimized and then with this optimum as additional constraint the sum of the fluxes in the network is minimized.
+This has the advantage that redundant internal cyclic fluxes are suppressed and that a lot of reactions will have zero flux which makes the solution easier to understand.
+
+### Flux variability analysis (FVA)
+
+In FVA the maximal/minimal rate of each reaction is calculated.
+This gives the possible flux range for each reaction.
+
+### Elementary modes (EFM)/elementary flux vectors (EFV)
+
+EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required.
+
+
+#### Options for CNA and efmtool
+
+When reactions are marked with 0 flux in a scenario and the option “consider 0 in current scenario as off” is activated then only the subset of EFM/EFV is calculated in which these reactions do not participate
+
+#### Additional options for CNA
+
+#### use flux bounds to calculate elementary flux vectors
+To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.
+
+
+![
+**Elementary Flux Mode Computation Dialog.**
+](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/efm-dialog.png "Elementary Flux Mode Computation Dialog"){#fig:efm-dialog}
+
+#### check reversibility
+
+Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.
+
+##### only convex basis
+
+Currently has no effect (need to be able to switch computation method first).
+
+##### consider isozymes only once
+
+If a group of reactions has the same stoichiometry then only the modes with one representative of that group are calculated.
+
+##### use rational numbers
+
+Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
+To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.
 
 
 

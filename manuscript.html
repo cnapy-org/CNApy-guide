@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/63e9e4ec1a7459a9abcbf752b01690bba7cee245/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/e38545e435c1942fef0fa59766c1e6cdfc8db87e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/63e9e4ec1a7459a9abcbf752b01690bba7cee245">cnapy-org/users-guide@63e9e4e</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/e38545e435c1942fef0fa59766c1e6cdfc8db87e">cnapy-org/users-guide@e38545e</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -175,7 +175,7 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
 </small></p></li>
 </ul>
-<h2 class="page_break_before" id="abstract">Abstract</h2>
+<!-- ## Abstract {.page_break_before} -->
 <h2 id="introduction">Introduction</h2>
 <p>This is the user manual of CNApy. CNApy is a graphical interface for the modelling and analysis of metabolic networks on the basis of constraint-based (stoichiometric) modeling approaches. It allows</p>
 <ul>
@@ -256,13 +256,13 @@ On top (4) we have the menu bar which gives us access to the various functionali
 We also have a video on that topic <a href="https://youtu.be/bsNXZBmtyWw">https://youtu.be/bsNXZBmtyWw</a>.</p>
 <p>CNApy starts with an empty Project.
 You can directly add new reactions via the reaction mask on the right.
-By pressing the Add new reaction button.</p>
+By pressing the <em>Add new reaction</em> button.</p>
 <p>Then simply type the reaction formula into the Equation field. For example <code>A + 2 B -&gt; C</code>.</p>
 <p>The associated metabolites <code>A</code>, <code>B</code> and <code>C</code> are then automatically added to the model.</p>
 <p>Changing metabolite identifiers in the metabolite form instantly rewrites the reaction equation of the associated reactions.</p>
 <p>Creating big models by adding single reactions is very cumbersome.
 Therefore CNApy allows you to create a new project from an SBML file.
-You find the point New project from SBML in the Project menu.</p>
+You find the point <em>New project from SBML</em> in the <em>Project</em> menu.</p>
 <p>After importing an SBML model the reaction list is populated with all the reactions from the model.</p>
 <p>You can add a map to our project, by going to the map menu and clicking add new map.</p>
 <p>From the map menu we can also change the background image of our map.</p>
@@ -276,25 +276,63 @@ If you want to move all reaction boxes together, press <code class="grey">Ctrl</
 CNApy allows you to load and save reaction box positions.
 This facilitates reuse among similar projects.</p>
 <p>The size of the background image can be adjusted with the shortcuts <code class="grey">Ctrl</code> + <code class="grey">Shift</code> + <code class="grey">+</code> and <code class="grey">Ctrl</code> + <code class="grey">Shift</code> + <code class="grey">-</code>.</p>
-<p>To save a project click Save Project as in the Project menu.
-It is important to add the dot CNA extension to the file name.
+<p>To save a project click <em>Save Project as</em> in the <em>Project</em> menu.
+It is important to add the <code>.cna</code> extension to the file name.
 This way your files can be found by CNApy.</p>
 <h2 id="scenarios">Scenarios</h2>
 <p>In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
 In essence a scenario is a set of flux constraints for a set of reactions.
 These constraints can fix the flux of a reaction or constraint lower and upper bounds for the flux.</p>
 <p>The scenario can be edited via the map, by entering values into the corresponding reaction boxes.
-Accepted values are either a single float like <code>1.2</code> or a pair of floats like <code>(-10, 1.2)</code>.
-A single float fixes the flux of the reaction to this value.
-While a pair sets the lower flux bound of the reaction to the first value and the upper flux bound to the second value.</p>
+Accepted values are either a single float like <code>1.5</code> or a pair of floats like <code>(-10, 1.2)</code>.
+A single float fixes the flux of the reaction to this value (<code>1.5</code>).
+While a pair sets the lower flux bound of the reaction to the first value (<code>-10</code>) and the upper flux bound to the second value (<code>1.2</code>).</p>
+<div id="fig:scenario-box" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/scenario-box.png" alt="Figure 4: Reaction box with scenario value." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Reaction box with scenario value.</strong></figcaption>
+</figure>
+</div>
 <p>Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
 The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.</p>
 <p>To remove the constraints on a reaction simply delete the scenario value in the reaction box.</p>
-<p>You can save and load scenarios as <em>.scen files. One scenario can be set as the default scenario of your project.
-This can be done via </em>set current scenario as default scenario* in the Scenario menu.
+<p>You can save and load scenarios as <code>*.scen</code> files. One scenario can be set as the default scenario of your project.
+This can be done via <em>set current scenario as default scenario</em> in the <em>Scenario</em> menu.
 The project must then be saved, and the next time you open the project the scenario is already set.</p>
 <p>CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
 You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model’s reaction bounds to the current scenario values.</p>
+<h2 id="analysing-a-metabolic-model">Analysing a metabolic model</h2>
+<h3 id="flux-balance-analysis-fba">Flux balance analysis (FBA)</h3>
+<p>Optimizes the value of the current objective function and shows a flux distribution that realizes this optimum.
+The objective function is a linear function over the reaction rates in the network, its coefficients can be modified in the reaction dialogs.
+To display the current objective function in the console you can call “Show optimization function” from the analysis menu.
+Note that the flux distribution calculated by FBA is usually not unique.</p>
+<h3 id="parsimonious-fba-pfba">Parsimonious FBA (pFBA)</h3>
+<p>In parsimonious FBA first the objective function optimized and then with this optimum as additional constraint the sum of the fluxes in the network is minimized.
+This has the advantage that redundant internal cyclic fluxes are suppressed and that a lot of reactions will have zero flux which makes the solution easier to understand.</p>
+<h3 id="flux-variability-analysis-fva">Flux variability analysis (FVA)</h3>
+<p>In FVA the maximal/minimal rate of each reaction is calculated.
+This gives the possible flux range for each reaction.</p>
+<h3 id="elementary-modes-efmelementary-flux-vectors-efv">Elementary modes (EFM)/elementary flux vectors (EFV)</h3>
+<p>EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required.</p>
+<h4 id="options-for-cna-and-efmtool">Options for CNA and efmtool</h4>
+<p>When reactions are marked with 0 flux in a scenario and the option “consider 0 in current scenario as off” is activated then only the subset of EFM/EFV is calculated in which these reactions do not participate</p>
+<h4 id="additional-options-for-cna">Additional options for CNA</h4>
+<h4 id="use-flux-bounds-to-calculate-elementary-flux-vectors">use flux bounds to calculate elementary flux vectors</h4>
+<p>To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
+<div id="fig:efm-dialog" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/efm-dialog.png" alt="Figure 5: Elementary Flux Mode Computation Dialog." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Elementary Flux Mode Computation Dialog.</strong></figcaption>
+</figure>
+</div>
+<h4 id="check-reversibility">check reversibility</h4>
+<p>Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.</p>
+<h5 id="only-convex-basis">only convex basis</h5>
+<p>Currently has no effect (need to be able to switch computation method first).</p>
+<h5 id="consider-isozymes-only-once">consider isozymes only once</h5>
+<p>If a group of reactions has the same stoichiometry then only the modes with one representative of that group are calculated.</p>
+<h5 id="use-rational-numbers">use rational numbers</h5>
+<p>Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
+To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
 Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</em></p>
 <h2 id="basic-formatting">Basic formatting</h2>
@@ -370,10 +408,10 @@ two spaces at end of line.</p>
 Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
 <p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
 <h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
-<p>Figure <a href="#fig:square-image">4</a></p>
-<p>Figure <a href="#fig:wide-image">5</a></p>
-<p>Figure <a href="#fig:tall-image">6</a></p>
-<p>Figure <a href="#fig:vector-image">7</a></p>
+<p>Figure <a href="#fig:square-image">6</a></p>
+<p>Figure <a href="#fig:wide-image">7</a></p>
+<p>Figure <a href="#fig:tall-image">8</a></p>
+<p>Figure <a href="#fig:vector-image">9</a></p>
 <p>Table <a href="#tbl:bowling-scores">1</a></p>
 <p>Equation <a href="#eq:regular-equation">1</a></p>
 <p>Equation <a href="#eq:long-equation">2</a></p>
@@ -402,25 +440,25 @@ Exporting PDF manuscript</code></pre>
 <h2 id="figures">Figures</h2>
 <div id="fig:square-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 4: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 6: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>A square image at actual size and with a bottom caption.</strong>
 Loaded from the latest version of image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:wide-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 5: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>An image too wide to fit within page at full size.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 7: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>An image too wide to fit within page at full size.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:tall-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 6: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>A tall image with a specified height.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 8: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 8:</span> <strong>A tall image with a specified height.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:vector-image" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 7: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 9: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 9:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
 The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
 White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
 </figure>
@@ -502,7 +540,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:040c8454-0bed-4d84-b1c1-ed995b965357" class="tablenos">
+<div id="tbl:154eaeca-4615-4ffc-a9ed-3b6890ade520" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
