@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205/))
+([permalink](https://cnapy-org.github.io/users-guide/v/a3fe605398533e48e550f0caf8ecb153893ad6f0/))
 was automatically generated
-from [cnapy-org/users-guide@5f2864b](https://github.com/cnapy-org/users-guide/tree/5f2864b4fd8b7a56493b985c7c60b3a3dc5c3205)
+from [cnapy-org/users-guide@a3fe605](https://github.com/cnapy-org/users-guide/tree/a3fe605398533e48e550f0caf8ecb153893ad6f0)
 on July 8, 2021.
 </em></small>
 
@@ -277,7 +277,7 @@ CNApy implements an edit history for the scenario with the tool buttons you can 
 You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model's reaction bounds to the current scenario values.
 
 
-## Analysing a metabolic model
+## Analysis functions
 
 ### Flux balance analysis (FBA)
 
@@ -329,6 +329,62 @@ If a group of reactions has the same stoichiometry then only the modes with one 
 
 Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
 To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints. A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.
+
+### Minimal cut sets
+
+Minimal cut sets (MCS) can be calculated in CNApy using the dual method.
+
+
+![
+**Minimal cut sets computation dialog.**
+](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/mcs-dialog.png "Minimal cut sets computation dialog"){#fig:mcs-dialog}
+
+- Target and Desired region(s)
+
+For the dual method one or more target regions must be defined which describe the network behaviour that is to be suppressed.
+In addition, one or more desired regions may be defined which describe the network behaviour that is to be preserved.
+Each target/desired region is defined by a set of linear equality constraints over the reaction rates in the network.
+All target and desired regions must be initially feasible or an error will be raised. Also make sure that 0 is not included in any target or desired region (0 as target cannot be suppressed and 0 as desired is always fulfilled).
+
+Note that all non-default reaction bounds (as defined by cobra.Configuration().bounds) are automatically added to all target and desired regions before MCS computation.
+
+- Solver
+
+MCS can either be calculated via CNA (using either Octave or Matlab) or via optlang using different MILP solvers.
+For CNA the solver must be chosen while optlang uses the solver for the current model (cf. Solver for current model).
+Not all variants and solvers allow for the same options so these will partly be disabled depending on the chosen solver.
+
+- Max. solutions
+
+Maximal number of MCS to calculate.
+
+- Max. size
+
+Only calculate MCS which consists of up to this number of cuts.
+
+- Time limit
+
+Do not run the search for longer than this limit.
+It is strongly recommended to use this parameter because MCS computation can take very long especially when searching for smallest MCS.
+
+- MCS search
+
+MCS can be enumerated iteratively, either the smallest first (least number of cuts) or any MCS (up to the number of cuts given by max. size).
+With the latter option new MCS are found more quickly but may not be the smallest.
+
+With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed. In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but often faster.
+
+- Gene KOs (CNA only)
+
+If the model contains the gene-reaction association, search for gene knock-outs instead of reaction knock-outs.
+
+- Exclude boundary reactions as cuts (optlang only)
+
+Do not allow knock-out of boundary reactions (reactions that cross the system boundary, e.g. exchange reactions).
+
+- Consider constraints given by scenario
+
+Take reaction bounds set by the current scenario into account for all target and desired regions.
 
 
 
