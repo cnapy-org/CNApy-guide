@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -153,9 +153,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/d979e0d78ae97d2cbcbc5afd958e675f7639bf34/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/ea04570f2f043b784a8abbfa0a67fc9b5b396d69/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/d979e0d78ae97d2cbcbc5afd958e675f7639bf34">cnapy-org/users-guide@d979e0d</a>
+from <a href="https://github.com/cnapy-org/users-guide/tree/ea04570f2f043b784a8abbfa0a67fc9b5b396d69">cnapy-org/users-guide@ea04570</a>
 on July 8, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -227,6 +227,30 @@ If all checks are successful green check marks are shown, if a check fails a red
 <p>If no check can be performed, a yellow question mark is shown.
 For example, the check of the CNA directory needs a working Matlab or Octave installation.</p>
 <p>You can also configure which colors CNApy should use to highlight reactions on the map or in the reaction list.</p>
+<h2 id="user-interface-overview">User interface overview</h2>
+<p>This section gives an introduction to the CNApy UI and its components and functions.</p>
+<p>When we have finished our first configuration we are greeted with a window like this.</p>
+<div id="fig:empty-project" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/empty-project.png" alt="Figure 2: CNApy with an empty project." /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>CNApy with an empty project.</strong></figcaption>
+</figure>
+</div>
+<p>This is an empty project on the right hand side we see the empty lists of reactions and metabolites.
+On the left we see the embedded Jupyter Console where one can interact programmatically with the model and UI.
+We can create a new project by importing SBML models, editing the reactions and adding graphical maps.
+We can also load one of the projects included in our projects repository.</p>
+<p>Let’s go to Project in our menubar and open the <code>ECC2comp.cna</code> project.</p>
+<div id="fig:ecc2-project" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/ecc2comp-project.png" alt="Figure 3: CNApy with the ECC2comp project." /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>CNApy with the ECC2comp project.</strong></figcaption>
+</figure>
+</div>
+<p>In this picture we see CNApy with the open ECC2comp project.
+On the right hand side (1) we see the populated reactions and metabolites lists with the color coded current values and corresponding details for the selected reaction/metabolite.
+The reactions list contains buttons that lets us add/delete reactions to/from the model.
+The console (2) now shows the output of some computations, and above the console we have a map view (3) with a graphical representation of our network.
+On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.</p>
+<p>We can add new maps via the Map menu, and drag reactions from the reaction list onto the desired position on the map.</p>
 <p><em>The rest of this document is a full list of formatting elements/features supported by Manubot.
 Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</em></p>
 <h2 id="basic-formatting">Basic formatting</h2>
@@ -302,10 +326,10 @@ two spaces at end of line.</p>
 Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
 <p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
 <h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
-<p>Figure <a href="#fig:square-image">2</a></p>
-<p>Figure <a href="#fig:wide-image">3</a></p>
-<p>Figure <a href="#fig:tall-image">4</a></p>
-<p>Figure <a href="#fig:vector-image">5</a></p>
+<p>Figure <a href="#fig:square-image">4</a></p>
+<p>Figure <a href="#fig:wide-image">5</a></p>
+<p>Figure <a href="#fig:tall-image">6</a></p>
+<p>Figure <a href="#fig:vector-image">7</a></p>
 <p>Table <a href="#tbl:bowling-scores">1</a></p>
 <p>Equation <a href="#eq:regular-equation">1</a></p>
 <p>Equation <a href="#eq:long-equation">2</a></p>
@@ -334,25 +358,25 @@ Exporting PDF manuscript</code></pre>
 <h2 id="figures">Figures</h2>
 <div id="fig:square-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 2: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 4: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>A square image at actual size and with a bottom caption.</strong>
 Loaded from the latest version of image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:wide-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 3: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>An image too wide to fit within page at full size.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 5: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>An image too wide to fit within page at full size.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:tall-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 4: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>A tall image with a specified height.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 6: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>A tall image with a specified height.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:vector-image" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 5: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 7: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
 The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
 White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
 </figure>
@@ -434,7 +458,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:ccab2489-aeda-4c19-8e18-5038bef3b82a" class="tablenos">
+<div id="tbl:6348530f-b67f-4e53-be74-8f903351ce7e" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
