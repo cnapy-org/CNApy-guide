@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/))
 was automatically generated
-from [cnapy-org/CNApy-guide@1a44a55](https://github.com/cnapy-org/CNApy-guide/tree/1a44a5539062161404be96b77a31faf76c36453f)
+from [cnapy-org/CNApy-guide@7985e3b](https://github.com/cnapy-org/CNApy-guide/tree/7985e3b98ae96c77284649f7764b443e82c6bc79)
 on August 13, 2021.
 </em></small>
 
@@ -265,7 +265,7 @@ While a pair sets the lower flux bound of the reaction to the first value (`-10`
 
 ![
 **Reaction box with scenario value.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/scenario-box.png "Reaction box with scenario value"){#fig:scenario-box}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-box.png "Reaction box with scenario value"){#fig:scenario-box}
 
 Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
 The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.

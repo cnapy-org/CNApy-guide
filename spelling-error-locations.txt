@@ -78,6 +78,7 @@ content/06.create-project.md:43:CNApy
 content/07.scenarios.md:3:CNApy
 content/07.scenarios.md:3:FBA
 content/07.scenarios.md:14:cnapy
+content/07.scenarios.md:14:CNApy
 content/07.scenarios.md:25:CNApy
 content/08.applications.md:3:FBA
 content/08.applications.md:6:dialogs
