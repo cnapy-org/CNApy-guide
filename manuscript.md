@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/))
 was automatically generated
-from [cnapy-org/CNApy-guide@b078af1](https://github.com/cnapy-org/CNApy-guide/tree/b078af159746f06e48ce2d6e8aa421f6a645fc3a)
+from [cnapy-org/CNApy-guide@f131013](https://github.com/cnapy-org/CNApy-guide/tree/f131013d30e4b9ff3d8bcc732305257bb40f605c)
 on August 13, 2021.
 </em></small>
 
