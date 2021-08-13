@@ -30,6 +30,7 @@ MCS
 menubar
 MILP
 MILPs
+miniconda
 modelling
 optlang
 pFBA

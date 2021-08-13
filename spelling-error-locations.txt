@@ -23,6 +23,8 @@ content/02.introduction.md:29:CNApy
 content/03.installation.md:3:CNApy
 content/03.installation.md:3:conda
 content/03.installation.md:3:conda
+content/03.installation.md:3:miniconda
+content/03.installation.md:3:miniconda
 content/03.installation.md:5:conda
 content/03.installation.md:8:cnapy
 content/03.installation.md:8:cnapy
