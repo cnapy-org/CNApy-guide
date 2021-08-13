@@ -115,6 +115,7 @@ content/08.applications.md:55:inhomogeneous
 content/08.applications.md:60:CNApy
 content/08.applications.md:60:MCS
 content/08.applications.md:64:cnapy
+content/08.applications.md:64:CNApy
 content/08.applications.md:64:mcs
 content/08.applications.md:64:mcs
 content/08.applications.md:68:behaviour
@@ -145,12 +146,16 @@ content/08.applications.md:102:CNA
 content/08.applications.md:102:KOs
 content/08.applications.md:106:optlang
 content/08.applications.md:118:cnapy
+content/08.applications.md:118:CNApy
 content/08.applications.md:130:cnapy
+content/08.applications.md:130:CNApy
 content/08.applications.md:137:FBA
 content/08.applications.md:145:cnapy
+content/08.applications.md:145:CNApy
 content/08.applications.md:150:COBRApy
 content/08.applications.md:153:COBRApy
 content/08.applications.md:154:cnapy
+content/08.applications.md:154:CNApy
 content/08.applications.md:154:cobrapy
 content/08.applications.md:154:cobrapy
 content/08.applications.md:154:COBRApy

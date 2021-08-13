@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/))
 was automatically generated
-from [cnapy-org/CNApy-guide@8c17456](https://github.com/cnapy-org/CNApy-guide/tree/8c1745674ff2c7495166b94d7916177290306bad)
+from [cnapy-org/CNApy-guide@74837f2](https://github.com/cnapy-org/CNApy-guide/tree/74837f23f0851eae61f7c4e269cd62d11db0faf8)
 on August 13, 2021.
 </em></small>
 
@@ -306,7 +306,7 @@ EFM can be calculated via CNA or directly via efmtool while for EFV CNA is requi
 
 ![
 **Elementary Flux Mode Computation Dialog.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/efm-dialog.png "Elementary Flux Mode Computation Dialog"){#fig:efm-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApys-guide/main/content/images/efm-dialog.png "Elementary Flux Mode Computation Dialog"){#fig:efm-dialog}
 
 #### Options for CNA and efmtool
 
@@ -343,7 +343,7 @@ Minimal cut sets (MCS) can be calculated in CNApy using the dual method.
 
 ![
 **Minimal cut sets computation dialog.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/mcs-dialog.png "Minimal cut sets computation dialog"){#fig:mcs-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/mcs-dialog.png "Minimal cut sets computation dialog"){#fig:mcs-dialog}
 
 - Target and Desired region(s)
 
@@ -397,7 +397,7 @@ Take reaction bounds set by the current scenario into account for all target and
 
 ![
 **Yield optimization dialog.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/yield-optimization-dialog.png "Yield optimization dialog"){#fig:yield-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/yield-optimization-dialog.png "Yield optimization dialog"){#fig:yield-dialog}
 
 Maximizes the value of a yield function *c/d* where *c* and *d* are linear expressions over the fluxes in the network.
 For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
@@ -409,7 +409,7 @@ A typical application would be the maximization of a product yield: When the exc
 
 ![
 **Phase plane plot dialog.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/phase-plane-dialog.png "Phase plane plot dialog"){#fig:phase-plane-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/phase-plane-dialog.png "Phase plane plot dialog"){#fig:phase-plane-dialog}
 
 Creates a plot (in the console) that shows the projection of the solution space onto a two-dimensional plane of two selected reaction rates.
 The flux values of the current scenario are taken into account during the calculations.
@@ -424,7 +424,7 @@ You can either call this function from the Analysis menu and specify a metabolit
 
 ![
 **Clipboard calculator.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/clipboard-calculator.png "Clipboard calculator"){#fig:clipboard-calc}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/clipboard-calculator.png "Clipboard calculator"){#fig:clipboard-calc}
 
 The clipboard calculator allows you to perform arithmetic operations with the values stored in the clipboard, the current reaction rates or a fixed value that you can enter in this dialog.
 The result of the operation replaces the current flux values.
@@ -433,7 +433,7 @@ The result of the operation replaces the current flux values.
 
 ![
 **COBRApy configuration dialog.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/cobrapy-config-dialog.png "COBRApy configuration dialog"){#fig:cobrapy-config}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/cobrapy-config-dialog.png "COBRApy configuration dialog"){#fig:cobrapy-config}
 
 
 With this dialog selected global settings (`class cobra.Configuration()`) of the COBRApy toolbox and selected parameters of the current model can be modified. The global settings are saved, but the parameters of the current model are not and will revert to the global default values are (re-)loading a model.
@@ -472,6 +472,7 @@ Here you can change the tolerance for the current model. You may enter an arbitr
 - accessing the COBRApy Model
 - accessing scenario and computed values
 - accessing the CNApy UI
+
 
 ## References {.page_break_before}
 
