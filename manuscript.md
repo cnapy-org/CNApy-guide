@@ -31,15 +31,15 @@ header-includes: |-
   <meta name="citation_author_orcid" content="0000-0002-5812-6963" />
   <meta name="citation_author" content="Axel von Kamp" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
-  <link rel="canonical" href="https://cnapy-org.github.io/users-guide/" />
-  <meta property="og:url" content="https://cnapy-org.github.io/users-guide/" />
-  <meta property="twitter:url" content="https://cnapy-org.github.io/users-guide/" />
-  <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
-  <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/manuscript.pdf" />
+  <link rel="canonical" href="https://cnapy-org.github.io/CNApy-guide/" />
+  <meta property="og:url" content="https://cnapy-org.github.io/CNApy-guide/" />
+  <meta property="twitter:url" content="https://cnapy-org.github.io/CNApy-guide/" />
+  <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
+  <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/b078af159746f06e48ce2d6e8aa421f6a645fc3a/))
 was automatically generated
-from [cnapy-org/users-guide@8c0cfc0](https://github.com/cnapy-org/users-guide/tree/8c0cfc031012ce1db53a42763cd37541d4311054)
+from [cnapy-org/CNApy-guide@b078af1](https://github.com/cnapy-org/CNApy-guide/tree/b078af159746f06e48ce2d6e8aa421f6a645fc3a)
 on August 13, 2021.
 </em></small>
 
