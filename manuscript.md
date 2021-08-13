@@ -1,5 +1,5 @@
 ---
-title: CNApy Users Guide
+title: CNApy Guide
 keywords:
 - constraint-programming
 - metabolic-models
@@ -14,10 +14,10 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="CNApy Users Guide" />
-  <meta name="citation_title" content="CNApy Users Guide" />
-  <meta property="og:title" content="CNApy Users Guide" />
-  <meta property="twitter:title" content="CNApy Users Guide" />
+  <meta name="dc.title" content="CNApy Guide" />
+  <meta name="citation_title" content="CNApy Guide" />
+  <meta property="og:title" content="CNApy Guide" />
+  <meta property="twitter:title" content="CNApy Guide" />
   <meta name="dc.date" content="2021-08-13" />
   <meta name="citation_publication_date" content="2021-08-13" />
   <meta name="dc.language" content="en-US" />
@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/007ca42d15c5af9a61aec5f83c783f41dc9061f2/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/007ca42d15c5af9a61aec5f83c783f41dc9061f2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/007ca42d15c5af9a61aec5f83c783f41dc9061f2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/7985e3b98ae96c77284649f7764b443e82c6bc79/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/007ca42d15c5af9a61aec5f83c783f41dc9061f2/))
 was automatically generated
-from [cnapy-org/CNApy-guide@7985e3b](https://github.com/cnapy-org/CNApy-guide/tree/7985e3b98ae96c77284649f7764b443e82c6bc79)
+from [cnapy-org/CNApy-guide@007ca42](https://github.com/cnapy-org/CNApy-guide/tree/007ca42d15c5af9a61aec5f83c783f41dc9061f2)
 on August 13, 2021.
 </em></small>
 
@@ -157,7 +157,7 @@ When we start CNApy for the first time we are greeted with a dialog like this.
 
 ![
 **CNApy Configuration dialog.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/config-dialog.png "Configuration dialog"){#fig:config-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/config-dialog.png "Configuration dialog"){#fig:config-dialog}
 
 With this dialog you can configure which Matlab/Octave installation CNApy should use.
 

@@ -43,6 +43,7 @@ content/03.installation.md:23:CNApy
 content/04.configuration.md:3:CNApy
 content/04.configuration.md:6:CNApy
 content/04.configuration.md:7:cnapy
+content/04.configuration.md:7:CNApy
 content/04.configuration.md:9:CNApy
 content/04.configuration.md:11:CellNetAnalyzer
 content/04.configuration.md:11:CNApy
