@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/f131013d30e4b9ff3d8bcc732305257bb40f605c/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/8c1745674ff2c7495166b94d7916177290306bad/))
 was automatically generated
-from [cnapy-org/CNApy-guide@f131013](https://github.com/cnapy-org/CNApy-guide/tree/f131013d30e4b9ff3d8bcc732305257bb40f605c)
+from [cnapy-org/CNApy-guide@8c17456](https://github.com/cnapy-org/CNApy-guide/tree/8c1745674ff2c7495166b94d7916177290306bad)
 on August 13, 2021.
 </em></small>
 
@@ -98,12 +98,12 @@ on August 13, 2021.
 
 This is the user manual of CNApy. CNApy is a graphical interface for the modelling and analysis of metabolic networks on the basis of constraint-based (stoichiometric) modeling approaches. It allows
 
-- the import/export of SBML models
-- creating COBRApy/CNA models
-- linking a graphical representation to the model data
-- convenient exploration and  editing of the model
-- model analysis with standard and advanced constraint-based methods
-- and saving everything as a CNApy *.cna project
+- Importing/exporting  SBML models
+- Creating COBRApy/CNA models
+- Linking a graphical representation to model data
+- Convenient exploration and editing of the model
+- Model analysis with standard and advanced constraint-based methods, and
+- Saving everything as a CNApy *.cna project
 
 The methods provided for model analysis (some of them are part of CNApy but most are functions from CNA and COBRApy) include:
 
