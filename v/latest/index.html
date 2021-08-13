@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Sven Thiele" />
   <meta name="author" content="Axel von Kamp" />
-  <meta name="dcterms.date" content="2021-07-08" />
+  <meta name="dcterms.date" content="2021-08-13" />
   <meta name="keywords" content="constraint-programming, metabolic-models" />
   <title>CNApy Users Guide</title>
   <style>
@@ -111,8 +111,8 @@
   <meta name="citation_title" content="CNApy Users Guide" />
   <meta property="og:title" content="CNApy Users Guide" />
   <meta property="twitter:title" content="CNApy Users Guide" />
-  <meta name="dc.date" content="2021-07-08" />
-  <meta name="citation_publication_date" content="2021-07-08" />
+  <meta name="dc.date" content="2021-08-13" />
+  <meta name="citation_publication_date" content="2021-08-13" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/153ea840f17deb7bc8b763ac826ab06ee1a800f4/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/153ea840f17deb7bc8b763ac826ab06ee1a800f4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/153ea840f17deb7bc8b763ac826ab06ee1a800f4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -146,10 +146,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/users-guide/v/153ea840f17deb7bc8b763ac826ab06ee1a800f4/">permalink</a>)
+(<a href="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/users-guide/tree/153ea840f17deb7bc8b763ac826ab06ee1a800f4">cnapy-org/users-guide@153ea84</a>
-on July 8, 2021.
+from <a href="https://github.com/cnapy-org/users-guide/tree/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac">cnapy-org/users-guide@7522a8d</a>
+on August 13, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -194,7 +194,7 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 <p>For feature requests and bug reports please use our <a href="https://github.com/cnapy-org/CNApy/issues">Issue tracker</a></p>
 <p>Thank you for using CNApy!</p>
 <h2 id="installation">Installation</h2>
-<p>The easiest way to install CNApy is using conda. First install conda and then:</p>
+<p>The easiest way to install CNApy is using the conda package manager. First install <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> and then:</p>
 <ul>
 <li><p>Create a conda environment with all dependencies</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> cnapy-1.0.0 <span class="at">-c</span> conda-forge <span class="at">-c</span> cnapy cnapy=1.0.0</span></code></pre></div></li>
@@ -319,7 +319,7 @@ This gives the possible flux range for each reaction.</p>
 <ul>
 <li><p>use flux bounds to calculate elementary flux vectors
 To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
-A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p></li>
+A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.</p></li>
 <li><p>check reversibility</p></li>
 </ul>
 <p>Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.</p>
@@ -337,7 +337,7 @@ A flux bound is only included when its absolute value is greater than the value 
 <p>Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
 To calculate EFV instead of EFM, activate this option.
 Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
-A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained.”</p>
+A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.</p>
 <h3 id="minimal-cut-sets">Minimal cut sets</h3>
 <p>Minimal cut sets (MCS) can be calculated in CNApy using the dual method.</p>
 <div id="fig:mcs-dialog" class="fignos">
