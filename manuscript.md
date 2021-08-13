@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/users-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/users-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/users-guide/v/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac/))
+([permalink](https://cnapy-org.github.io/users-guide/v/8c0cfc031012ce1db53a42763cd37541d4311054/))
 was automatically generated
-from [cnapy-org/users-guide@7522a8d](https://github.com/cnapy-org/users-guide/tree/7522a8d9a082a2f94f76dd1c026e53e1ccbd27ac)
+from [cnapy-org/users-guide@8c0cfc0](https://github.com/cnapy-org/users-guide/tree/8c0cfc031012ce1db53a42763cd37541d4311054)
 on August 13, 2021.
 </em></small>
 
@@ -196,8 +196,11 @@ Let’s go to Project in our menubar and open the `ECC2comp.cna` project.
 
 
 In this picture we see CNApy with the open ECC2comp project.
-On the right hand side (1) we see the populated reactions and metabolites lists with the color coded current values and corresponding details for the selected reaction/metabolite.
+On the right hand side (1) we see the populated reactions and metabolites lists with the color coded current values and a form with corresponding details for the selected reaction/metabolite.
 The reactions list contains buttons that lets us add/delete reactions to/from the model.
+Changing the metabolite identifier or other details in the metabolite/reaction form has an instant effect on the corresponding reactions/metabolites in the model.
+
+
 The console (2) now shows the output of some computations, and above the console we have a map view (3) with a graphical representation of our network.
 On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.
 
