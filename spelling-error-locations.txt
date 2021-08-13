@@ -55,6 +55,7 @@ content/05.ui-overview.md:3:CNApy
 content/05.ui-overview.md:3:UI
 content/05.ui-overview.md:8:CNApy
 content/05.ui-overview.md:9:cnapy
+content/05.ui-overview.md:9:CNApy
 content/05.ui-overview.md:12:Jupyter
 content/05.ui-overview.md:12:programmatically
 content/05.ui-overview.md:12:UI
@@ -63,6 +64,7 @@ content/05.ui-overview.md:16:cna
 content/05.ui-overview.md:16:menubar
 content/05.ui-overview.md:19:CNApy
 content/05.ui-overview.md:20:cnapy
+content/05.ui-overview.md:20:CNApy
 content/05.ui-overview.md:23:CNApy
 content/05.ui-overview.md:30:CNApy
 content/06.create-project.md:6:CNApy

@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/74837f23f0851eae61f7c4e269cd62d11db0faf8/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/1a44a5539062161404be96b77a31faf76c36453f/))
 was automatically generated
-from [cnapy-org/CNApy-guide@74837f2](https://github.com/cnapy-org/CNApy-guide/tree/74837f23f0851eae61f7c4e269cd62d11db0faf8)
+from [cnapy-org/CNApy-guide@1a44a55](https://github.com/cnapy-org/CNApy-guide/tree/1a44a5539062161404be96b77a31faf76c36453f)
 on August 13, 2021.
 </em></small>
 
@@ -181,7 +181,7 @@ When we have finished our first configuration we are greeted with a window like 
 
 ![
 **CNApy with an empty project.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/empty-project.png "Empty project"){#fig:empty-project}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/empty-project.png "Empty project"){#fig:empty-project}
 
 This is an empty project on the right hand side we see the empty lists of reactions and metabolites.
 On the left we see the embedded Jupyter Console where one can interact programmatically with the model and UI.
@@ -192,7 +192,7 @@ Let’s go to Project in our menubar and open the `ECC2comp.cna` project.
 
 ![
 **CNApy with the ECC2comp project.**
-](https://raw.githubusercontent.com/cnapy-org/users-guide/main/content/images/ecc2comp-project.png "ECC2comp project"){#fig:ecc2-project}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/ecc2comp-project.png "ECC2comp project"){#fig:ecc2-project}
 
 
 In this picture we see CNApy with the open ECC2comp project.
