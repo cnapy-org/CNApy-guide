@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/4f4eccc245567508039c526154784b5d1267d76e/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/4f4eccc245567508039c526154784b5d1267d76e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/4f4eccc245567508039c526154784b5d1267d76e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/4f4eccc245567508039c526154784b5d1267d76e/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/))
 was automatically generated
-from [cnapy-org/CNApy-guide@4f4eccc](https://github.com/cnapy-org/CNApy-guide/tree/4f4eccc245567508039c526154784b5d1267d76e)
+from [cnapy-org/CNApy-guide@2043bbd](https://github.com/cnapy-org/CNApy-guide/tree/2043bbd9758c808b506fdf0b88efe844b3cd6431)
 on August 20, 2021.
 </em></small>
 
@@ -302,11 +302,11 @@ This gives the possible flux range for each reaction.
 
 ### Elementary modes (EFM)/elementary flux vectors (EFV)
 
-EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required.
+EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a [navigation panel](#emfmcs-navigation-and-analysis) appears to acces the results.
 
 ![
 **Elementary Flux Mode Computation Dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApys-guide/main/content/images/efm-dialog.png "Elementary Flux Mode Computation Dialog"){#fig:efm-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/efm-dialog.png "Elementary Flux Mode Computation Dialog"){#fig:efm-dialog}
 
 #### Options for CNA and efmtool
 
@@ -339,7 +339,7 @@ A flux bound is only included when its absolute value is greater than the value 
 
 ### Minimal cut sets
 
-Minimal cut sets (MCS) can be calculated in CNApy using the dual method.
+Minimal cut sets (MCS) can be calculated in CNApy using the dual method. After calculation a [navigation panel](#emfmcs-navigation-and-analysis) appears to acces the results.
 
 ![
 **Minimal cut sets computation dialog.**
@@ -392,6 +392,26 @@ Do not allow knock-out of boundary reactions (reactions that cross the system bo
 - Consider constraints given by scenario
 
 Take reaction bounds set by the current scenario into account for all target and desired regions.
+
+### EMF/MCS Navigation and analysis
+
+After the computation of EFM or MCS a navigation panel appears below the map. With this you can browse through the results, select a subset of the modes/MCS and show some statistics. There is also a button for saving the results and one to clear them and close the navigation panel.
+
+![
+**Mode/MCS Navigation Panel.**
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/mode-navigator.png "Mode/MCS Navigation Panel"){#fig:navigator}
+
+- Select...
+
+In this text field you can enter a comma-separated list of reaction IDs. After pressing "Enter" on the keyboard the subset of modes/MCS is shown in which all specified reactions occur. If you prepend a reaction ID with an exclamation mark (e.g. !R1) this means that the specified reaction must not participate in selected the modes/MCS. To revert the selection click on the clear button embedded in the text field.
+
+- Reaction participation
+
+Calculate the relative participation of each reaction in the currently selected modes/MCS. The results are shown in the reaction boxes and the "Flux" column of the reaction list.
+
+- Size histogram
+
+Calculate the pathway lengths/number of reactions of the currently selected modes/MCS. The result is shown as a size historam in the integrated Jupyter console.
 
 ### Yield optimization
 
