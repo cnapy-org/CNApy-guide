@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Sven Thiele" />
   <meta name="author" content="Axel von Kamp" />
-  <meta name="dcterms.date" content="2021-08-20" />
+  <meta name="dcterms.date" content="2021-08-23" />
   <meta name="keywords" content="constraint-programming, metabolic-models" />
   <title>CNApy Guide</title>
   <style>
@@ -111,8 +111,8 @@
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2021-08-20" />
-  <meta name="citation_publication_date" content="2021-08-20" />
+  <meta name="dc.date" content="2021-08-23" />
+  <meta name="citation_publication_date" content="2021-08-23" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -146,10 +146,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/2043bbd9758c808b506fdf0b88efe844b3cd6431">cnapy-org/CNApy-guide@2043bbd</a>
-on August 20, 2021.
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/fa37f1062affae45d5ca5d7186b1313e62813af9">cnapy-org/CNApy-guide@fa37f10</a>
+on August 23, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -308,7 +308,7 @@ This has the advantage that redundant internal cyclic fluxes are suppressed and 
 <p>In FVA the maximal/minimal rate of each reaction is calculated.
 This gives the possible flux range for each reaction.</p>
 <h3 id="elementary-modes-efmelementary-flux-vectors-efv">Elementary modes (EFM)/elementary flux vectors (EFV)</h3>
-<p>EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a <a href="#emfmcs-navigation-and-analysis">navigation panel</a> appears to acces the results.</p>
+<p>EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a <a href="#efmmcs-navigation-and-analysis">navigation panel</a> appears to acces the results.</p>
 <div id="fig:efm-dialog" class="fignos">
 <figure>
 <img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/efm-dialog.png" alt="Figure 5: Elementary Flux Mode Computation Dialog." /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Elementary Flux Mode Computation Dialog.</strong></figcaption>
@@ -392,7 +392,7 @@ In addition, with these solvers a continuous search mode is possible which is si
 <li>Consider constraints given by scenario</li>
 </ul>
 <p>Take reaction bounds set by the current scenario into account for all target and desired regions.</p>
-<h3 id="emfmcs-navigation-and-analysis">EMF/MCS Navigation and analysis</h3>
+<h3 id="efmmcs-navigation-and-analysis">EFM/MCS Navigation and analysis</h3>
 <p>After the computation of EFM or MCS a navigation panel appears below the map. With this you can browse through the results, select a subset of the modes/MCS and show some statistics. There is also a button for saving the results and one to clear them and close the navigation panel.</p>
 <div id="fig:navigator" class="fignos">
 <figure>
