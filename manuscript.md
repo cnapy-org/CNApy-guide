@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2021-08-20'
+date-meta: '2021-08-23'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2021-08-20" />
-  <meta name="citation_publication_date" content="2021-08-20" />
+  <meta name="dc.date" content="2021-08-23" />
+  <meta name="citation_publication_date" content="2021-08-23" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +61,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/2043bbd9758c808b506fdf0b88efe844b3cd6431/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/))
 was automatically generated
-from [cnapy-org/CNApy-guide@2043bbd](https://github.com/cnapy-org/CNApy-guide/tree/2043bbd9758c808b506fdf0b88efe844b3cd6431)
-on August 20, 2021.
+from [cnapy-org/CNApy-guide@fa37f10](https://github.com/cnapy-org/CNApy-guide/tree/fa37f1062affae45d5ca5d7186b1313e62813af9)
+on August 23, 2021.
 </em></small>
 
 ## Authors
@@ -302,7 +302,7 @@ This gives the possible flux range for each reaction.
 
 ### Elementary modes (EFM)/elementary flux vectors (EFV)
 
-EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a [navigation panel](#emfmcs-navigation-and-analysis) appears to acces the results.
+EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a [navigation panel](#efmmcs-navigation-and-analysis) appears to acces the results.
 
 ![
 **Elementary Flux Mode Computation Dialog.**
@@ -393,7 +393,7 @@ Do not allow knock-out of boundary reactions (reactions that cross the system bo
 
 Take reaction bounds set by the current scenario into account for all target and desired regions.
 
-### EMF/MCS Navigation and analysis
+### EFM/MCS Navigation and analysis
 
 After the computation of EFM or MCS a navigation panel appears below the map. With this you can browse through the results, select a subset of the modes/MCS and show some statistics. There is also a button for saving the results and one to clear them and close the navigation panel.
 
