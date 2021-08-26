@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Sven Thiele" />
   <meta name="author" content="Axel von Kamp" />
-  <meta name="dcterms.date" content="2021-08-23" />
+  <meta name="dcterms.date" content="2021-08-26" />
   <meta name="keywords" content="constraint-programming, metabolic-models" />
   <title>CNApy Guide</title>
   <style>
@@ -111,8 +111,8 @@
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2021-08-23" />
-  <meta name="citation_publication_date" content="2021-08-23" />
+  <meta name="dc.date" content="2021-08-26" />
+  <meta name="citation_publication_date" content="2021-08-26" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/3699b68b3645de124d80db950611f4506dcdc332/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/3699b68b3645de124d80db950611f4506dcdc332/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/3699b68b3645de124d80db950611f4506dcdc332/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -146,10 +146,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/fa37f1062affae45d5ca5d7186b1313e62813af9/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/3699b68b3645de124d80db950611f4506dcdc332/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/fa37f1062affae45d5ca5d7186b1313e62813af9">cnapy-org/CNApy-guide@fa37f10</a>
-on August 23, 2021.
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/3699b68b3645de124d80db950611f4506dcdc332">cnapy-org/CNApy-guide@3699b68</a>
+on August 26, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -197,13 +197,13 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 <p>The easiest way to install CNApy is using the conda package manager. First install <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> and then:</p>
 <ul>
 <li><p>Create a conda environment with all dependencies</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> cnapy-1.0.0 <span class="at">-c</span> conda-forge <span class="at">-c</span> cnapy cnapy=1.0.0</span></code></pre></div></li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> cnapy-1.0.2 <span class="at">-c</span> conda-forge <span class="at">-c</span> cnapy cnapy=1.0.2</span></code></pre></div></li>
 <li><p>Activate the cnapy conda environment</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate cnapy-1.0.0</span></code></pre></div></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate cnapy-1.0.2</span></code></pre></div></li>
 <li><p>Run CNApy</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cnapy</span></span></code></pre></div></li>
 </ul>
-<p>On windows you may also use the <a href="https://github.com/cnapy-org/CNApy/releases/download/v1.0.0/CNApy-1.0.0-Windows-x86_64.exe">graphical installer</a>.</p>
+<p>On windows you may also use the <a href="https://github.com/cnapy-org/CNApy/releases/download/v1.0.2/CNApy-1.0.2-Windows-x86_64.exe">graphical installer</a>.</p>
 <h2 id="configuration">Configuration</h2>
 <p>When we start CNApy for the first time we are greeted with a dialog like this.</p>
 <div id="fig:config-dialog" class="fignos">
