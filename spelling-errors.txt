@@ -4,8 +4,8 @@ axelvonkamp
 behaviour
 cardinality
 CellNetAnalyzer
-cna
-CNApy
+CNA
+cnapy
 COBRApy
 conda
 CPLEX
