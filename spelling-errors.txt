@@ -4,8 +4,9 @@ axelvonkamp
 behaviour
 cardinality
 CellNetAnalyzer
-cna
-cnapy
+CNA
+CNApy
+CNApy’s
 COBRApy
 conda
 CPLEX
@@ -16,6 +17,7 @@ EFM
 efmtool
 EFV
 etoh
+exe
 FBA
 FVA
 glc
@@ -32,7 +34,6 @@ MCS
 menubar
 MILP
 MILPs
-miniconda
 modelling
 optlang
 pFBA

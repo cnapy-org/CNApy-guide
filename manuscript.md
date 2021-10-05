@@ -37,9 +37,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/8ea09fb053fd05d189e29bd33fee3cd8fd7f62ae/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/8ea09fb053fd05d189e29bd33fee3cd8fd7f62ae/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/8ea09fb053fd05d189e29bd33fee3cd8fd7f62ae/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/8ea09fb053fd05d189e29bd33fee3cd8fd7f62ae/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/))
 was automatically generated
-from [cnapy-org/CNApy-guide@8ea09fb](https://github.com/cnapy-org/CNApy-guide/tree/8ea09fb053fd05d189e29bd33fee3cd8fd7f62ae)
+from [cnapy-org/CNApy-guide@460dbac](https://github.com/cnapy-org/CNApy-guide/tree/460dbacc41c1622b999919c845f881a43c3e76d4)
 on October 5, 2021.
 </em></small>
 
@@ -126,29 +126,12 @@ Thank you for using CNApy!
 
 
 
-## Installation
+# Install
 
-The easiest way to install CNApy is using the conda package manager. First install [miniconda](https://docs.conda.io/en/latest/miniconda.html) and then:
+There are two ways to install CNApy:
 
-- Create a conda environment with all dependencies
-
-    ```sh
-    conda create -n cnapy-1.0.4 -c conda-forge -c cnapy cnapy=1.0.4
-    ```
-
-- Activate the cnapy conda environment
-
-    ```sh
-    conda activate cnapy-1.0.4
-    ```
-
-- Run CNApy
-
-    ```sh
-    cnapy
-    ```
-
-On windows you may also use the [graphical installer](https://github.com/cnapy-org/CNApy/releases/download/v1.0.4/CNApy-1.0.4-Windows-x86_64.exe).
+1. Under any operating system, by installing CNApy as a conda package (see [https://github.com/cnapy-org/CNApy#install-cnapy-with-conda](https://github.com/cnapy-org/CNApy#install-cnapy-with-conda))
+2. As an alternative installation way under Windows, by using the .exe installer attached to [CNApy's latest release](https://github.com/cnapy-org/CNApy/releases/latest).
 
 
 ## Configuration
