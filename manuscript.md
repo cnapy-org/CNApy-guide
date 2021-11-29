@@ -4,10 +4,11 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2021-10-05'
+date-meta: '2021-11-29'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
+- Pavlos Stephanos Bekiaris
 header-includes: |-
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
@@ -18,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2021-10-05" />
-  <meta name="citation_publication_date" content="2021-10-05" />
+  <meta name="dc.date" content="2021-11-29" />
+  <meta name="citation_publication_date" content="2021-11-29" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -31,15 +32,18 @@ header-includes: |-
   <meta name="citation_author_orcid" content="0000-0002-5812-6963" />
   <meta name="citation_author" content="Axel von Kamp" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
+  <meta name="citation_author" content="Pavlos Stephanos Bekiaris" />
+  <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
+  <meta name="twitter:creator" content="@Paulocracy2" />
   <link rel="canonical" href="https://cnapy-org.github.io/CNApy-guide/" />
   <meta property="og:url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta property="twitter:url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/460dbacc41c1622b999919c845f881a43c3e76d4/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/))
 was automatically generated
-from [cnapy-org/CNApy-guide@460dbac](https://github.com/cnapy-org/CNApy-guide/tree/460dbacc41c1622b999919c845f881a43c3e76d4)
-on October 5, 2021.
+from [cnapy-org/CNApy-guide@eb54f5d](https://github.com/cnapy-org/CNApy-guide/tree/eb54f5d27dd861b6e640448cedc5668fc59498ae)
+on November 29, 2021.
 </em></small>
 
 ## Authors
@@ -83,6 +87,15 @@ on October 5, 2021.
 + **Axel von Kamp**<br>
     · ![GitHub icon](images/github.svg){.inline_icon}
     [axelvonkamp](https://github.com/axelvonkamp)<br>
+  <small>
+     Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
+  </small>
+
++ **Pavlos Stephanos Bekiaris**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [Paulocracy](https://github.com/Paulocracy)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [Paulocracy2](https://twitter.com/Paulocracy2)<br>
   <small>
      Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   </small>

@@ -2,6 +2,7 @@ acces
 Axel
 axelvonkamp
 behaviour
+Bekiaris
 cardinality
 CellNetAnalyzer
 CNA
@@ -36,10 +37,13 @@ MILP
 MILPs
 modelling
 optlang
+Paulocracy
+Pavlos
 pFBA
 prepend
 programmatically
 SBML
+Stephanos
 sthiele
 stoichiometric
 stoichiometry
