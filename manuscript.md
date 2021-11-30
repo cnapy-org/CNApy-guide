@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/))
 was automatically generated
-from [cnapy-org/CNApy-guide@323a3c8](https://github.com/cnapy-org/CNApy-guide/tree/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113)
+from [cnapy-org/CNApy-guide@cae2ac9](https://github.com/cnapy-org/CNApy-guide/tree/cae2ac96e29c7aa4c620893f9459c024dc92826c)
 on November 30, 2021.
 </em></small>
 
@@ -299,28 +299,29 @@ This way your files can be found by CNApy.
 
 In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
 In essence a scenario is a set of flux constraints for a set of reactions.
-These constraints can fix the flux of a reaction or constraint lower and upper bounds for the flux.
+These constraints can fix the flux of a reaction or set a lower and upper bounds for the flux.
 
-The scenario can be edited via the map, by entering values into the corresponding reaction boxes. 
-Accepted values are either a single float like `1.5` or a pair of floats like `(-10, 1.2)`.
+The scenario can be edited via the reaction boxes on the map or the "Scenario" column of the reaction list. 
+Accepted values are either a single float like `1.5` or a pair of floats like `-10, 1.2`.
 A single float fixes the flux of the reaction to this value (`1.5`).
 While a pair sets the lower flux bound of the reaction to the first value (`-10`) and the upper flux bound to the second value (`1.2`).
+Note that in a scenario you can use values outside the defined lower/upper bound of a reaction. In such a casse the scenario will supersede the reaction bounds which allows temporary modification of the bounds without the need to change the model.
 
 ![
 **Reaction box with scenario value.**
 ](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-box.png "Reaction box with scenario value"){#fig:scenario-box}
 
 Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
-The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.
+The frame turns yellow, if the scenario constraint lies outside the reaction bounds of the model.
 
-To remove the constraints on a reaction simply delete the scenario value in the reaction box.
+To remove the constraints on a reaction simply delete the scenario value in the reaction box or "Scenario" column of the reaction list.
 
 You can save and load scenarios as `*.scen` files. One scenario can be set as the default scenario of your project.
 This can be done via *set current scenario as default scenario* in the *Scenario* menu.
 The project must then be saved, and the next time you open the project the scenario is already set.
 
 CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
-You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model's reaction bounds to the current scenario values.
+You can also import all the values that are currently in the reaction boxes into the scenario (can be useful for applying a MCS), and you can change the model's reaction bounds to the current scenario values.
 
 
 ## Analysis functions
@@ -330,8 +331,12 @@ You can also import all the values that are currently in the reaction boxes into
 Optimizes the value of the current objective function and shows a flux distribution that realizes this optimum.
 The objective function is a linear function over the reaction rates in the network, its coefficients can be modified in the reaction dialogs.
 To display the current objective function you can choose *Show optimization function* from the *Analysis* menu.
-The current objective function in shown in the console.
+The current objective value is shown in the console as well as the status bar at the bottom of the main window.
 Note that the flux distribution calculated by FBA is usually not unique.
+
+### Auto FBA
+
+This is a checkable option which switches the "Auto FBA" mode on or off. In "Auto FBA" mode a FBA is automatically performed when a scenario is changed or when a reaction property that potentially influences the FBA result is changed.
 
 ### Parsimonious FBA (pFBA)
 
@@ -342,6 +347,14 @@ This has the advantage that redundant internal cyclic fluxes are suppressed and 
 
 In FVA the maximal/minimal rate of each reaction is calculated.
 This gives the possible flux range for each reaction.
+
+### Make scenario feasible (QLP)
+
+A scenario is infeasible if fluxes in this scenario are incompatible with each other. An example would be a flux of a product that is higher than the substrate flux multiplied by the maximal yield. Such a situation could for instance arise due to measurement errors. 
+
+With "Make scenario feasible" the fluxes defined in the scenario are modified to be consistent with a quadratic linear programming (QLP) method (and therefore requires a QLP-capable solver like CPLEX, Gurobi or cbc-coinor). The objective function then minimizes the sum of weighted quadratic errors between the scenario fluxes and calculated fluxes where the weights are the absolute scenario flux values. Note that only reactions with scenario fluxes fixed to values unequal to zero enter into the optimization.
+
+After optimization the current scenario is modified to contain the calculated consistent fluxes, but you can go back to the original values via the scenario history.
 
 ### Elementary modes (EFM)/elementary flux vectors (EFV)
 
@@ -422,7 +435,7 @@ MCS can be enumerated iteratively, either the smallest first (least number of cu
 With the latter option new MCS are found more quickly but may not be the smallest.
 
 With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed.
-In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but often faster.
+In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but usually much faster.
 
 - Gene KOs (CNA only)
 

@@ -71,9 +71,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -87,9 +87,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113">cnapy-org/CNApy-guide@323a3c8</a>
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/cae2ac96e29c7aa4c620893f9459c024dc92826c">cnapy-org/CNApy-guide@cae2ac9</a>
 on November 30, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -258,37 +258,44 @@ This way your files can be found by CNApy.</p>
 <h2 id="scenarios">Scenarios</h2>
 <p>In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
 In essence a scenario is a set of flux constraints for a set of reactions.
-These constraints can fix the flux of a reaction or constraint lower and upper bounds for the flux.</p>
-<p>The scenario can be edited via the map, by entering values into the corresponding reaction boxes.
-Accepted values are either a single float like <code>1.5</code> or a pair of floats like <code>(-10, 1.2)</code>.
+These constraints can fix the flux of a reaction or set a lower and upper bounds for the flux.</p>
+<p>The scenario can be edited via the reaction boxes on the map or the “Scenario” column of the reaction list.
+Accepted values are either a single float like <code>1.5</code> or a pair of floats like <code>-10, 1.2</code>.
 A single float fixes the flux of the reaction to this value (<code>1.5</code>).
-While a pair sets the lower flux bound of the reaction to the first value (<code>-10</code>) and the upper flux bound to the second value (<code>1.2</code>).</p>
+While a pair sets the lower flux bound of the reaction to the first value (<code>-10</code>) and the upper flux bound to the second value (<code>1.2</code>).
+Note that in a scenario you can use values outside the defined lower/upper bound of a reaction. In such a casse the scenario will supersede the reaction bounds which allows temporary modification of the bounds without the need to change the model.</p>
 <div id="fig:scenario-box" class="fignos">
 <figure>
 <img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-box.png" alt="Figure 6: Reaction box with scenario value." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Reaction box with scenario value.</strong></figcaption>
 </figure>
 </div>
 <p>Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
-The frame turns yellow, if the scenario constraint contradicts the reaction constraints of the model.</p>
-<p>To remove the constraints on a reaction simply delete the scenario value in the reaction box.</p>
+The frame turns yellow, if the scenario constraint lies outside the reaction bounds of the model.</p>
+<p>To remove the constraints on a reaction simply delete the scenario value in the reaction box or “Scenario” column of the reaction list.</p>
 <p>You can save and load scenarios as <code>*.scen</code> files. One scenario can be set as the default scenario of your project.
 This can be done via <em>set current scenario as default scenario</em> in the <em>Scenario</em> menu.
 The project must then be saved, and the next time you open the project the scenario is already set.</p>
 <p>CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
-You can also import all the values that are currently in the reaction boxes into the scenario, and you can change the model’s reaction bounds to the current scenario values.</p>
+You can also import all the values that are currently in the reaction boxes into the scenario (can be useful for applying a MCS), and you can change the model’s reaction bounds to the current scenario values.</p>
 <h2 id="analysis-functions">Analysis functions</h2>
 <h3 id="flux-balance-analysis-fba">Flux balance analysis (FBA)</h3>
 <p>Optimizes the value of the current objective function and shows a flux distribution that realizes this optimum.
 The objective function is a linear function over the reaction rates in the network, its coefficients can be modified in the reaction dialogs.
 To display the current objective function you can choose <em>Show optimization function</em> from the <em>Analysis</em> menu.
-The current objective function in shown in the console.
+The current objective value is shown in the console as well as the status bar at the bottom of the main window.
 Note that the flux distribution calculated by FBA is usually not unique.</p>
+<h3 id="auto-fba">Auto FBA</h3>
+<p>This is a checkable option which switches the “Auto FBA” mode on or off. In “Auto FBA” mode a FBA is automatically performed when a scenario is changed or when a reaction property that potentially influences the FBA result is changed.</p>
 <h3 id="parsimonious-fba-pfba">Parsimonious FBA (pFBA)</h3>
 <p>In parsimonious FBA first the objective function optimized and then with this optimum as additional constraint the sum of the fluxes in the network is minimized.
 This has the advantage that redundant internal cyclic fluxes are suppressed and that a lot of reactions will have zero flux which makes the solution easier to understand.</p>
 <h3 id="flux-variability-analysis-fva">Flux variability analysis (FVA)</h3>
 <p>In FVA the maximal/minimal rate of each reaction is calculated.
 This gives the possible flux range for each reaction.</p>
+<h3 id="make-scenario-feasible-qlp">Make scenario feasible (QLP)</h3>
+<p>A scenario is infeasible if fluxes in this scenario are incompatible with each other. An example would be a flux of a product that is higher than the substrate flux multiplied by the maximal yield. Such a situation could for instance arise due to measurement errors.</p>
+<p>With “Make scenario feasible” the fluxes defined in the scenario are modified to be consistent with a quadratic linear programming (QLP) method (and therefore requires a QLP-capable solver like CPLEX, Gurobi or cbc-coinor). The objective function then minimizes the sum of weighted quadratic errors between the scenario fluxes and calculated fluxes where the weights are the absolute scenario flux values. Note that only reactions with scenario fluxes fixed to values unequal to zero enter into the optimization.</p>
+<p>After optimization the current scenario is modified to contain the calculated consistent fluxes, but you can go back to the original values via the scenario history.</p>
 <h3 id="elementary-modes-efmelementary-flux-vectors-efv">Elementary modes (EFM)/elementary flux vectors (EFV)</h3>
 <p>EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a <a href="#efmmcs-navigation-and-analysis">navigation panel</a> appears to acces the results.</p>
 <div id="fig:efm-dialog" class="fignos">
@@ -361,7 +368,7 @@ It is strongly recommended to use this parameter because MCS computation can tak
 <p>MCS can be enumerated iteratively, either the smallest first (least number of cuts) or any MCS (up to the number of cuts given by max. size).
 With the latter option new MCS are found more quickly but may not be the smallest.</p>
 <p>With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed.
-In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but often faster.</p>
+In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but usually much faster.</p>
 <ul>
 <li>Gene KOs (CNA only)</li>
 </ul>

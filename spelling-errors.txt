@@ -4,11 +4,14 @@ axelvonkamp
 behaviour
 Bekiaris
 cardinality
+casse
 CellNetAnalyzer
+checkable
 CNA
 CNApy
 CNApy’s
 COBRApy
+coinor
 conda
 Config
 CPLEX
@@ -43,6 +46,7 @@ Pavlos
 pFBA
 prepend
 programmatically
+QLP
 SBML
 Stephanos
 sthiele
