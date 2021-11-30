@@ -71,9 +71,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -87,9 +87,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d">cnapy-org/CNApy-guide@dd0f6f7</a>
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/323a3c8e7e23e3aa5649edfa7b5a5b2e1037c113">cnapy-org/CNApy-guide@323a3c8</a>
 on November 30, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -203,13 +203,12 @@ If all checks are successful green check marks are shown, if a check fails a red
 For example, the check of the CNA directory needs a working Matlab or Octave installation.</p>
 <h2 id="user-interface-overview">User interface overview</h2>
 <p>This section gives an introduction to the CNApy UI and its components and functions.</p>
-<p>When we have finished our first configuration we are greeted with a window like this.</p>
 <div id="fig:empty-project" class="fignos">
 <figure>
 <img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/empty-project.png" alt="Figure 4: CNApy with an empty project." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>CNApy with an empty project.</strong></figcaption>
 </figure>
 </div>
-<p>This is an empty project on the right hand side we see the empty lists of reactions and metabolites.
+<p>This is an empty project on the right hand side we see the empty lists of reactions, metabolites and genes.
 On the left we see the embedded Jupyter Console where one can interact programmatically with the model and UI.
 We can create a new project by importing SBML models, editing the reactions and adding graphical maps.
 We can also load one of the projects included in our projects repository.</p>
@@ -220,9 +219,11 @@ We can also load one of the projects included in our projects repository.</p>
 </figure>
 </div>
 <p>In this picture we see CNApy with the open ECC2comp project.
-On the right hand side (1) we see the populated reactions and metabolites lists with the color coded current values and a form with corresponding details for the selected reaction/metabolite.
-The reactions list contains buttons that lets us add/delete reactions to/from the model.
+On the right hand side (1) we see the populated reactions and metabolites lists with the color coded current values and a form with corresponding details for the selected reaction/metabolite.</p>
+<p>The upper part of the reactions lists contains several columns. In the “Scenario” column the current scenario values are shown and can also be edited via this column. The “Flux” column contains the results of the last computation, e.g. the fluxes from a FBA. The “LB” and “UB” columns show the lower/upper bounds of the reactions and after a FVA the results of this analysis will be displayed there.</p>
+<p>The reactions list contains buttons that lets us add/delete reactions to/from the model.
 Changing the metabolite identifier or other details in the metabolite/reaction form has an instant effect on the corresponding reactions/metabolites in the model.</p>
+<p>When selecting a metabolite in the metabolite tabs a list of reactions (and corresponding equations) in which this metabolite participates is shown a the bottom. By double-clicking on a reaction or metabolite ID one can switch to the respective object.</p>
 <p>The console (2) now shows the output of some computations, and above the console we have a map view (3) with a graphical representation of our network.
 On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.</p>
 <p>We can add new maps via the Map menu, and drag reactions from the reaction list onto the desired position on the map.</p>
