@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2021-11-29'
+date-meta: '2021-11-30'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2021-11-29" />
-  <meta name="citation_publication_date" content="2021-11-29" />
+  <meta name="dc.date" content="2021-11-30" />
+  <meta name="citation_publication_date" content="2021-11-30" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/eb54f5d27dd861b6e640448cedc5668fc59498ae/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d/))
 was automatically generated
-from [cnapy-org/CNApy-guide@eb54f5d](https://github.com/cnapy-org/CNApy-guide/tree/eb54f5d27dd861b6e640448cedc5668fc59498ae)
-on November 29, 2021.
+from [cnapy-org/CNApy-guide@dd0f6f7](https://github.com/cnapy-org/CNApy-guide/tree/dd0f6f74ea6e41c3302e7b3af313feeecd27ec2d)
+on November 30, 2021.
 </em></small>
 
 ## Authors
@@ -149,24 +149,69 @@ There are two ways to install CNApy:
 
 ## Configuration
 
-When we start CNApy for the first time we are greeted with a dialog like this.
+CNApy can be configured via the Config menu. The different aspects of CNApy can be configured via separate dialogs:
+
+### Configure CNApy
 
 ![
 **CNApy Configuration dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/config-dialog.png "Configuration dialog"){#fig:config-dialog}
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/configure-cnapy-dialog.png "Configuration dialog"){#fig:config-dialog}
+
+Here you can configure which colors CNApy should use to highlight reactions on the map or in the reaction list.
+
+### Configure COBRApy
+
+![
+**COBRApy configuration dialog.**
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/cobrapy-config-dialog.png "COBRApy configuration dialog"){#fig:cobrapy-config}
+
+
+With this dialog selected global settings (`class cobra.Configuration()`) of the COBRApy toolbox and selected parameters of the current model can be modified. The global settings are saved, but the parameters of the current model are not and will revert to the global default values when (re-)loading a model.
+
+- Default solver (global)
+
+Select which solver to use as global default from the dropdown list. COBRApy supports a variety of solvers but only the ones which are installed for COBRApy on your system will be available on the list. Also, different solvers have different capabilities so you should set a default that has all capabilities that you require (e.g. glpk_exact cannot be used for MILPs).
+
+- Solver for current model
+
+Here you can change the solver for the current model.
+
+- Number of processes for multiprocessing (global)
+
+Number of processes run in parallel when Python multiprocessing is used, e.g. for FVA. Setting this to 1 disables multiprocessing.
+
+<!-- IMPORTANT: Should be set to 1 on Windows because Python multiprocessing performs very poorly on this OS. -->
+[
+<i class="fas fa-info-circle fa-lg"></i> **IMPORTANT**<br>
+Should be set to 1 on Windows because Python multiprocessing performs very poorly on this OS.
+]{.banner .lightblue}
+
+
+- Default tolerance (global)
+
+This value is used to distinguish zero from non-zero elements for various purposes. In particular, this value is propagated to the solver (see the COBRApy source code which solver parameters are affected). Most solvers restrict the range of this value, so it must be between 1E-9 and 0.1 For details where this value is used see the COBRApy documentation and source code.
+
+- Tolerance for the current model
+
+Here you can change the tolerance for the current model. You may enter an arbitrary value >= 0 here but if it is not compatible with the current solver then “Apply Changes” can lead to an error message.
+
+### Configure CNA bridge
+
+![
+**CNApy Configuration dialog.**
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/configure-cna-bridge-dialog.png "CNA bridge dialog"){#fig:config-dialog}
 
 With this dialog you can configure which Matlab/Octave installation CNApy should use.
 
-The minimal cut set computation in CNApy uses functions that are provided by CellNetAnalyzer.
+Some functionalities in CNApy use functions that are provided by CellNetAnalyzer.
 To be able to use these functions you have to provide CNApy with either a path to a Matlab installation >R2019 or the path to an Octave executable >4, and of course with a path to a recent CellNetAnalyzer installation.
 You can do this by clicking these buttons (1).
 If you change the settings CNApy performs some basic tests to make sure everything is working.
 If all checks are successful green check marks  are shown, if a check fails a red cross  is shown.
 
-If no check can be performed, a yellow question mark  is shown.
+If no check can be performed, a yellow question mark is shown.
 For example, the check of the CNA directory needs a working Matlab or Octave installation.
 
-You can also configure which colors CNApy should use to highlight reactions on the map or in the reaction list.
 
 
 ## User interface overview
@@ -445,41 +490,6 @@ You can either call this function from the Analysis menu and specify a metabolit
 The clipboard calculator allows you to perform arithmetic operations with the values stored in the clipboard, the current reaction rates or a fixed value that you can enter in this dialog.
 The result of the operation replaces the current flux values.
 
-### Configure COBRApy
-
-![
-**COBRApy configuration dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/cobrapy-config-dialog.png "COBRApy configuration dialog"){#fig:cobrapy-config}
-
-
-With this dialog selected global settings (`class cobra.Configuration()`) of the COBRApy toolbox and selected parameters of the current model can be modified. The global settings are saved, but the parameters of the current model are not and will revert to the global default values are (re-)loading a model.
-
-- Default solver (global)
-
-Select which solver to use as global default from the dropdown list. COBRApy supports a variety of solvers but only the ones which are installed for COBRApy on your system will be available on the list. Also, different solvers have different capabilities so you should set a default that has all capabilities that you require (e.g. glpk_exact cannot be used for MILPs).
-
-- Solver for current model
-
-Here you can change the solver for the current model.
-
-- Number of processes for multiprocessing (global)
-
-Number of processes run in parallel when Python multiprocessing is used, e.g. for FVA. Setting this to 1 disables multiprocessing.
-
-<!-- IMPORTANT: Should be set to 1 on Windows because Python multiprocessing performs very poorly on this OS. -->
-[
-<i class="fas fa-info-circle fa-lg"></i> **IMPORTANT**<br>
-Should be set to 1 on Windows because Python multiprocessing performs very poorly on this OS.
-]{.banner .lightblue}
-
-
-- Default tolerance (global)
-
-This value is used to distinguish zero from non-zero elements for various purposes. In particular, this value is propagated to the solver (see the COBRApy source code which solver parameters are affected). Most solvers restrict the range of this value, so it must be between 1E-9 and 0.1 For details where this value is used see the COBRApy documentation and source code.
-
-- Tolerance for the current model
-
-Here you can change the tolerance for the current model. You may enter an arbitrary value >= 0 here but if it is not compatible with the current solver then “Apply Changes” can lead to an error message.
 
 ### Programming CNApy
 

@@ -10,6 +10,7 @@ CNApy
 CNApy’s
 COBRApy
 conda
+Config
 CPLEX
 dialogs
 dropdown
