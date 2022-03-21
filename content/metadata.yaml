@@ -13,14 +13,15 @@ authors:
       - Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
     # funders:
       # - Grant XXXXXXXX
+    # orcid: XXXX-XXXX-XXXX-XXXX
+    # email: jane.roe@whatever.edu
   - github: axelvonkamp
     name: Axel von Kamp
     initials: AVK
-    # orcid: XXXX-XXXX-XXXX-XXXX
-    # email: jane.roe@whatever.edu
     affiliations:
       - Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   - github: Paulocracy
+    orcid:  0000-0002-3047-4253
     name: Pavlos Stephanos Bekiaris
     initials: PSB
     twitter: Paulocracy2
