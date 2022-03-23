@@ -141,7 +141,7 @@ The citation key syntax is described in the [Pandoc manual](https://pandoc.org/M
 > it must be surrounded by curly braces,
 > which are not considered part of the key.
 > In `@Foo_bar.baz.`, the key is `Foo_bar.baz`.
-> The final period is not *internal* punctuation,
+> The final period is not _internal_ punctuation,
 > so it is not included in the key.
 > In `@{Foo_bar.baz.}`, the key is `Foo_bar.baz.`, including the final period.
 > The curly braces are recommended if you use URLs as keys:
@@ -196,7 +196,7 @@ pandoc:
 
 ## Reference metadata
 
-Manubot stores the bibliographic details for references (the set of all cited works) as CSL JSON ([Citation Style Language Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#csl-json-items)).
+Manubot stores the bibliographic details for references (the set of all cited works) as CSL JSON ([Citation Style Language Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#csl-json-items))
 Manubot automatically generates CSL JSON for most persistent identifiers (as described in [Citations](#citations) above).
 In some cases, automatic metadata retrieval fails or provides incorrect or incomplete information.
 Errors are most common for references generated from scraping HTML metadata from websites.
@@ -278,11 +278,14 @@ Specify a thumbnail in any of the following ways:
 1. placing an image named `thumbnail.png` anywhere in the manuscript repository (for example, in the root directory).
 2. setting `thumbnail` in `metadata.yaml` to a path, relative to the repository root, where the image file is located.
     Example:
+
     ```yaml
     thumbnail: build/assets/thumbnail-1000x1000.png
     ```
+
 3. setting `thumbnail` in `metadata.yaml` to an absolute URL where the image is located.
     Example:
+
     ```yaml
     thumbnail: https://github.com/greenelab/meta-review/raw/master/thumbnail.png
     ```
@@ -330,7 +333,7 @@ To cite the Manubot project or for more information on its design and history, s
 
 > **Open collaborative writing with Manubot**<br>
 Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter<br>
-*PLOS Computational Biology* (2019-06-24) <https://doi.org/c7np><br>
+_PLOS Computational Biology_ (2019-06-24) <https://doi.org/c7np><br>
 DOI: [10.1371/journal.pcbi.1007128](https://doi.org/10.1371/journal.pcbi.1007128) · PMID: [31233491](https://www.ncbi.nlm.nih.gov/pubmed/31233491)
 
 The Manubot version of this manuscript is available at <https://greenelab.github.io/meta-review/>.

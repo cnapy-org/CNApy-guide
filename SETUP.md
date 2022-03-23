@@ -1,19 +1,19 @@
 # Table of contents
 
 - [Creating a new manuscript](#creating-a-new-manuscript)
-  * [Using setup script](#using-setup-script)
-  * [Manual configuration](#manual-configuration)
-  * [Create repository](#create-repository)
-  * [Continuous integration](#continuous-integration)
-    + [GitHub Actions](#github-actions)
-    + [SSH Deploy Key](#ssh-deploy-key)
+  - [Using setup script](#using-setup-script)
+  - [Manual configuration](#manual-configuration)
+  - [Create repository](#create-repository)
+  - [Continuous integration](#continuous-integration)
+    - [GitHub Actions](#github-actions)
+    - [SSH Deploy Key](#ssh-deploy-key)
       - [Add the public key to GitHub](#add-the-public-key-to-github)
       - [Add the private key to GitHub](#add-the-private-key-to-github)
-    + [Previewing pull request builds with AppVeyor](#previewing-pull-request-builds-with-appveyor)
-  * [README updates](#readme-updates)
-  * [Finalize](#finalize)
+    - [Previewing pull request builds with AppVeyor](#previewing-pull-request-builds-with-appveyor)
+  - [README updates](#readme-updates)
+  - [Finalize](#finalize)
 - [Merging upstream rootstock changes](#merging-upstream-rootstock-changes)
-  * [Default branch](#default-branch)
+  - [Default branch](#default-branch)
 
 _generated with [markdown-toc](https://ecotrust-canada.github.io/markdown-toc/)_
 
@@ -28,6 +28,7 @@ Setup is supported on Linux, macOS, and Windows.
 Windows setup requires [Git Bash](https://gitforwindows.org/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
 ## Using setup script
+
 Creating a new manuscript using GitHub actions, the recommended default CI service (see below), can be achieved easily using the [setup script](https://github.com/manubot/rootstock/blob/main/setup.bash).
 This simply runs the steps detailed below in the manual configuration.
 
@@ -37,6 +38,7 @@ You can check the code that will be executed [here](https://github.com/manubot/r
 ````sh
 bash <( curl --location https://github.com/manubot/rootstock/raw/main/setup.bash )
 ````
+
 The script will then take you through the process of cloning the rootstock repo, make the changes required to use GitHub actions, edit the README to point to your repo and commit the changes.
 Your new manuscript repo is then ready for you to start adding your own content.
 
@@ -44,6 +46,7 @@ This script does not not create the remote repo for you, so you will be prompted
 Do not initialize the repository, other than optionally adding a description.
 
 ### CLI
+
 There is also a command line interface for users who want to create manuscripts at scale and in an automated way.
 See the help for details.
 
@@ -88,7 +91,7 @@ git remote set-url origin https://github.com/$OWNER/$REPO.git
 git remote set-url origin git@github.com:$OWNER/$REPO.git
 ```
 
-Then create an empty repository on GitHub. 
+Then create an empty repository on GitHub.
 You can do this at <https://github.com/new> or via the [GitHub command line interface](https://github.com/cli/cli) (if installed) with `gh repo create`.
 Make sure to use the same "Owner" and "Repository name" specified above.
 Do not initialize the repository, other than optionally adding a Description.
@@ -119,6 +122,7 @@ Notes on table fields:
 - **Deployment**: Whether the CI service can write outputs back to the GitHub repository (to the `output` and `gh-pages` branches).
   Deployment provides GitHub Pages with the latest manuscript version to serve to the manuscript's URL.
   GitHub Actions will deploy by default without any additional setup.
+
 - **Config**: File configuring what operations CI will perform.
   Removing this file is one method to disable the CI service.
 - **Private Repos**: Quota for private repos.
@@ -147,7 +151,7 @@ If it does not work for you after completing this setup, try reselecting "gh-pag
 GitHub Pages should now trigger on the next commit.
 If not, [let us know](https://github.com/manubot/rootstock/issues/new).
 
-For an alternative deployment method on GitHub,
+For an alternative deployment method on GitHub
 you can use an SSH Deploy Key instead.
 However, the setup is more complex.
 The following sections, collapsed by default, detail how to generate an SSH Deploy Key.
@@ -192,7 +196,7 @@ Finally, click "Add key".
 
 #### Add the private key to GitHub
 
-If you would like GitHub Actions to use SSH for deployment, rather than via HTTPS using `GITHUB_TOKEN`, perform the steps in this section.
+If you would like GitHub Actions to use SSH for deployment, rather than via HTTPS using `GITHUB_TOKEN`, perform the steps in this section
 
 ```sh
 # Print the URL for adding the private key to GitHub
@@ -209,13 +213,12 @@ Next, copy-paste the content of `ci/deploy.key.txt` into "Value"
 (printed above by `cat`, including any trailing `=` characters if present).
 </details>
 
-
 <details>
 <summary>Expand for AppVeyor setup</summary>
 
 ### Previewing pull request builds with AppVeyor
 
-You can optionally enable AppVeyor continuous integration to view pull request builds.
+You can optionally enable AppVeyor continuous integration to view pull request builds
 AppVeyor supports storing manuscripts generated during pull request builds as artifacts.
 These can be previewed to facilitate pull request review and ensure formatting and reference changes render as expected.
 When a pull request build runs successfully, **@AppVeyorBot** will comment on the pull request with a download link to the manuscript PDF.
