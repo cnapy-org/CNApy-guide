@@ -1,7 +1,6 @@
 acces
 Axel
 axelvonkamp
-behaviour
 Bekiaris
 cardinality
 casse
@@ -39,7 +38,6 @@ MCS
 menubar
 MILP
 MILPs
-modelling
 optlang
 Paulocracy
 Pavlos

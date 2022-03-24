@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2021-11-30'
+date-meta: '2022-03-24'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2021-11-30" />
-  <meta name="citation_publication_date" content="2021-11-30" />
+  <meta name="dc.date" content="2022-03-24" />
+  <meta name="citation_publication_date" content="2022-03-24" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -59,42 +59,41 @@ manubot-clear-requests-cache: false
 ...
 
 
-
-
-
-
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/cae2ac96e29c7aa4c620893f9459c024dc92826c/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/))
 was automatically generated
-from [cnapy-org/CNApy-guide@cae2ac9](https://github.com/cnapy-org/CNApy-guide/tree/cae2ac96e29c7aa4c620893f9459c024dc92826c)
-on November 30, 2021.
+from [cnapy-org/CNApy-guide@d1e346e](https://github.com/cnapy-org/CNApy-guide/tree/d1e346eba0ee989537079b517e7e47f7082c7748)
+on March 24, 2022.
 </em></small>
 
 ## Authors
 
 
 
+
 + **Sven Thiele**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-5812-6963](https://orcid.org/0000-0002-5812-6963)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [sthiele](https://github.com/sthiele)<br>
   <small>
      Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   </small>
 
+
 + **Axel von Kamp**<br>
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [axelvonkamp](https://github.com/axelvonkamp)<br>
   <small>
      Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   </small>
 
+
 + **Pavlos Stephanos Bekiaris**<br>
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [Paulocracy](https://github.com/Paulocracy)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [Paulocracy2](https://twitter.com/Paulocracy2)<br>
   <small>
      Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg

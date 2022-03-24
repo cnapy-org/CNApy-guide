@@ -1,6 +1,5 @@
 content/02.introduction.md:3:CNApy
 content/02.introduction.md:3:CNApy
-content/02.introduction.md:3:modelling
 content/02.introduction.md:3:stoichiometric
 content/02.introduction.md:5:SBML
 content/02.introduction.md:6:CNA
@@ -168,8 +167,6 @@ content/08.applications.md:76:cnapy
 content/08.applications.md:76:CNApy
 content/08.applications.md:76:mcs
 content/08.applications.md:76:mcs
-content/08.applications.md:80:behaviour
-content/08.applications.md:81:behaviour
 content/08.applications.md:85:MCS
 content/08.applications.md:89:CNA
 content/08.applications.md:89:MCS
