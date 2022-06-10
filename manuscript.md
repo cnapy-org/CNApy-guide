@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2022-03-24'
+date-meta: '2022-06-10'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-03-24" />
-  <meta name="citation_publication_date" content="2022-03-24" />
+  <meta name="dc.date" content="2022-06-10" />
+  <meta name="citation_publication_date" content="2022-06-10" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +61,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/))
 was automatically generated
-from [cnapy-org/CNApy-guide@d1e346e](https://github.com/cnapy-org/CNApy-guide/tree/d1e346eba0ee989537079b517e7e47f7082c7748)
-on March 24, 2022.
+from [cnapy-org/CNApy-guide@92f77e4](https://github.com/cnapy-org/CNApy-guide/tree/92f77e4104edc8a24b67b783fd6732edf0e75c45)
+on June 10, 2022.
 </em></small>
 
 ## Authors
@@ -138,12 +138,21 @@ Thank you for using CNApy!
 
 
 
-# Install
+## Installation
 
-There are two ways to install CNApy:
+### CNApy main program
 
-1. Under any operating system, by installing CNApy as a conda package (see [https://github.com/cnapy-org/CNApy#install-cnapy-with-conda](https://github.com/cnapy-org/CNApy#install-cnapy-with-conda))
-2. As an alternative installation way under Windows, by using the .exe installer attached to [CNApy's latest release](https://github.com/cnapy-org/CNApy/releases/latest).
+There are two ways to install CNApy itself:
+
+1. Recommended but more complicated: Under any operating system, by installing CNApy as a conda package. For detailed instructions to do this, see [https://github.com/cnapy-org/CNApy#install-cnapy-with-conda](https://github.com/cnapy-org/CNApy#install-cnapy-with-conda).
+2. Not recommended but simple: Under Windows, you can install CNApy by using the .exe installer attached to [CNApy's latest release](https://github.com/cnapy-org/CNApy/releases/latest). Once you run the installer, it will guide you through the installation process. Please note that the installation process may take some time.
+
+
+### Additional solvers (optional)
+
+CNApy itself is already packaged and installed with the open source linear programming solver [GLPK](https://www.gnu.org/software/glpk/) which is fast enough for calculations with small models and which is not restricted in the possible number of variables.
+
+*Completely optional*: In addition, CNApy is also pre-packaged with the Community editions of the much more powerful commercial solvers [IBM CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio) and [Gurobi](https://www.gurobi.com/). These community editions can only run with models up to 1000 variables. In order to use one of these solvers with models which contain more variables, the *full versions* of either two of these solvers have to be installed and connected to CNApy. In order to help you with this process, CNApy contains a wizard which explains the process in detail and which takes over some of the neccessary tasks. You can find the wizards under the "Config" menu entry.
 
 
 ## Configuration

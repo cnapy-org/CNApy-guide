@@ -7,7 +7,7 @@
   <meta name="author" content="Sven Thiele" />
   <meta name="author" content="Axel von Kamp" />
   <meta name="author" content="Pavlos Stephanos Bekiaris" />
-  <meta name="dcterms.date" content="2022-03-24" />
+  <meta name="dcterms.date" content="2022-06-10" />
   <meta name="keywords" content="constraint-programming, metabolic-models" />
   <title>CNApy Guide</title>
   <style>
@@ -46,8 +46,8 @@
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-03-24" />
-  <meta name="citation_publication_date" content="2022-03-24" />
+  <meta name="dc.date" content="2022-06-10" />
+  <meta name="citation_publication_date" content="2022-06-10" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -87,10 +87,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/d1e346eba0ee989537079b517e7e47f7082c7748/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/d1e346eba0ee989537079b517e7e47f7082c7748">cnapy-org/CNApy-guide@d1e346e</a>
-on March 24, 2022.
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/92f77e4104edc8a24b67b783fd6732edf0e75c45">cnapy-org/CNApy-guide@92f77e4</a>
+on June 10, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -142,12 +142,16 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 <p>We appreciate any comments or suggestions for improvements and we are greatly interested in your feedback which you can give at our <a href="https://groups.google.com/g/cellnetanalyzer-user-forum">User Forum</a>.</p>
 <p>For feature requests and bug reports please use our <a href="https://github.com/cnapy-org/CNApy/issues">Issue tracker</a></p>
 <p>Thank you for using CNApy!</p>
-<h1 id="install">Install</h1>
-<p>There are two ways to install CNApy:</p>
+<h2 id="installation">Installation</h2>
+<h3 id="cnapy-main-program">CNApy main program</h3>
+<p>There are two ways to install CNApy itself:</p>
 <ol type="1">
-<li>Under any operating system, by installing CNApy as a conda package (see <a href="https://github.com/cnapy-org/CNApy#install-cnapy-with-conda">https://github.com/cnapy-org/CNApy#install-cnapy-with-conda</a>)</li>
-<li>As an alternative installation way under Windows, by using the .exe installer attached to <a href="https://github.com/cnapy-org/CNApy/releases/latest">CNApy’s latest release</a>.</li>
+<li>Recommended but more complicated: Under any operating system, by installing CNApy as a conda package. For detailed instructions to do this, see <a href="https://github.com/cnapy-org/CNApy#install-cnapy-with-conda">https://github.com/cnapy-org/CNApy#install-cnapy-with-conda</a>.</li>
+<li>Not recommended but simple: Under Windows, you can install CNApy by using the .exe installer attached to <a href="https://github.com/cnapy-org/CNApy/releases/latest">CNApy’s latest release</a>. Once you run the installer, it will guide you through the installation process. Please note that the installation process may take some time.</li>
 </ol>
+<h3 id="additional-solvers-optional">Additional solvers (optional)</h3>
+<p>CNApy itself is already packaged and installed with the open source linear programming solver <a href="https://www.gnu.org/software/glpk/">GLPK</a> which is fast enough for calculations with small models and which is not restricted in the possible number of variables.</p>
+<p><em>Completely optional</em>: In addition, CNApy is also pre-packaged with the Community editions of the much more powerful commercial solvers <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio">IBM CPLEX</a> and <a href="https://www.gurobi.com/">Gurobi</a>. These community editions can only run with models up to 1000 variables. In order to use one of these solvers with models which contain more variables, the <em>full versions</em> of either two of these solvers have to be installed and connected to CNApy. In order to help you with this process, CNApy contains a wizard which explains the process in detail and which takes over some of the neccessary tasks. You can find the wizards under the “Config” menu entry.</p>
 <h2 id="configuration">Configuration</h2>
 <p>CNApy can be configured via the Config menu. The different aspects of CNApy can be configured via separate dialogs:</p>
 <h3 id="configure-cnapy">Configure CNApy</h3>
