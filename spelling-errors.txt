@@ -6,11 +6,10 @@ cardinality
 casse
 CellNetAnalyzer
 checkable
-CNA
+cna
 CNApy
 CNApy’s
 COBRApy
-coinor
 conda
 Config
 CPLEX
@@ -28,6 +27,7 @@ glc
 GLPK
 Gurobi
 historam
+infeasibilities
 inhomogeneous
 isozymes
 iteratively
@@ -39,6 +39,7 @@ MCS
 menubar
 MILP
 MILPs
+minimzing
 neccessary
 optlang
 Paulocracy
@@ -47,7 +48,7 @@ pFBA
 pre
 prepend
 programmatically
-QLP
+QP
 SBML
 Stephanos
 sthiele

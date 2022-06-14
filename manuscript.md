@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2022-06-10'
+date-meta: '2022-06-14'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-06-10" />
-  <meta name="citation_publication_date" content="2022-06-10" />
+  <meta name="dc.date" content="2022-06-14" />
+  <meta name="citation_publication_date" content="2022-06-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +61,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/92f77e4104edc8a24b67b783fd6732edf0e75c45/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/))
 was automatically generated
-from [cnapy-org/CNApy-guide@92f77e4](https://github.com/cnapy-org/CNApy-guide/tree/92f77e4104edc8a24b67b783fd6732edf0e75c45)
-on June 10, 2022.
+from [cnapy-org/CNApy-guide@2edda76](https://github.com/cnapy-org/CNApy-guide/tree/2edda76f9fac14d0c9154144c6f75ef95be7cb18)
+on June 14, 2022.
 </em></small>
 
 ## Authors
@@ -356,13 +356,13 @@ This has the advantage that redundant internal cyclic fluxes are suppressed and 
 In FVA the maximal/minimal rate of each reaction is calculated.
 This gives the possible flux range for each reaction.
 
-### Make scenario feasible (QLP)
+### Make scenario feasible
 
-A scenario is infeasible if fluxes in this scenario are incompatible with each other. An example would be a flux of a product that is higher than the substrate flux multiplied by the maximal yield. Such a situation could for instance arise due to measurement errors. 
+A scenario is infeasible if the given fluxes in this scenario are incompatible with each other. An example would be a flux of a product that is higher than the substrate flux multiplied by the maximal product yield. Such a situation could for instance arise due to measurement errors if the given fluxes come from experimental measurements. 
 
-With "Make scenario feasible" the fluxes defined in the scenario are modified to be consistent with a quadratic linear programming (QLP) method (and therefore requires a QLP-capable solver like CPLEX, Gurobi or cbc-coinor). The objective function then minimizes the sum of weighted quadratic errors between the scenario fluxes and calculated fluxes where the weights are the absolute scenario flux values. Note that only reactions with scenario fluxes fixed to values unequal to zero enter into the optimization.
+With "Make scenario feasible" the given fluxes in the scenario are modified to be consistent which basically relies on minimzing the sum of absolute differences between the given values and the computed values that make the scenario consistent. There are two main settings that control this minimization: Firstly, one can choose whether the differences are linear or quadratic terms, resulting in a linear program (LP) or quadratic program (QP) respectively (the latter requires a QP-capable solver like CPLEX or Gurobi). Secondly, the (reciprocal) weights with which the differences enter the objective function can either all be equal, relative to their absolute flux values (i.e. larger fluxes are more likely to be changed when resolving infeasibilities), or taken from a specified field in the reaction annotation (in the last case, where a reaction has no entry in the specified annotation field, the default weight is used). Note that only reactions with scenario fluxes fixed to values unequal to zero enter the optimization.
 
-After optimization the current scenario is modified to contain the calculated consistent fluxes, but you can go back to the original values via the scenario history.
+After optimization, the current scenario is modified so that it contains the calculated consistent fluxes and the necessary changes are shown on the console. You can go back to the original values via the scenario history.
 
 ### Elementary modes (EFM)/elementary flux vectors (EFV)
 

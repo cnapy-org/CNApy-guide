@@ -140,12 +140,12 @@ content/08.applications.md:15:pFBA
 content/08.applications.md:17:FBA
 content/08.applications.md:20:FVA
 content/08.applications.md:22:FVA
-content/08.applications.md:25:QLP
-content/08.applications.md:29:coinor
 content/08.applications.md:29:CPLEX
 content/08.applications.md:29:Gurobi
-content/08.applications.md:29:QLP
-content/08.applications.md:29:QLP
+content/08.applications.md:29:infeasibilities
+content/08.applications.md:29:minimzing
+content/08.applications.md:29:QP
+content/08.applications.md:29:QP
 content/08.applications.md:33:EFM
 content/08.applications.md:33:EFV
 content/08.applications.md:35:acces
