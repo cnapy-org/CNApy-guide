@@ -6,7 +6,7 @@ cardinality
 casse
 CellNetAnalyzer
 checkable
-cna
+CNA
 CNApy
 CNApy’s
 COBRApy

@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/2edda76f9fac14d0c9154144c6f75ef95be7cb18/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/))
 was automatically generated
-from [cnapy-org/CNApy-guide@2edda76](https://github.com/cnapy-org/CNApy-guide/tree/2edda76f9fac14d0c9154144c6f75ef95be7cb18)
+from [cnapy-org/CNApy-guide@d2fa724](https://github.com/cnapy-org/CNApy-guide/tree/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7)
 on June 14, 2022.
 </em></small>
 
@@ -147,8 +147,10 @@ There are two ways to install CNApy itself:
 1. Recommended but more complicated: Under any operating system, by installing CNApy as a conda package. For detailed instructions to do this, see [https://github.com/cnapy-org/CNApy#install-cnapy-with-conda](https://github.com/cnapy-org/CNApy#install-cnapy-with-conda).
 2. Not recommended but simple: Under Windows, you can install CNApy by using the .exe installer attached to [CNApy's latest release](https://github.com/cnapy-org/CNApy/releases/latest). Once you run the installer, it will guide you through the installation process. Please note that the installation process may take some time.
 
+**NOTE: After CNApy's installation, it is recommended to download the [CNApy example projects](https://github.com/cnapy-org/CNApy-projects) (including interactive maps of models such as [ECC2](https://www.nature.com/articles/srep39647), [*i*ML1515](https://www.nature.com/articles/nbt.3956) and many more) by starting CNApy and clicking on "Download CNApy example projects..." in the "Projects" menu entry.**
 
-### Additional solvers (optional)
+
+### Installing additional solvers (optional)
 
 CNApy itself is already packaged and installed with the open source linear programming solver [GLPK](https://www.gnu.org/software/glpk/) which is fast enough for calculations with small models and which is not restricted in the possible number of variables.
 
