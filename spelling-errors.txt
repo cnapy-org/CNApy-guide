@@ -6,7 +6,7 @@ cardinality
 casse
 CellNetAnalyzer
 checkable
-CNA
+cna
 CNApy
 CNApy’s
 COBRApy
@@ -34,7 +34,6 @@ iteratively
 Jupyter
 Kamp
 KOs
-Kown
 Magdeburg
 MCS
 menubar

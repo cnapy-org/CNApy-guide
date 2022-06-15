@@ -153,7 +153,6 @@ content/08.applications.md:29:infeasibilities
 content/08.applications.md:29:minimzing
 content/08.applications.md:29:QP
 content/08.applications.md:29:QP
-content/08.applications.md:33:Kown
 content/08.applications.md:33:ojective
 content/08.applications.md:33:optlang
 content/08.applications.md:33:QP

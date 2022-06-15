@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,9 +61,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/))
 was automatically generated
-from [cnapy-org/CNApy-guide@696adf0](https://github.com/cnapy-org/CNApy-guide/tree/696adf005f500d389b9aeea098078eb21ec52426)
+from [cnapy-org/CNApy-guide@947f3a6](https://github.com/cnapy-org/CNApy-guide/tree/947f3a650af833eed789ab7637636edca7be8992)
 on June 15, 2022.
 </em></small>
 
@@ -366,7 +366,7 @@ With "Make scenario feasible" the given fluxes in the scenario are modified to b
 
 After optimization, the current scenario is modified so that it contains the calculated consistent fluxes and the necessary changes are shown on the console. You can go back to the original values via the scenario history.
 
-Kown issue: The solvers are currently accessed through the optlang interface. Setting up the quadratic ojective for the QP via this interface incurs a significant overhead which increases with the number of fluxes set in the scenario. This means that the method as a whole can become quite slow in case more than a few dozen fluxes were set despite the fact that solving the QP itself is ususally quite fast.
+Known issue: The solvers are currently accessed through the optlang interface. Setting up the quadratic ojective for the QP via this interface incurs a significant overhead which increases with the number of fluxes set in the scenario. This means that the method as a whole can become quite slow in case more than a few dozen fluxes were set despite the fact that solving the QP itself is ususally quite fast.
 
 ### Elementary modes (EFM)/elementary flux vectors (EFV)
 
