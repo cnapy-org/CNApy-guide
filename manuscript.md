@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2022-06-14'
+date-meta: '2022-06-15'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-06-14" />
-  <meta name="citation_publication_date" content="2022-06-14" />
+  <meta name="dc.date" content="2022-06-15" />
+  <meta name="citation_publication_date" content="2022-06-15" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +61,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/696adf005f500d389b9aeea098078eb21ec52426/))
 was automatically generated
-from [cnapy-org/CNApy-guide@d2fa724](https://github.com/cnapy-org/CNApy-guide/tree/d2fa72402e69faad5c9ba3cf8d53595a6c601fe7)
-on June 14, 2022.
+from [cnapy-org/CNApy-guide@696adf0](https://github.com/cnapy-org/CNApy-guide/tree/696adf005f500d389b9aeea098078eb21ec52426)
+on June 15, 2022.
 </em></small>
 
 ## Authors
@@ -365,6 +365,8 @@ A scenario is infeasible if the given fluxes in this scenario are incompatible w
 With "Make scenario feasible" the given fluxes in the scenario are modified to be consistent which basically relies on minimzing the sum of absolute differences between the given values and the computed values that make the scenario consistent. There are two main settings that control this minimization: Firstly, one can choose whether the differences are linear or quadratic terms, resulting in a linear program (LP) or quadratic program (QP) respectively (the latter requires a QP-capable solver like CPLEX or Gurobi). Secondly, the (reciprocal) weights with which the differences enter the objective function can either all be equal, relative to their absolute flux values (i.e. larger fluxes are more likely to be changed when resolving infeasibilities), or taken from a specified field in the reaction annotation (in the last case, where a reaction has no entry in the specified annotation field, the default weight is used). Note that only reactions with scenario fluxes fixed to values unequal to zero enter the optimization.
 
 After optimization, the current scenario is modified so that it contains the calculated consistent fluxes and the necessary changes are shown on the console. You can go back to the original values via the scenario history.
+
+Kown issue: The solvers are currently accessed through the optlang interface. Setting up the quadratic ojective for the QP via this interface incurs a significant overhead which increases with the number of fluxes set in the scenario. This means that the method as a whole can become quite slow in case more than a few dozen fluxes were set despite the fact that solving the QP itself is ususally quite fast.
 
 ### Elementary modes (EFM)/elementary flux vectors (EFV)
 

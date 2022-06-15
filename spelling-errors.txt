@@ -34,6 +34,7 @@ iteratively
 Jupyter
 Kamp
 KOs
+Kown
 Magdeburg
 MCS
 menubar
@@ -41,6 +42,7 @@ MILP
 MILPs
 minimzing
 neccessary
+ojective
 optlang
 Paulocracy
 Pavlos
@@ -58,4 +60,5 @@ Thiele
 UB
 UI
 Unchecking
+ususally
 von
