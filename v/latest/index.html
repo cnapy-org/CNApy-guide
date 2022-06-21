@@ -7,7 +7,8 @@
   <meta name="author" content="Sven Thiele" />
   <meta name="author" content="Axel von Kamp" />
   <meta name="author" content="Pavlos Stephanos Bekiaris" />
-  <meta name="dcterms.date" content="2022-06-15" />
+  <meta name="author" content="Philipp Schneider" />
+  <meta name="dcterms.date" content="2022-06-21" />
   <meta name="keywords" content="constraint-programming, metabolic-models" />
   <title>CNApy Guide</title>
   <style>
@@ -46,8 +47,8 @@
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-06-15" />
-  <meta name="citation_publication_date" content="2022-06-15" />
+  <meta name="dc.date" content="2022-06-21" />
+  <meta name="citation_publication_date" content="2022-06-21" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -62,15 +63,17 @@
   <meta name="citation_author" content="Pavlos Stephanos Bekiaris" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
   <meta name="twitter:creator" content="@Paulocracy2" />
+  <meta name="citation_author" content="Philipp Schneider" />
+  <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
   <link rel="canonical" href="https://cnapy-org.github.io/CNApy-guide/" />
   <meta property="og:url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta property="twitter:url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -87,10 +90,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/947f3a650af833eed789ab7637636edca7be8992">cnapy-org/CNApy-guide@947f3a6</a>
-on June 15, 2022.
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/e1d0050a143da28454e2f0093a8b1e1565b6153c">cnapy-org/CNApy-guide@e1d0050</a>
+on June 21, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -113,6 +116,12 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 <a href="https://github.com/Paulocracy">Paulocracy</a>
 · <img src="images/twitter.svg" class="inline_icon" width="16" height="16" alt="Twitter icon" />
 <a href="https://twitter.com/Paulocracy2">Paulocracy2</a><br>
+<small>
+Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
+</small></p></li>
+<li><p><strong>Philipp Schneider</strong><br>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/VonAlphaBisZulu">VonAlphaBisZulu</a><br>
 <small>
 Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
 </small></p></li>
@@ -194,27 +203,12 @@ Should be set to 1 on Windows because Python multiprocessing performs very poorl
 <li>Tolerance for the current model</li>
 </ul>
 <p>Here you can change the tolerance for the current model. You may enter an arbitrary value &gt;= 0 here but if it is not compatible with the current solver then “Apply Changes” can lead to an error message.</p>
-<h3 id="configure-cna-bridge">Configure CNA bridge</h3>
-<div id="fig:config-dialog" class="fignos">
-<figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/configure-cna-bridge-dialog.png" alt="Figure 3: CNApy Configuration dialog." />
-<figcaption aria-hidden="true"><span>Figure 3:</span> <strong>CNApy Configuration dialog.</strong></figcaption>
-</figure>
-</div>
-<p>With this dialog you can configure which Matlab/Octave installation CNApy should use.</p>
-<p>Some functionalities in CNApy use functions that are provided by CellNetAnalyzer.
-To be able to use these functions you have to provide CNApy with either a path to a Matlab installation &gt;R2019 or the path to an Octave executable &gt;4, and of course with a path to a recent CellNetAnalyzer installation.
-You can do this by clicking these buttons (1).
-If you change the settings CNApy performs some basic tests to make sure everything is working.
-If all checks are successful green check marks are shown, if a check fails a red cross is shown.</p>
-<p>If no check can be performed, a yellow question mark is shown.
-For example, the check of the CNA directory needs a working Matlab or Octave installation.</p>
 <h2 id="user-interface-overview">User interface overview</h2>
 <p>This section gives an introduction to the CNApy UI and its components and functions.</p>
 <div id="fig:empty-project" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/empty-project.png" alt="Figure 4: CNApy with an empty project." />
-<figcaption aria-hidden="true"><span>Figure 4:</span> <strong>CNApy with an empty project.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/empty-project.png" alt="Figure 3: CNApy with an empty project." />
+<figcaption aria-hidden="true"><span>Figure 3:</span> <strong>CNApy with an empty project.</strong></figcaption>
 </figure>
 </div>
 <p>This is an empty project on the right hand side we see the empty lists of reactions, metabolites and genes.
@@ -224,8 +218,8 @@ We can also load one of the projects included in our projects repository.</p>
 <p>Let’s go to Project in our menubar and open the <code>ECC2comp.cna</code> project.</p>
 <div id="fig:ecc2-project" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/ecc2comp-project.png" alt="Figure 5: CNApy with the ECC2comp project." />
-<figcaption aria-hidden="true"><span>Figure 5:</span> <strong>CNApy with the ECC2comp project.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/ecc2comp-project.png" alt="Figure 4: CNApy with the ECC2comp project." />
+<figcaption aria-hidden="true"><span>Figure 4:</span> <strong>CNApy with the ECC2comp project.</strong></figcaption>
 </figure>
 </div>
 <p>In this picture we see CNApy with the open ECC2comp project.
@@ -276,8 +270,8 @@ While a pair sets the lower flux bound of the reaction to the first value (<code
 Note that in a scenario you can use values outside the defined lower/upper bound of a reaction. In such a casse the scenario will supersede the reaction bounds which allows temporary modification of the bounds without the need to change the model.</p>
 <div id="fig:scenario-box" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-box.png" alt="Figure 6: Reaction box with scenario value." />
-<figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Reaction box with scenario value.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-box.png" alt="Figure 5: Reaction box with scenario value." />
+<figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Reaction box with scenario value.</strong></figcaption>
 </figure>
 </div>
 <p>Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
@@ -308,45 +302,17 @@ This gives the possible flux range for each reaction.</p>
 <p>With “Make scenario feasible” the given fluxes in the scenario are modified to be consistent which basically relies on minimzing the sum of absolute differences between the given values and the computed values that make the scenario consistent. There are two main settings that control this minimization: Firstly, one can choose whether the differences are linear or quadratic terms, resulting in a linear program (LP) or quadratic program (QP) respectively (the latter requires a QP-capable solver like CPLEX or Gurobi). Secondly, the (reciprocal) weights with which the differences enter the objective function can either all be equal, relative to their absolute flux values (i.e. larger fluxes are more likely to be changed when resolving infeasibilities), or taken from a specified field in the reaction annotation (in the last case, where a reaction has no entry in the specified annotation field, the default weight is used). Note that only reactions with scenario fluxes fixed to values unequal to zero enter the optimization.</p>
 <p>After optimization, the current scenario is modified so that it contains the calculated consistent fluxes and the necessary changes are shown on the console. You can go back to the original values via the scenario history.</p>
 <p>Known issue: The solvers are currently accessed through the optlang interface. Setting up the quadratic ojective for the QP via this interface incurs a significant overhead which increases with the number of fluxes set in the scenario. This means that the method as a whole can become quite slow in case more than a few dozen fluxes were set despite the fact that solving the QP itself is ususally quite fast.</p>
-<h3 id="elementary-modes-efmelementary-flux-vectors-efv">Elementary modes (EFM)/elementary flux vectors (EFV)</h3>
-<p>EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a <a href="#efmmcs-navigation-and-analysis">navigation panel</a> appears to acces the results.</p>
-<div id="fig:efm-dialog" class="fignos">
-<figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/efm-dialog.png" alt="Figure 7: Elementary Flux Mode Computation Dialog." />
-<figcaption aria-hidden="true"><span>Figure 7:</span> <strong>Elementary Flux Mode Computation Dialog.</strong></figcaption>
-</figure>
-</div>
-<h4 id="options-for-cna-and-efmtool">Options for CNA and efmtool</h4>
+<h3 id="elementary-modes-efm">Elementary modes (EFM)</h3>
+<p>EFM can be calculated via <a href="https://csb.ethz.ch/tools/software/efmtool.html">efmtool</a> which is automatically installed with CNApy. After calculation a <a href="#efmmcs-navigation-and-analysis">navigation panel</a> appears to acces the results.</p>
+<h4 id="options">Options</h4>
 <p>When reactions are marked with 0 flux in a scenario and the option “consider 0 in current scenario as off” is activated then only the subset of EFM/EFV is calculated in which these reactions do not participate</p>
-<h4 id="additional-options-for-cna">Additional options for CNA</h4>
-<ul>
-<li><p>use flux bounds to calculate elementary flux vectors
-To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
-A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.</p></li>
-<li><p>check reversibility</p></li>
-</ul>
-<p>Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.</p>
-<ul>
-<li>only convex basis</li>
-</ul>
-<p>Currently has no effect (need to be able to switch computation method first).</p>
-<ul>
-<li>consider isozymes only once</li>
-</ul>
-<p>If a group of reactions has the same stoichiometry then only the modes with one representative of that group are calculated.</p>
-<ul>
-<li>use rational numbers</li>
-</ul>
-<p>Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
-To calculate EFV instead of EFM, activate this option.
-Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
-A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.</p>
-<h3 id="minimal-cut-sets">Minimal cut sets</h3>
+<h3 id="computational-strain-design">Computational strain design</h3>
+<h4 id="minimal-cut-sets">Minimal cut sets</h4>
 <p>Minimal cut sets (MCS) can be calculated in CNApy using the dual method. After calculation a <a href="#emfmcs-navigation-and-analysis">navigation panel</a> appears to acces the results.</p>
 <div id="fig:mcs-dialog" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/mcs-dialog.png" alt="Figure 8: Minimal cut sets computation dialog." />
-<figcaption aria-hidden="true"><span>Figure 8:</span> <strong>Minimal cut sets computation dialog.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/mcs-dialog.png" alt="Figure 6: Minimal cut sets computation dialog." />
+<figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Minimal cut sets computation dialog.</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -358,10 +324,9 @@ Each target/desired region is defined by a set of linear equality constraints ov
 All target and desired regions must be initially feasible or an error will be raised. Also make sure that 0 is not included in any target or desired region (0 as target cannot be suppressed and 0 as desired is always fulfilled).</p>
 <p>Note that all non-default reaction bounds (as defined by cobra.Configuration().bounds) are automatically added to all target and desired regions before MCS computation.</p>
 <ul>
-<li>Solver</li>
+<li>Current solver</li>
 </ul>
-<p>MCS can either be calculated via CNA (using either Octave or Matlab) or via optlang using different MILP solvers.
-For CNA the solver must be chosen while optlang uses the solver for the current model (cf. Solver for current model).
+<p>MCS can be calculated via optlang using the currently active MILP solver.
 Not all variants and solvers allow for the same options so these will partly be disabled depending on the chosen solver.</p>
 <ul>
 <li>Max. solutions</li>
@@ -384,23 +349,21 @@ With the latter option new MCS are found more quickly but may not be the smalles
 <p>With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed.
 In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but usually much faster.</p>
 <ul>
-<li>Gene KOs (CNA only)</li>
-</ul>
-<p>If the model contains the gene-reaction association, search for gene knock-outs instead of reaction knock-outs.</p>
-<ul>
-<li>Exclude boundary reactions as cuts (optlang only)</li>
+<li>Exclude boundary reactions as cuts</li>
 </ul>
 <p>Do not allow knock-out of boundary reactions (reactions that cross the system boundary, e.g. exchange reactions).</p>
 <ul>
 <li>Consider constraints given by scenario</li>
 </ul>
 <p>Take reaction bounds set by the current scenario into account for all target and desired regions.</p>
+<h4 id="compute-strain-designs">Compute strain designs</h4>
+<p>Opens a dialog which serves as front-end of the <a href="https://github.com/klamt-lab/straindesign">StrainDesign</a> package for MILP-based strain design computation which supports MCS, MCS with nested optimization, OptKnock, RobustKnock and OptCouple, GPR-rule integration, gene and reaction knockouts and additions as well as regulatory interventions. A detailed description can be found in its <a href="https://straindesign.readthedocs.io/en/latest/">documentation</a>.</p>
 <h3 id="efmmcs-navigation-and-analysis">EFM/MCS Navigation and analysis</h3>
 <p>After the computation of EFM or MCS a navigation panel appears below the map. With this you can browse through the results, select a subset of the modes/MCS and show some statistics. There is also a button for saving the results and one to clear them and close the navigation panel.</p>
 <div id="fig:navigator" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/mode-navigator.png" alt="Figure 9: Mode/MCS Navigation Panel." />
-<figcaption aria-hidden="true"><span>Figure 9:</span> <strong>Mode/MCS Navigation Panel.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/mode-navigator.png" alt="Figure 7: Mode/MCS Navigation Panel." />
+<figcaption aria-hidden="true"><span>Figure 7:</span> <strong>Mode/MCS Navigation Panel.</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -415,26 +378,24 @@ In addition, with these solvers a continuous search mode is possible which is si
 <li>Size histogram</li>
 </ul>
 <p>Calculate the pathway lengths/number of reactions of the currently selected modes/MCS. The result is shown as a size historam in the integrated Jupyter console.</p>
-<h3 id="yield-optimization">Yield optimization</h3>
-<div id="fig:yield-dialog" class="fignos">
-<figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/yield-optimization-dialog.png" alt="Figure 10: Yield optimization dialog." />
-<figcaption aria-hidden="true"><span>Figure 10:</span> <strong>Yield optimization dialog.</strong></figcaption>
-</figure>
-</div>
-<p>Maximizes the value of a yield function <em>c/d</em> where <em>c</em> and <em>d</em> are linear expressions over the fluxes in the network.
-For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
+<h3 id="flux-optimization">Flux optimization</h3>
+<p>Launches a dialog in which you can enter a linear expression (over the fluxes) that can then be maximized or minimized. The result is then displayed on the map(s) and the reaction list.
 The flux values of the current scenario are taken into during the optimization.</p>
-<p>A typical application would be the maximization of a product yield: When the exchange fluxes for ethanol and glucose are <em>EX_etoh</em> and <em>EX_glc</em> then maximizing <em>EX_etoh/-EX_glc gives</em> the maximal ethanol yield on glucose.</p>
-<h3 id="phase-plane-plot">Phase plane plot</h3>
-<div id="fig:phase-plane-dialog" class="fignos">
-<figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/phase-plane-dialog.png" alt="Figure 11: Phase plane plot dialog." />
-<figcaption aria-hidden="true"><span>Figure 11:</span> <strong>Phase plane plot dialog.</strong></figcaption>
-</figure>
-</div>
-<p>Creates a plot (in the console) that shows the projection of the solution space onto a two-dimensional plane of two selected reaction rates.
+<h3 id="yield-optimization">Yield optimization</h3>
+<p>Launches a dialog in which you can enter two linear expressions (over the fluxes), which serve as numerator/denominator of a linear fractional
+program which then be maximized or minimized.
+A typical application would be the maximization of a product yield: When the exchange fluxes for ethanol and glucose are <em>EX_etoh</em> and <em>EX_glc</em> then maximizing <em>EX_etoh/-EX_glc gives</em> the maximal ethanol yield on glucose.
+For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
+The result is then displayed on the map(s) and the reaction list.
+The flux values of the current scenario are taken into during the optimization.</p>
+<h3 id="plot-flux-space">Plot flux space</h3>
+<p>Launches a dialog in which you can configure a plot that shows the projection of the solution space in 2D or 3D where the axes can be flux expressions or yield expressions.
+In the simplest case one can for example plot the growth rate against the substrate uptake rate.
 The flux values of the current scenario are taken into account during the calculations.</p>
+<h3 id="show-model-stats">Show model stats</h3>
+<p>Shows the stoichiometric matrix and basic model properties on the console. In particular, the degrees of freedom of the stoichiometric matrix and the number of conservation relations are calculated for this.</p>
+<h3 id="net-conversion-of-the-external-metabolites">Net conversion of the external metabolites</h3>
+<p>Shows the conversion of external metabolites of the current flux distribution. Because there are no external metabolites in COBRApy models this conversion is derived from the rates through the boundary fluxes.</p>
 <h3 id="compute-inout-fluxes-at-a-metabolite">Compute in/out fluxes at a metabolite</h3>
 <p>If a flux distribution has been calculated (e.g. by FBA) this function shows the magnitude of all fluxes going in/coming out of a specified metabolite.
 The reaction fluxes are displayed as stacked bar graphs on the console.
@@ -442,8 +403,8 @@ You can either call this function from the Analysis menu and specify a metabolit
 <h3 id="clipboard-calculator">Clipboard calculator</h3>
 <div id="fig:clipboard-calc" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/clipboard-calculator.png" alt="Figure 12: Clipboard calculator." />
-<figcaption aria-hidden="true"><span>Figure 12:</span> <strong>Clipboard calculator.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/clipboard-calculator.png" alt="Figure 8: Clipboard calculator." />
+<figcaption aria-hidden="true"><span>Figure 8:</span> <strong>Clipboard calculator.</strong></figcaption>
 </figure>
 </div>
 <p>The clipboard calculator allows you to perform arithmetic operations with the values stored in the clipboard, the current reaction rates or a fixed value that you can enter in this dialog.
