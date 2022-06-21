@@ -6,13 +6,14 @@
       "metabolic-models"
     ],
     "lang": "en-US",
-    "date-meta": "2022-06-15",
+    "date-meta": "2022-06-21",
     "author-meta": [
       "Sven Thiele",
       "Axel von Kamp",
-      "Pavlos Stephanos Bekiaris"
+      "Pavlos Stephanos Bekiaris",
+      "Philipp Schneider"
     ],
-    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"CNApy Guide\" />\n<meta name=\"citation_title\" content=\"CNApy Guide\" />\n<meta property=\"og:title\" content=\"CNApy Guide\" />\n<meta property=\"twitter:title\" content=\"CNApy Guide\" />\n<meta name=\"dc.date\" content=\"2022-06-15\" />\n<meta name=\"citation_publication_date\" content=\"2022-06-15\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Sven Thiele\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-5812-6963\" />\n<meta name=\"citation_author\" content=\"Axel von Kamp\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<meta name=\"citation_author\" content=\"Pavlos Stephanos Bekiaris\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<meta name=\"twitter:creator\" content=\"@Paulocracy2\" />\n<link rel=\"canonical\" href=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta property=\"og:url\" content=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta property=\"twitter:url\" content=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta name=\"citation_pdf_url\" content=\"https://cnapy-org.github.io/CNApy-guide/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://cnapy-org.github.io/CNApy-guide/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"CNApy Guide\" />\n<meta name=\"citation_title\" content=\"CNApy Guide\" />\n<meta property=\"og:title\" content=\"CNApy Guide\" />\n<meta property=\"twitter:title\" content=\"CNApy Guide\" />\n<meta name=\"dc.date\" content=\"2022-06-21\" />\n<meta name=\"citation_publication_date\" content=\"2022-06-21\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Sven Thiele\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-5812-6963\" />\n<meta name=\"citation_author\" content=\"Axel von Kamp\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<meta name=\"citation_author\" content=\"Pavlos Stephanos Bekiaris\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<meta name=\"twitter:creator\" content=\"@Paulocracy2\" />\n<meta name=\"citation_author\" content=\"Philipp Schneider\" />\n<meta name=\"citation_author_institution\" content=\"Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg\" />\n<link rel=\"canonical\" href=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta property=\"og:url\" content=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta property=\"twitter:url\" content=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://cnapy-org.github.io/CNApy-guide/\" />\n<meta name=\"citation_pdf_url\" content=\"https://cnapy-org.github.io/CNApy-guide/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://cnapy-org.github.io/CNApy-guide/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
     "bibliography": [
       "content/manual-references.json"
     ],
@@ -22,7 +23,7 @@
     "manubot-clear-requests-cache": false
   },
   "manubot": {
-    "date": "June 15, 2022",
+    "date": "June 21, 2022",
     "randomize_author_order": false,
     "authors": [
       {
@@ -59,6 +60,17 @@
         "affiliation_numbers": [
           1
         ]
+      },
+      {
+        "github": "VonAlphaBisZulu",
+        "name": "Philipp Schneider",
+        "initials": "PS",
+        "affiliations": [
+          "Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg"
+        ],
+        "affiliation_numbers": [
+          1
+        ]
       }
     ],
     "affiliations": [
@@ -72,19 +84,19 @@
       "repo_slug": "cnapy-org/CNApy-guide",
       "repo_owner": "cnapy-org",
       "repo_name": "CNApy-guide",
-      "commit": "947f3a650af833eed789ab7637636edca7be8992",
-      "triggering_commit": "947f3a650af833eed789ab7637636edca7be8992",
-      "build_url": "https://github.com/cnapy-org/CNApy-guide/commit/947f3a650af833eed789ab7637636edca7be8992/checks",
-      "job_url": "https://github.com/cnapy-org/CNApy-guide/actions/runs/2503041095"
+      "commit": "e1d0050a143da28454e2f0093a8b1e1565b6153c",
+      "triggering_commit": "e1d0050a143da28454e2f0093a8b1e1565b6153c",
+      "build_url": "https://github.com/cnapy-org/CNApy-guide/commit/e1d0050a143da28454e2f0093a8b1e1565b6153c/checks",
+      "job_url": "https://github.com/cnapy-org/CNApy-guide/actions/runs/2533897804"
     },
     "html_url": "https://cnapy-org.github.io/CNApy-guide/",
     "pdf_url": "https://cnapy-org.github.io/CNApy-guide/manuscript.pdf",
-    "html_url_versioned": "https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/",
-    "pdf_url_versioned": "https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/manuscript.pdf",
+    "html_url_versioned": "https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/",
+    "pdf_url_versioned": "https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/manuscript.pdf",
     "manubot_version": "0.5.2",
     "rootstock_commit": "9a22fab4497f80f501ea361d028f26888ad9d5a0",
     "manuscript_stats": {
-      "word_count": 4079
+      "word_count": 3864
     }
   }
 }

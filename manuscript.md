@@ -4,11 +4,12 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2022-06-15'
+date-meta: '2022-06-21'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
 - Pavlos Stephanos Bekiaris
+- Philipp Schneider
 header-includes: |-
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
@@ -19,8 +20,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-06-15" />
-  <meta name="citation_publication_date" content="2022-06-15" />
+  <meta name="dc.date" content="2022-06-21" />
+  <meta name="citation_publication_date" content="2022-06-21" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -35,15 +36,17 @@ header-includes: |-
   <meta name="citation_author" content="Pavlos Stephanos Bekiaris" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
   <meta name="twitter:creator" content="@Paulocracy2" />
+  <meta name="citation_author" content="Philipp Schneider" />
+  <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
   <link rel="canonical" href="https://cnapy-org.github.io/CNApy-guide/" />
   <meta property="og:url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta property="twitter:url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,10 +64,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/947f3a650af833eed789ab7637636edca7be8992/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/e1d0050a143da28454e2f0093a8b1e1565b6153c/))
 was automatically generated
-from [cnapy-org/CNApy-guide@947f3a6](https://github.com/cnapy-org/CNApy-guide/tree/947f3a650af833eed789ab7637636edca7be8992)
-on June 15, 2022.
+from [cnapy-org/CNApy-guide@e1d0050](https://github.com/cnapy-org/CNApy-guide/tree/e1d0050a143da28454e2f0093a8b1e1565b6153c)
+on June 21, 2022.
 </em></small>
 
 ## Authors
@@ -95,6 +98,14 @@ on June 15, 2022.
     [Paulocracy](https://github.com/Paulocracy)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [Paulocracy2](https://twitter.com/Paulocracy2)<br>
+  <small>
+     Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
+  </small>
+
+
++ **Philipp Schneider**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [VonAlphaBisZulu](https://github.com/VonAlphaBisZulu)<br>
   <small>
      Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
   </small>
@@ -204,23 +215,6 @@ This value is used to distinguish zero from non-zero elements for various purpos
 - Tolerance for the current model
 
 Here you can change the tolerance for the current model. You may enter an arbitrary value >= 0 here but if it is not compatible with the current solver then “Apply Changes” can lead to an error message.
-
-### Configure CNA bridge
-
-![
-**CNApy Configuration dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/configure-cna-bridge-dialog.png "CNA bridge dialog"){#fig:config-dialog}
-
-With this dialog you can configure which Matlab/Octave installation CNApy should use.
-
-Some functionalities in CNApy use functions that are provided by CellNetAnalyzer.
-To be able to use these functions you have to provide CNApy with either a path to a Matlab installation >R2019 or the path to an Octave executable >4, and of course with a path to a recent CellNetAnalyzer installation.
-You can do this by clicking these buttons (1).
-If you change the settings CNApy performs some basic tests to make sure everything is working.
-If all checks are successful green check marks  are shown, if a check fails a red cross  is shown.
-
-If no check can be performed, a yellow question mark is shown.
-For example, the check of the CNA directory needs a working Matlab or Octave installation.
 
 
 
@@ -368,44 +362,17 @@ After optimization, the current scenario is modified so that it contains the cal
 
 Known issue: The solvers are currently accessed through the optlang interface. Setting up the quadratic ojective for the QP via this interface incurs a significant overhead which increases with the number of fluxes set in the scenario. This means that the method as a whole can become quite slow in case more than a few dozen fluxes were set despite the fact that solving the QP itself is ususally quite fast.
 
-### Elementary modes (EFM)/elementary flux vectors (EFV)
+### Elementary modes (EFM)
 
-EFM can be calculated via CNA or directly via efmtool while for EFV CNA is required. After calculation a [navigation panel](#efmmcs-navigation-and-analysis) appears to acces the results.
+EFM can be calculated via [efmtool](https://csb.ethz.ch/tools/software/efmtool.html) which is automatically installed with CNApy. After calculation a [navigation panel](#efmmcs-navigation-and-analysis) appears to acces the results.
 
-![
-**Elementary Flux Mode Computation Dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/efm-dialog.png "Elementary Flux Mode Computation Dialog"){#fig:efm-dialog}
-
-#### Options for CNA and efmtool
+#### Options
 
 When reactions are marked with 0 flux in a scenario and the option “consider 0 in current scenario as off” is activated then only the subset of EFM/EFV is calculated in which these reactions do not participate
 
-#### Additional options for CNA
+### Computational strain design
 
-- use flux bounds to calculate elementary flux vectors
-To calculate EFV instead of EFM, activate this option. Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
-A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.
-
-- check reversibility
-
-Unchecking this option will lead to all reactions being considered reversible even if they have a rate minimum ≥ 0.
-
-- only convex basis
-
-Currently has no effect (need to be able to switch computation method first).
-
-- consider isozymes only once
-
-If a group of reactions has the same stoichiometry then only the modes with one representative of that group are calculated.
-
-- use rational numbers
-
-Use rational numbers of arbitrary length for EFM/EFV computation (efmtool part only, results will still appear as floating point numbers)
-To calculate EFV instead of EFM, activate this option.
-Flux bounds defined in the reactions and the current scenario are then taken into account as inhomogeneous constraints.
-A flux bound is only included when its absolute value is greater than the value given as “Threshold for bounds to be unconstrained”.
-
-### Minimal cut sets
+#### Minimal cut sets
 
 Minimal cut sets (MCS) can be calculated in CNApy using the dual method. After calculation a [navigation panel](#emfmcs-navigation-and-analysis) appears to acces the results.
 
@@ -422,10 +389,9 @@ All target and desired regions must be initially feasible or an error will be ra
 
 Note that all non-default reaction bounds (as defined by cobra.Configuration().bounds) are automatically added to all target and desired regions before MCS computation.
 
-- Solver
+- Current solver
 
-MCS can either be calculated via CNA (using either Octave or Matlab) or via optlang using different MILP solvers.
-For CNA the solver must be chosen while optlang uses the solver for the current model (cf. Solver for current model).
+MCS can be calculated via optlang using the currently active MILP solver.
 Not all variants and solvers allow for the same options so these will partly be disabled depending on the chosen solver.
 
 - Max. solutions
@@ -449,17 +415,17 @@ With the latter option new MCS are found more quickly but may not be the smalles
 With CPLEX or Gurobi as solver, MCS can also be enumerated by cardinality, i.e. all MCS of successively increasing size (up to max. size) are computed.
 In addition, with these solvers a continuous search mode is possible which is similar to the any MCS method but usually much faster.
 
-- Gene KOs (CNA only)
-
-If the model contains the gene-reaction association, search for gene knock-outs instead of reaction knock-outs.
-
-- Exclude boundary reactions as cuts (optlang only)
+- Exclude boundary reactions as cuts
 
 Do not allow knock-out of boundary reactions (reactions that cross the system boundary, e.g. exchange reactions).
 
 - Consider constraints given by scenario
 
 Take reaction bounds set by the current scenario into account for all target and desired regions.
+
+#### Compute strain designs
+
+Opens a dialog which serves as front-end of the [StrainDesign](https://github.com/klamt-lab/straindesign) package for MILP-based strain design computation which supports MCS, MCS with nested optimization, OptKnock, RobustKnock and OptCouple, GPR-rule integration, gene and reaction knockouts and additions as well as regulatory interventions. A detailed description can be found in its [documentation](https://straindesign.readthedocs.io/en/latest/).
 
 ### EFM/MCS Navigation and analysis
 
@@ -481,26 +447,33 @@ Calculate the relative participation of each reaction in the currently selected 
 
 Calculate the pathway lengths/number of reactions of the currently selected modes/MCS. The result is shown as a size historam in the integrated Jupyter console.
 
-### Yield optimization
+### Flux optimization
 
-![
-**Yield optimization dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/yield-optimization-dialog.png "Yield optimization dialog"){#fig:yield-dialog}
-
-Maximizes the value of a yield function *c/d* where *c* and *d* are linear expressions over the fluxes in the network.
-For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
+Launches a dialog in which you can enter a linear expression (over the fluxes) that can then be maximized or minimized. The result is then displayed on the map(s) and the reaction list.
 The flux values of the current scenario are taken into during the optimization.
 
+### Yield optimization
+
+Launches a dialog in which you can enter two linear expressions (over the fluxes), which serve as numerator/denominator of a linear fractional
+program which then be maximized or minimized.
 A typical application would be the maximization of a product yield: When the exchange fluxes for ethanol and glucose are *EX_etoh* and *EX_glc* then maximizing *EX_etoh/-EX_glc gives* the maximal ethanol yield on glucose.
+For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
+The result is then displayed on the map(s) and the reaction list.
+The flux values of the current scenario are taken into during the optimization.
 
-### Phase plane plot
+### Plot flux space
 
-![
-**Phase plane plot dialog.**
-](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/phase-plane-dialog.png "Phase plane plot dialog"){#fig:phase-plane-dialog}
-
-Creates a plot (in the console) that shows the projection of the solution space onto a two-dimensional plane of two selected reaction rates.
+Launches a dialog in which you can configure a plot that shows the projection of the solution space in 2D or 3D where the axes can be flux expressions or yield expressions.
+In the simplest case one can for example plot the growth rate against the substrate uptake rate.
 The flux values of the current scenario are taken into account during the calculations.
+
+### Show model stats
+
+Shows the stoichiometric matrix and basic model properties on the console. In particular, the degrees of freedom of the stoichiometric matrix and the number of conservation relations are calculated for this.
+
+### Net conversion of the external metabolites
+
+Shows the conversion of external metabolites of the current flux distribution. Because there are no external metabolites in COBRApy models this conversion is derived from the rates through the boundary fluxes.
 
 ### Compute in/out fluxes at a metabolite
 
