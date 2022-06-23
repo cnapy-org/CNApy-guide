@@ -2,7 +2,7 @@
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
-[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://cnapy-org.github.io/CNAoy-guide/)
+[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://cnapy-org.github.io/CNApy-guide/)
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://cnapy-org.github.io/CNApy-guide/manuscript.pdf)
 [![GitHub Actions Status](https://github.com/cnapy-org/CNApy-guide/workflows/cnapy-org/badge.svg)](https://github.com/cnapy-org/CNApy-guide/actions)
 <!-- usage note: delete CI badges above for services not used by your manuscript -->
