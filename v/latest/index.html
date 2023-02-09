@@ -8,7 +8,7 @@
   <meta name="author" content="Axel von Kamp" />
   <meta name="author" content="Pavlos Stephanos Bekiaris" />
   <meta name="author" content="Philipp Schneider" />
-  <meta name="dcterms.date" content="2022-06-23" />
+  <meta name="dcterms.date" content="2023-02-09" />
   <meta name="keywords" content="constraint-programming, metabolic-models" />
   <title>CNApy Guide</title>
   <style>
@@ -18,6 +18,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
@@ -47,8 +110,8 @@
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2022-06-23" />
-  <meta name="citation_publication_date" content="2022-06-23" />
+  <meta name="dc.date" content="2023-02-09" />
+  <meta name="citation_publication_date" content="2023-02-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -62,6 +125,7 @@
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
   <meta name="citation_author" content="Pavlos Stephanos Bekiaris" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
+  <meta name="citation_author_orcid" content="0000-0002-3047-4253" />
   <meta name="twitter:creator" content="@Paulocracy2" />
   <meta name="citation_author" content="Philipp Schneider" />
   <meta name="citation_author_institution" content="Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg" />
@@ -71,9 +135,9 @@
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/5f252d4084ad4ea6e6ea512fa5817d238a208724/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/5f252d4084ad4ea6e6ea512fa5817d238a208724/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/5f252d4084ad4ea6e6ea512fa5817d238a208724/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,10 +154,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cnapy-org.github.io/CNApy-guide/v/5f252d4084ad4ea6e6ea512fa5817d238a208724/">permalink</a>)
+(<a href="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cnapy-org/CNApy-guide/tree/5f252d4084ad4ea6e6ea512fa5817d238a208724">cnapy-org/CNApy-guide@5f252d4</a>
-on June 23, 2022.
+from <a href="https://github.com/cnapy-org/CNApy-guide/tree/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430">cnapy-org/CNApy-guide@f6050d1</a>
+on February 9, 2023.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -112,6 +176,8 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg
 </small></p></li>
 <li><p><strong>Pavlos Stephanos Bekiaris</strong><br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-3047-4253">0000-0002-3047-4253</a>
 · <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
 <a href="https://github.com/Paulocracy">Paulocracy</a>
 · <img src="images/twitter.svg" class="inline_icon" width="16" height="16" alt="Twitter icon" />
@@ -128,40 +194,43 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 </ul>
 <!-- ## Abstract {.page_break_before} -->
 <h2 id="introduction">Introduction</h2>
-<p>This is the user manual of CNApy. CNApy is a graphical interface for the modelling and analysis of metabolic networks on the basis of constraint-based (stoichiometric) modeling approaches. It allows</p>
+<p>This is the user manual of CNApy. CNApy is a graphical interface for the modelling and analysis of metabolic networks on the basis of constraint-based (stoichiometric) modeling approaches. Its main features are:</p>
 <ul>
-<li>Importing/exporting SBML models</li>
-<li>Creating COBRApy/CNA models</li>
-<li>Linking a graphical representation to model data</li>
-<li>Convenient exploration and editing of the model</li>
-<li>Model analysis with standard and advanced constraint-based methods, and</li>
+<li>Import/export of metabolic models in the widely used SBML format</li>
+<li>Visualizing the reactions and solutions in the form of CNApy (with text boxes and an SVG background) or <a href="https://escher.github.io/">Escher maps</a> (which are fully editable)</li>
+<li>Convenient exploration and editing of the model, including its reactions, metabolites and genes</li>
+<li>Creation, loading and saving of CNApy scenarios which add custom linear constraints, reactions and flux bounds to the model without directly altering the model itself</li>
+<li>Model analysis with standard and advanced constraint-based methods (listed below)</li>
 <li>Saving everything as a CNApy *.cna project</li>
 </ul>
-<p>The methods provided for model analysis (some of them are part of CNApy but most are functions from CNA and COBRApy) include:</p>
+<p>The methods provided for model analysis (some of them are part of CNApy and some provided by <a href="https://opencobra.github.io/cobrapy/">COBRApy</a>) include:</p>
 <ul>
-<li>Flux balance analysis</li>
-<li>Parsimonious flux balance analysis</li>
-<li>Flux variability analysis</li>
-<li>Minimal cut sets</li>
-<li>Elementary modes</li>
+<li>Flux Balance Analysis (FBA)</li>
+<li>Flux Variability Analysis (FVA)</li>
+<li>Making measured flux scenarios stoichiometrically feasible</li>
+<li>Elementary Flux Modes (EFM)</li>
+<li>Thermodynamic methods based on <a href="https://doi.org/10.1371/journal.pcbi.1006492">OptMDFpathway</a></li>
+<li>Many advanced strain design algorithms such as <a href="https://doi.org/10.1002/bit.10803">OptKnock</a>, <a href="https://doi.org/10.1093/bioinformatics/btp704">RobustKnock</a>, <a href="https://doi.org/10.1016/j.mec.2019.e00087">OptCouple</a> and <a href="https://doi.org/10.1371/journal.pcbi.1008110">advanced Minimal Cut Sets</a> through its integration of the <a href="https://github.com/klamt-lab/straindesign">StrainDesign</a> package.</li>
+<li>Yield optimization (based on linear-fractional programming)</li>
 <li>Phase plane analysis</li>
-<li>Yield optimization</li>
 </ul>
+<p>All results of these calculations can then be visualized in the model’s map as well as exported in the form of text or partly Excel XLSX files.</p>
 <p>CNApy is available at <a href="https://github.com/cnapy-org/CNApy">https://github.com/cnapy-org/CNApy</a> under the <a href="https://github.com/ARB-Lab/CNApy/blob/master/LICENSE">Apache-2.0 License</a>.</p>
-<p>We appreciate any comments or suggestions for improvements and we are greatly interested in your feedback which you can give at our <a href="https://groups.google.com/g/cellnetanalyzer-user-forum">User Forum</a>.</p>
-<p>For feature requests and bug reports please use our <a href="https://github.com/cnapy-org/CNApy/issues">Issue tracker</a></p>
+<p>We appreciate any comments or suggestions for improvements and we are greatly interested in your feedback! If you have questions, suggestions or bug reports regarding CNApy, you can use either of the <a href="https://github.com/cnapy-org/CNApy/issues">CNApy GitHub issues</a>, the <a href="https://github.com/cnapy-org/CNApy/discussions">CNApy GitHub discussions</a> or the <a href="https://gitter.im/cnapy-org/community">CNApy Gitter chat room</a>.</p>
 <p>Thank you for using CNApy!</p>
 <h2 id="installation">Installation</h2>
 <h3 id="cnapy-main-program">CNApy main program</h3>
-<p>There are two ways to install CNApy itself:</p>
+<p>There are three ways to install CNApy itself:</p>
 <ol type="1">
-<li>Recommended but more complicated: Under any operating system, by installing CNApy as a conda package. For detailed instructions to do this, see <a href="https://github.com/cnapy-org/CNApy#install-cnapy-with-conda">https://github.com/cnapy-org/CNApy#install-cnapy-with-conda</a>.</li>
-<li>Not recommended but simple: Under Windows, you can install CNApy by using the .exe installer attached to <a href="https://github.com/cnapy-org/CNApy/releases/latest">CNApy’s latest release</a>. Once you run the installer, it will guide you through the installation process. Please note that the installation process may take some time.</li>
+<li>As the easiest way only under Windows, you can use the .exe installer attached to the assets at the bottom of <a href="https://github.com/cnapy-org/CNApy/releases/latest">CNApy’s latest release</a>.</li>
+<li>Under any operating system, you can install CNApy as a conda package as described in section <a href="https://github.com/cnapy-org/CNApy#install-cnapy-as-conda-package">Install CNApy as conda package</a>.</li>
+<li>If you want to clone and/or develop CNApy, follow the instruction in section <a href="https://github.com/cnapy-org/CNApy#setup-the-cnapy-development-environment">Setup the CNApy development environment</a>.</li>
 </ol>
 <p><strong>NOTE: After CNApy’s installation, it is recommended to download the <a href="https://github.com/cnapy-org/CNApy-projects">CNApy example projects</a> (including interactive maps of models such as <a href="https://www.nature.com/articles/srep39647">ECC2</a>, <a href="https://www.nature.com/articles/nbt.3956"><em>i</em>ML1515</a> and many more) by starting CNApy and clicking on “Download CNApy example projects…” in the “Projects” menu entry.</strong></p>
 <h3 id="installing-additional-solvers-optional">Installing additional solvers (optional)</h3>
 <p>CNApy itself is already packaged and installed with the open source linear programming solver <a href="https://www.gnu.org/software/glpk/">GLPK</a> which is fast enough for calculations with small models and which is not restricted in the possible number of variables.</p>
-<p><em>Completely optional</em>: In addition, CNApy is also pre-packaged with the Community editions of the much more powerful commercial solvers <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio">IBM CPLEX</a> and <a href="https://www.gurobi.com/">Gurobi</a>. These community editions can only run with models up to 1000 variables. In order to use one of these solvers with models which contain more variables, the <em>full versions</em> of either two of these solvers have to be installed and connected to CNApy. In order to help you with this process, CNApy contains a wizard which explains the process in detail and which takes over some of the neccessary tasks. You can find the wizards under the “Config” menu entry.</p>
+<p>In addition, CNApy is also pre-packaged with the Community editions of the much more powerful commercial solvers <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio">IBM CPLEX</a> and <a href="https://www.gurobi.com/">Gurobi</a>. These community editions can only run with models up to 1000 variables. In order to use one of these solvers with models which contain more variables, the <em>full versions</em> of either two of these solvers have to be installed and connected to CNApy. In order to help you with this process, CNApy contains a wizard which explains the process in detail and which takes over some of the neccessary tasks. You can find the wizards under the “Config” menu entry.</p>
+<p>For strain design and thermodyanmic calculations, you can also use the free and open-source solver <a href="https://www.scipopt.org/">SCIP</a> which is much faster than GLPK but still often much slower than IBM CPLEX and Gurobi. You can install SCIP according to the instructions <a href="https://www.scipopt.org/index.php#download">on its website</a>.</p>
 <h2 id="configuration">Configuration</h2>
 <p>CNApy can be configured via the Config menu. The different aspects of CNApy can be configured via separate dialogs:</p>
 <h3 id="configure-cnapy">Configure CNApy</h3>
@@ -172,6 +241,7 @@ Analysis and Redesign of Biological Networks, Max Planck Institute for Dynamics 
 </figure>
 </div>
 <p>Here you can configure which colors CNApy should use to highlight reactions on the map or in the reaction list.</p>
+<p>In addition, you can activate the flux analysis (e.g., flux variabiliy analysis or FVA) cache in the selected folder, where flux analysis results of a specific model will be stored so that they can be quickly reloaded without performing the flux analysis again. The flux analysis cache automatically works in a way such that any change of the model also leads to a newly created flux analysis cache file.</p>
 <h3 id="configure-cobrapy">Configure COBRApy</h3>
 <div id="fig:cobrapy-config" class="fignos">
 <figure>
@@ -229,36 +299,37 @@ On the right hand side (1) we see the populated reactions and metabolites lists 
 Changing the metabolite identifier or other details in the metabolite/reaction form has an instant effect on the corresponding reactions/metabolites in the model.</p>
 <p>When selecting a metabolite in the metabolite tabs a list of reactions (and corresponding equations) in which this metabolite participates is shown a the bottom. By double-clicking on a reaction or metabolite ID one can switch to the respective object.</p>
 <p>The console (2) now shows the output of some computations, and above the console we have a map view (3) with a graphical representation of our network.
-On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.</p>
+On top (4) we have the menu bar which gives us access to the various functionalities of CNApy and a Toolbar for quick access to often used functions.
+Underneath, you can also see the search bar with which you can search for the IDs of reactions, metabolites or genes, depending on which tab you have opened. The search results are shown in the respective list (1). In addition to only searching for IDs, you can also look for annotations (given in the annotations table of a single reaction, metabolite or gene) if you activate the respective checkbox.</p>
 <p>We can add new maps via the Map menu, and drag reactions from the reaction list onto the desired position on the map.</p>
 <h2 id="create-a-new-project">Create a new project</h2>
-<p>In this Section we explain how to create a new network project.
+<p>In this section we explain how to create a new metabolic network project.
 We also have a video on that topic <a href="https://youtu.be/bsNXZBmtyWw">https://youtu.be/bsNXZBmtyWw</a>.</p>
-<p>CNApy starts with an empty Project.
+<p>CNApy starts with an empty project.
 You can directly add new reactions via the reaction mask on the right.
-By pressing the <em>Add new reaction</em> button.</p>
-<p>Then simply type the reaction formula into the Equation field. For example <code>A + 2 B -&gt; C</code>.</p>
+by pressing the <em>Add new reaction</em> button.</p>
+<p>Then, you can type the reaction formula into the Equation field. For example <code>A + 2 B -&gt; C</code>.</p>
 <p>The associated metabolites <code>A</code>, <code>B</code> and <code>C</code> are then automatically added to the model.</p>
 <p>Changing metabolite identifiers in the metabolite form instantly rewrites the reaction equation of the associated reactions.</p>
-<p>Creating big models by adding single reactions is very cumbersome.
-Therefore CNApy allows you to create a new project from an SBML file.
-You find the point <em>New project from SBML</em> in the <em>Project</em> menu.</p>
-<p>After importing an SBML model the reaction list is populated with all the reactions from the model.</p>
-<p>You can add a map to our project, by going to the <em>Map</em> menu and clicking <em>add new map</em>.</p>
+<p>Since creating big models by adding single reactions is very cumbersome, CNApy also allows you to create a new project from a pre-existing SBML file.
+You find the action <em>New project from SBML</em> in the <em>Project</em> menu.</p>
+<p>After importing an SBML model, the reaction list is populated with all the reactions from the model.</p>
+<p>You can add a map to the project by going to the <em>Map</em> menu and clicking <em>add new map</em>.</p>
 <p>From the <em>Map</em> menu we can also <em>change the background image</em> of our map.
 Any SVG image can be used as a background.</p>
 <p>You can add multiple maps that highlight different aspects of your model.</p>
 <p>Reaction boxes can be put on the map by dragging over them from the reactions list.</p>
 <p>You can adjust the box size with the keyboard shortcuts <code class="grey">Ctrl</code> + <code class="grey">+</code> and <code class="grey">Ctrl</code> + <code class="grey">-</code>.
 You can move the reaction box to the desired position by dragging them on their handles.
-If you want to move all reaction boxes together, press <code class="grey">Ctrl</code> while dragging.</p>
+If you want to move all reaction boxes together, press <code class="grey">Ctrl</code> while dragging.
+In addition, you can set a specific (pixel-wise) position by right-clicking on a reaction box and selecting “set box position…”.</p>
 <p>Positioning a big number of reaction boxes can be tiresome.
-CNApy allows you to load and save reaction box positions.
+Therefore, CNApy allows you to load and save reaction box positions via the <em>Map</em> menu.
 This facilitates reuse among similar projects.</p>
 <p>The size of the background image can be adjusted with the shortcuts <code class="grey">Ctrl</code> + <code class="grey">Shift</code> + <code class="grey">+</code> and <code class="grey">Ctrl</code> + <code class="grey">Shift</code> + <code class="grey">-</code>.</p>
 <p>To save a project click <em>Save Project as</em> in the <em>Project</em> menu.
 It is important to add the <code>.cna</code> extension to the file name.
-This way your files can be found by CNApy.</p>
+This way your files can be directly found by CNApy. .cna files both include the metabolic model as well as its associated maps.</p>
 <h2 id="scenarios">Scenarios</h2>
 <p>In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
 In essence a scenario is a set of flux constraints for a set of reactions.
@@ -382,8 +453,7 @@ In addition, with these solvers a continuous search mode is possible which is si
 <p>Launches a dialog in which you can enter a linear expression (over the fluxes) that can then be maximized or minimized. The result is then displayed on the map(s) and the reaction list.
 The flux values of the current scenario are taken into during the optimization.</p>
 <h3 id="yield-optimization">Yield optimization</h3>
-<p>Launches a dialog in which you can enter two linear expressions (over the fluxes), which serve as numerator/denominator of a linear fractional
-program which then be maximized or minimized.
+<p>Launches a dialog in which you can enter two linear expressions (over the fluxes), which serve as numerator/denominator of a linear-fractional program which is then maximized or minimized.
 A typical application would be the maximization of a product yield: When the exchange fluxes for ethanol and glucose are <em>EX_etoh</em> and <em>EX_glc</em> then maximizing <em>EX_etoh/-EX_glc gives</em> the maximal ethanol yield on glucose.
 For this to work correctly, there must be no flux vector in the network where the denominator becomes zero and the nominator is non-zero.
 The result is then displayed on the map(s) and the reaction list.
@@ -392,6 +462,112 @@ The flux values of the current scenario are taken into during the optimization.<
 <p>Launches a dialog in which you can configure a plot that shows the projection of the solution space in 2D or 3D where the axes can be flux expressions or yield expressions.
 In the simplest case one can for example plot the growth rate against the substrate uptake rate.
 The flux values of the current scenario are taken into account during the calculations.</p>
+<h3 id="optmdfpathway">OptMDFpathway</h3>
+<p>Launches a dialog with which you can start <a href="https://doi.org/10.1371/journal.pcbi.1006492">OptMDFpathway</a>, a mixed-integer linear program which allows one to find - with a given metabolic network, linear constraints (such as a minimal growth rate), metabolite concentration ranges and Gibbs free energies of reactions (ΔG’°) - a pathway with the highest possible max-min driving force (MDF, in kJ/mol). If the MDF is negative, one knows that, at least as deduced by the given thermodynamic data (metabolite concentration ranges and Gibbs free energies), there is <em>no</em> thermodynamically feasible solution. If the MDF is positive, one knows that there <em>is</em> a thermodynamically feasible solution.</p>
+<p>In order to set-up a CNApy model for OptMDFpathway (or any of the following thermodynamics-using methods), you have to provide metabolite concentration ranges as well as reaction ΔG’° values as mentioned below.</p>
+<p>Once this is set up, you can run OptMDFpathway either at the optimal value of the model’s or scenario’s objective (which is calculated in advance without thermodynamic constraints) by activating the checkbox, or without regarding the objective value.</p>
+<h3 id="thermodynamic-fba">Thermodynamic FBA</h3>
+<p>This thermodynamic FBA is derived from OptMDFpathway (see above) and requires a <em>minimal</em> MDF that must be at least reached and for which a steady-state solution is searched for. The main difference to OptMDFPathway is that the given steady-state solution does <em>not</em> have to be at the OptMDF, but just at any MDF between the given minimal MDF and the OptMDF, which allows for more possible solutions. E.g., if you set a small positive minimal MDF of, e.g., 0.0001 kJ/mol, you essentially perform an FBA where thermodynamic feasibility is ensured. Again, if you activate the checkbox, you can perform this calculation at the optimal objective value which is calculate in advance.</p>
+<p>Note that, just like with normal flux balance analysis and OptMDFpathway, the resulting flux solution does not have to be unique.</p>
+<h3 id="thermodynamic-bottleneck-analysis">Thermodynamic bottleneck analysis</h3>
+<p>Each thermodynamic solution is restricted by at least one <em>thermodynamic bottleneck</em>, i.e., there is at least one reactions whose ΔG’° poses a limit on the OptMDF with the given metabolite concentration ranges. In order to find ways to solve these bottlenecks, it may be interesting to find them.</p>
+<p>Furthermore, with a given pre-calculated set of ΔG’° values and concentration ranges, a metabolic model seems to be thermodynamically infeasible (i.e., OptMDF &lt; 0 kJ/mol) at a biologically typical situation such as high growth rates. This problem may arise from some extreme ΔG’° values which are erroneously calculated so that the resulting reactions become thermodynamic bottlenecks.</p>
+<p>Hence, in order to identify thermodynamic bottlenecks, CNApy provides a thermodynamic bottleneck analysis. It is a mixed-integer linear problem (MILP) which identifies a <em>minimal</em> set of reactions whose ΔG’° has to be disregarded (i.e., their ΔG’° becomes -∞) such that a user-given minimal OptMDF (e.g., a positive one so that thermodynamic feasibility is possible) can be reached. This minimal list of affected thermodynamic bottlenecks is then printed to the console below the map for further study.</p>
+<h3 id="loading-metabolite-concentration-ranges">Loading metabolite concentration ranges</h3>
+<p>In order for any thermodynamic method of CNApy to work, <em>every</em> metabolite of the model needs a minimal (Cmin) and maximal (Cmax) concentration which is given in M (mol/l). A typical standard Cmin is 1e-6 M, a typical Cmax 0.02 M, except of protons (H+), which typically get a Cmin and Cmax of 1 M so that their concentration does not have an effect on the MDF as H+ is typically already accounted for in the ΔG’° calculation.</p>
+<p>There are 3 ways to load metabolite concentration ranges into your model:</p>
+<ol type="1">
+<li>You can manually add a “Cmin” and “Cmax” annotation (as keys) to each of your model’s metabolites, with the respective concentration as value.</li>
+<li>You can create and then load an Excel XLSX in the following example form (i.e., the first line has the given captions and the following lines correspond to these captions):</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Metabolite ID</th>
+<th>Cmin</th>
+<th>Cmax</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DEFAULT</td>
+<td>1e-6</td>
+<td>0.02</td>
+</tr>
+<tr class="even">
+<td>h_c</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td>h_p</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<p>This table actually encodes the mentioned typical standard concentration ranges: 1 M for protons (here given by their BiGG IDs in the cytoplasm (_c) and periplasm (_p)) and 1e-6 M to 0.02 M for <em>all other</em> metabolties as “DEFAULT” is a special table keyword with which all metabolites for which no concentration ranges are given (here, all metabolites except of h_c and h_p) get these default concentration ranges. Note that the metabolite IDs given must correspond exactly to the one in your model, including lower and upper case.</p>
+<p>CNApy can load this Excel XLSX through “Analysis-&gt;Load concentration ranges-&gt;As Excel XLSX”.</p>
+<ol start="3" type="1">
+<li>As an alternative to the Excel XLSX, you can also give the concentration range data in the form of a <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> file, which can be seen as a text file which can contain a typical <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">Python dictionary</a>. For example, with CNApy’s OptMDFpathway implementation, the Excel XLSX’s content would look like the following as a JSON file:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;DEFAULT&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;min&quot;</span><span class="fu">:</span> <span class="dv">1e-6</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;max&quot;</span><span class="fu">:</span> <span class="fl">0.02</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;h_c&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;min&quot;</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;max&quot;</span><span class="fu">:</span> <span class="fl">1.0</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;h_p&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;min&quot;</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;max&quot;</span><span class="fu">:</span> <span class="fl">1.0</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>CNApy can load this JSON through “Analysis-&gt;Load concentration ranges-&gt;As JSON”.</p>
+<h3 id="loading-reaction-δg-values">Loading reaction ΔG’° values</h3>
+<p>In order for any thermodynamic method of CNApy to work, <em>at least one</em> reaction (the more, the better) needs an associated Gibbs free energy value (ΔG’°) in kJ/mol. One convenient way to calculate ΔG’° for a reaction <em>in silico</em> is the <a href="https://equilibrator.weizmann.ac.il/">eQuiilibrator web-site</a>. If you have experience with programming in Python, you can also automate the task using the <a href="https://gitlab.com/equilibrator/equilibrator-api">eQuilibrator API</a>. Typically, the eQuilibrator does not only return a ΔG’° but also an uncertainty in the calculation of the value.</p>
+<p>Once you have calculated or measured ΔG’° values, you can include them into a CNApy project in one of three ways:</p>
+<ol type="1">
+<li>You can manually add a “dG0” (for the ΔG’° value) and “dG0_uncertainty” annotation (as keys) to each of your model’s metabolites, with the respective concentration as value.</li>
+<li>You can create and then load an Excel XLSX in the following example form (i.e., the first line has the given captions and the following lines correspond to these captions):</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Reaction ID</th>
+<th>dG’° [kJ/mol]</th>
+<th>dG’° uncertainty [kJ/mol]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GAPD</td>
+<td>0.28</td>
+<td>0.0003</td>
+</tr>
+<tr class="even">
+<td>PGM</td>
+<td>-4.12</td>
+<td>-0.0005</td>
+</tr>
+</tbody>
+</table>
+<p>Here, we set a small positive ΔG’° for the reaction GAPD and a larger negative one for PGM. Note that the reaction IDs given must correspond exactly to the one in your model, including lower and upper case. The sign of the ΔG’° uncertainty does not matter as only its absolute value is used.</p>
+<ol start="3" type="1">
+<li>As an alternative to the Excel XLSX, you can also give the ΔG’° range data in the form of a <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> file, which can be seen as a text file which can contain a typical <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">Python dictionary</a>. For example, with CNApy’s OptMDFpathway implementation, the shown Excel XLSX’s content would look like the following as a JSON file:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;GAPD&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;dG0&quot;</span><span class="fu">:</span> <span class="fl">0.28</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;uncertainty&quot;</span><span class="fu">:</span> <span class="fl">0.0003</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;PGM&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;dG0&quot;</span><span class="fu">:</span> <span class="fl">-4.12</span><span class="fu">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;uncertainty&quot;</span><span class="fu">:</span> <span class="fl">-0.0005</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <h3 id="show-model-stats">Show model stats</h3>
 <p>Shows the stoichiometric matrix and basic model properties on the console. In particular, the degrees of freedom of the stoichiometric matrix and the number of conservation relations are calculated for this.</p>
 <h3 id="net-conversion-of-the-external-metabolites">Net conversion of the external metabolites</h3>
