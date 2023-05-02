@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2023-02-09'
+date-meta: '2023-05-02'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -20,8 +20,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2023-02-09" />
-  <meta name="citation_publication_date" content="2023-02-09" />
+  <meta name="dc.date" content="2023-05-02" />
+  <meta name="citation_publication_date" content="2023-05-02" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/250e5b2ffb3642a7b295247fba56bf31c5c6c4d6/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/250e5b2ffb3642a7b295247fba56bf31c5c6c4d6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/250e5b2ffb3642a7b295247fba56bf31c5c6c4d6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/250e5b2ffb3642a7b295247fba56bf31c5c6c4d6/))
 was automatically generated
-from [cnapy-org/CNApy-guide@f6050d1](https://github.com/cnapy-org/CNApy-guide/tree/f6050d1beb70ee37e5c5eb3cff5474a8efa9d430)
-on February 9, 2023.
+from [cnapy-org/CNApy-guide@250e5b2](https://github.com/cnapy-org/CNApy-guide/tree/250e5b2ffb3642a7b295247fba56bf31c5c6c4d6)
+on May 2, 2023.
 </em></small>
 
 ## Authors
