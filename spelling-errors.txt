@@ -56,7 +56,7 @@ OptCouple
 OptKnock
 optlang
 OptMDF
-OptMDFPathway
+OptMDFpathway
 Paulocracy
 Pavlos
 periplasm
