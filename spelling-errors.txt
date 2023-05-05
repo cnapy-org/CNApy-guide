@@ -4,7 +4,6 @@ axelvonkamp
 Bekiaris
 BiGG
 cardinality
-casse
 checkable
 Cmax
 Cmin
@@ -28,6 +27,7 @@ etoh
 exe
 FBA
 FVA
+GAM
 GAPD
 Gitter
 glc
@@ -35,7 +35,8 @@ GLPK
 GPR
 Gurobi
 historam
-infeasibilities
+infeasibility
+isobutanol
 iteratively
 JSON
 Jupyter
@@ -48,9 +49,12 @@ menubar
 metabolties
 MILP
 MILPs
+minimzation
 minimzing
+mmol
 mol
 neccessary
+occured
 ojective
 OptCouple
 OptKnock
@@ -70,11 +74,13 @@ QP
 RobustKnock
 SBML
 SCIP
+selecet
 silico
 Stephanos
 sthiele
 stoichiometric
 stoichiometrically
+stoichiometries
 StrainDesign
 thermodyanmic
 thermodynamically

@@ -4,7 +4,7 @@ keywords:
 - constraint-programming
 - metabolic-models
 lang: en-US
-date-meta: '2023-05-04'
+date-meta: '2023-05-05'
 author-meta:
 - Sven Thiele
 - Axel von Kamp
@@ -20,8 +20,8 @@ header-includes: |-
   <meta name="citation_title" content="CNApy Guide" />
   <meta property="og:title" content="CNApy Guide" />
   <meta property="twitter:title" content="CNApy Guide" />
-  <meta name="dc.date" content="2023-05-04" />
-  <meta name="citation_publication_date" content="2023-05-04" />
+  <meta name="dc.date" content="2023-05-05" />
+  <meta name="citation_publication_date" content="2023-05-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://cnapy-org.github.io/CNApy-guide/" />
   <meta name="citation_pdf_url" content="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cnapy-org.github.io/CNApy-guide/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/6b31373305050db48f57d75ee2b12a377bd05787/" />
-  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/6b31373305050db48f57d75ee2b12a377bd05787/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/6b31373305050db48f57d75ee2b12a377bd05787/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cnapy-org.github.io/CNApy-guide/v/b376912381fcd01c6d059ed44a84458f78e0251b/" />
+  <meta name="manubot_html_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/b376912381fcd01c6d059ed44a84458f78e0251b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cnapy-org.github.io/CNApy-guide/v/b376912381fcd01c6d059ed44a84458f78e0251b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cnapy-org.github.io/CNApy-guide/v/6b31373305050db48f57d75ee2b12a377bd05787/))
+([permalink](https://cnapy-org.github.io/CNApy-guide/v/b376912381fcd01c6d059ed44a84458f78e0251b/))
 was automatically generated
-from [cnapy-org/CNApy-guide@6b31373](https://github.com/cnapy-org/CNApy-guide/tree/6b31373305050db48f57d75ee2b12a377bd05787)
-on May 4, 2023.
+from [cnapy-org/CNApy-guide@b376912](https://github.com/cnapy-org/CNApy-guide/tree/b376912381fcd01c6d059ed44a84458f78e0251b)
+on May 5, 2023.
 </em></small>
 
 ## Authors
@@ -308,31 +308,53 @@ This way your files can be directly found by CNApy. .cna files both include the 
 
 ## Scenarios
 
-In CNApy you can define a scenario under which metabolic analysis like the FBA will be performed.
-In essence a scenario is a set of flux constraints for a set of reactions.
-These constraints can fix the flux of a reaction or set a lower and upper bounds for the flux.
+In CNApy you can define a scenario under which metabolic analyses like the FBA will be performed.
+In its most basic form, a scenario is a set of flux bounds for a set of reactions. A scenario flux can fix the flux of a reaction or set a lower and upper bound for the flux.
+Furthermore, a scenario can contain its own objective function and it is possible to add reactions as well as constraints over the reaction fluxes to a model.
 
-The scenario can be edited via the reaction boxes on the map or the "Scenario" column of the reaction list.
+### Scenario fluxes
+
+The scenario fluxes of regular model reactions can be edited via the reaction boxes on the map or the *Scenario* column of the reaction list.
 Accepted values are either a single float like `1.5` or a pair of floats like `-10, 1.2`.
-A single float fixes the flux of the reaction to this value (`1.5`).
-While a pair sets the lower flux bound of the reaction to the first value (`-10`) and the upper flux bound to the second value (`1.2`).
-Note that in a scenario you can use values outside the defined lower/upper bound of a reaction. In such a casse the scenario will supersede the reaction bounds which allows temporary modification of the bounds without the need to change the model.
+A single float fixes the flux of the reaction to this value (`1.5`) while a pair sets the lower flux bound of the reaction to the first value (`-10`) and the upper flux bound to the second value (`1.2`).
+Note that in a scenario you can use values outside the defined lower/upper bound of a reaction. In such a case the scenario will supersede the reaction bounds which allows temporary modification of the bounds without the need to change the model.
 
 ![
 **Reaction box with scenario value.**
 ](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-box.png "Reaction box with scenario value"){#fig:scenario-box}
 
-Reactions boxes with scenario constraints are marked by the scenario color and a green frame.
-The frame turns yellow, if the scenario constraint lies outside the reaction bounds of the model.
+Reactions boxes with scenario flux are marked by the scenario color and a green frame.
+The frame turns yellow, if the scenario flux lies outside the reaction bounds of the model.
 
-To remove the constraints on a reaction simply delete the scenario value in the reaction box or "Scenario" column of the reaction list.
+To remove a scenario flux, simply delete the scenario value in the reaction box or "Scenario" column of the reaction list.
 
-You can save and load scenarios as `*.scen` files. One scenario can be set as the default scenario of your project.
+### The *Scenario* tab
+![
+**Scenario tab with settings for isobutanol production.**
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/scenario-tab.png "Scenario tab with settings for isobutanol production"){#fig:scenario-tab}
+
+### Scenario objective
+
+A scenario objective can be defined in the *Scenario* tab. There it is also possible to select whether the scenario objective or the model objective is to be used (e.g. in FBA).
+
+### Scenario reactions
+
+Scenario reactions can be added via the scenario tab. All metabolites from the model can be used when entering a reaction equation. If you use a metabolite that is not part of the model it will automatically be added to the model whenever the scenario is applied (e.g. in FBA). Scenario reactions are intended as a means for introducing a few reactions that are necessary for a scenario's function without having to modify the model. Note that is not possible to set further properties of scenario reactions (e.g. a gene rule) or metabolites (e.g. a formula). If this is required then you need to add the respective reaction or metabolite to the model itself.
+
+### Scenario constraints
+
+These are linear (in-)equality constraints over the reaction fluxes in the network (model as well as scenario reactions). Such a constraint can for instance be used to express a minimal product yield that is required in the scenario.
+
+### Scenario files and history
+
+You can save and load scenarios as `*.scen` files via the *Scenario* menu or the toolbar. If a scenario file has been loaded its name is shown in the toolbar.
+The flux bounds of a scenario can be set as the default scenario of your project.
 This can be done via *set current scenario as default scenario* in the *Scenario* menu.
 The project must then be saved, and the next time you open the project the scenario is already set.
 
-CNApy implements an edit history for the scenario with the tool buttons you can undo and redo your changes to the scenario.
-You can also import all the values that are currently in the reaction boxes into the scenario (can be useful for applying a MCS), and you can change the model's reaction bounds to the current scenario values.
+
+CNApy implements an edit history for the scenario fluxes and with the tool buttons you can undo/redo your changes. Note that the edit history is for scenario fluxes only, scenario reactions and constraints can only be added/removed via the *Scenario* tab.
+You can also import all the values that are currently in the reaction boxes into the scenario (can be useful for applying a MCS), and you can change the model's reaction bounds to the current scenario flux values.
 
 
 ## Analysis functions
@@ -363,11 +385,44 @@ This gives the possible flux range for each reaction.
 
 A scenario is infeasible if the given fluxes in this scenario are incompatible with each other. An example would be a flux of a product that is higher than the substrate flux multiplied by the maximal product yield. Such a situation could for instance arise due to measurement errors if the given fluxes come from experimental measurements.
 
-With "Make scenario feasible" the given fluxes in the scenario are modified to be consistent which basically relies on minimzing the sum of absolute differences between the given values and the computed values that make the scenario consistent. There are two main settings that control this minimization: Firstly, one can choose whether the differences are linear or quadratic terms, resulting in a linear program (LP) or quadratic program (QP) respectively (the latter requires a QP-capable solver like CPLEX or Gurobi). Secondly, the (reciprocal) weights with which the differences enter the objective function can either all be equal, relative to their absolute flux values (i.e. larger fluxes are more likely to be changed when resolving infeasibilities), or taken from a specified field in the reaction annotation (in the last case, where a reaction has no entry in the specified annotation field, the default weight is used). Note that only reactions with scenario fluxes fixed to values unequal to zero enter the optimization.
+With "Make scenario feasible" the given fluxes in the scenario and/or the biomass composition are adjusted to make the fluxes consistent. This basically relies on minimzing the sum of deviations from the given fluxes and/or deviations from the stoichiometric coefficients the biomass reaction. There is one main setting that controls this minimization: One can choose whether the deviations are linear or quadratic terms, resulting in a linear program (LP) or quadratic program (QP) respectively (the latter requires a QP-capable solver like CPLEX or Gurobi).
 
-After optimization, the current scenario is modified so that it contains the calculated consistent fluxes and the necessary changes are shown on the console. You can go back to the original values via the scenario history.
+![
+**Make scenario feasible dialog.**
+](https://raw.githubusercontent.com/cnapy-org/CNApy-guide/main/content/images/make-scenario-feasible-dialog.png "Make scenario feasible dialog"){#fig:make-feasibile-dialog}
+
+#### Allow corrections to given fluxes using the following weights
+
+If this option is activated, adjustments of the given fluxes are allowed. Here you can set the (reciprocal) weights with which the flux deviations enter the objective function: They can either all be equal, relative to their absolute flux values (i.e. larger fluxes are more likely to be changed when resolving infeasibility), or taken from a specified field in the reaction annotation. In the last case, where a reaction has no entry in the specified annotation field, the default weight is used. The default weight/scale factor also scales all flux deviation weights and can thus be used to adjust the relative importance between flux corrections and biomass adjustments in the minimization. Concretely, lowering the scale factor here means that flux deviations become more expensive than biomass adjustments.
+
+#### Allow adjustment of the biomass reaction
+
+If this option is activated the biomass composition may be changed during minimization. To use this option it is required to selecet a biomass reaction and this reaction must have a fixed flux in the current scenario. There are two major ways in which the biomass reaction can be modified: The biomass composition may be allowed to change and/or the amount of growth-associated maintenance (GAM) may vary.
+
+#### Select adjustable biomass constituents
+
+Here a table is shown with the components of the biomass reactions as well as their stoichiometries and formulas. In the first column of this table you can (de-)select the components whose stoichiometries may be allowed to change. Note that you can only select components that have a formula so that their molecular weights can be calculated. These are required to set up a constraint which ensures that the overall biomass weight remains constant. You can also specify the maximal relative coefficient change [%] and whether the change should be calculated in mmol or gram.
+
+#### Allow adjustment of growth-associated ATP maintenance (GAM)
+
+If GAM is integrated in the currently selected biomass reaction this option can be used to activate the adjustment of GAM. For this you need to specify a list of  metabolites of an ATP hydrolysis reaction together with the amount of GAM that has been set in the model. The GAM amount can either be given as a number or you can specify a metabolite of the ATP hydrolysis reaction (ADP should work in most situations) whose coefficient from the biomass reaction is then used as GAM amount. If all the above parameters are set, GAM will be removed from the biomass reaction during minimzation and considered separately. Lastly, you can set the maximal amount of GAM change together with a weight for this change in the overall minimization.
+
+#### Compute
+
+After optimization, the current scenario is modified so that it contains the calculated consistent fluxes and the necessary changes are shown on the console. If any adjustment of the biomass reaction occured then the modified biomass reaction is also shown on the console and it is added to the current scenario (see Scenario tab) if the "Add modified biomass reaction to scenario" was activated. The biomass and GAM adjustment results are also displayed in the dialog window. You can perform the calculation repeatedly with different settings while the dialog is open without the need to go back in the scenario history. You can reset the original scenario fluxes via the scenario history, but if a modified biomass reaction was added to the scenario you need to remove this via the Scenario tab.
+
+Note that only reactions with scenario fluxes fixed to values unequal to zero enter the optimization. Reactions which have a zero flux set in the scenario will be considered removed from the network.
 
 Known issue: The solvers are currently accessed through the optlang interface. Setting up the quadratic ojective for the QP via this interface incurs a significant overhead which increases with the number of fluxes set in the scenario. This means that the method as a whole can become quite slow in case more than a few dozen fluxes were set despite the fact that solving the QP itself is ususally quite fast.
+
+#### Show elemental balances
+
+Computes the elemental balances over
+1) the boundary reactions with a given scenario flux
+2) all boundary reactions with a computed flux.
+
+If a biomass reaction is currently selected it is also included in the calculation. The results are then displayed on the console.
+Note that this function only gives correct results if all metabolites included in the reactions have correct formulas.
 
 ### Elementary modes (EFM)
 
